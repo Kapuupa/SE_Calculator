@@ -257,52 +257,76 @@ namespace SE_Calculator
 
         private void listBox6_Click(object sender, EventArgs e)
         {
-            if (listBox6.SelectedItem == "Ores and Stone")
-            { ContainerItem = 0.37; }
-            else if (listBox6.SelectedItem == "Steel Plate")
-            { ContainerItem = 0.15; }
-            else if (listBox6.SelectedItem == "Computer")
-            { ContainerItem = 5; }
-            else if (listBox6.SelectedItem == "Construction Component/Gravity Component/ThrusterComponent")
-            { ContainerItem = 0.25; }
-            else if (listBox6.SelectedItem == "Metal Grid")
-            { ContainerItem = 2.5; }
-            else if (listBox6.SelectedItem == "Interior Plate")
-            { ContainerItem = 5 / 3; }
-            else if (listBox6.SelectedItem == "Iron Ingot")
-            { ContainerItem = 0.13; }
-            else if (listBox6.SelectedItem == "Silicon Wafer")
-            { ContainerItem = 0.43; }
-            else if (listBox6.SelectedItem == "Nickel Ingot/Cobalt Ingot")
-            { ContainerItem = 0.11; }
-            else if (listBox6.SelectedItem == "Magnesium Powder")
-            { ContainerItem = 0.58; }
-            else if (listBox6.SelectedItem == "Silver Ingot")
-            { ContainerItem = 0.10; }
-            else if (listBox6.SelectedItem == "Gold Ingot/Uranium Ingot")
-            { ContainerItem = 0.052; }
-            else if (listBox6.SelectedItem == "Platinum Ingot")
-            { ContainerItem = 0.05; }
-            else if (listBox6.SelectedItem == "Power Cell")
-            { ContainerItem = 1.6; }
-            else if (listBox6.SelectedItem == "Girder")
-            { ContainerItem = 1 / 3; }
-            else if (listBox6.SelectedItem == "Large Steel Tube")
-            { ContainerItem = 1.52; }
-            else if (listBox6.SelectedItem == "Small Steel Tube")
-            { ContainerItem = 0.5; }
-            else if (listBox6.SelectedItem == "Motor")
-            { ContainerItem = 8 / (0.024); }
-            else if (listBox6.SelectedItem == "Detector Component")
-            { ContainerItem = 1.2; }
-            else if (listBox6.SelectedItem == "Display")
-            { ContainerItem = 0.75; }
-            else if (listBox6.SelectedItem == "Radio-comm comp.")
-            { ContainerItem = 8.75; }
-            else 
-            { ContainerItem = 8/(15) ; }
-
-
+           
+            switch (listBox6.SelectedItem.ToString())
+            {
+                case "Display" :
+                    ContainerItem = 0.75;
+                    break;
+                case "Ores and Stone":
+                    ContainerItem = 0.37;
+                    break;
+                case "Steel Plate" :
+                    ContainerItem = 0.15;
+                    break;
+                case "Computer":
+                    ContainerItem = 5;
+                    break;
+                case "Construction Component/Gravity Component/ThrusterComponent":
+                    ContainerItem = 0.25;
+                    break;
+                case "Metal Grid":
+                    ContainerItem = 2.5;
+                    break;
+                case "Interior Plate":
+                    ContainerItem = 5/3;
+                    break;
+                case "Iron Ingot":
+                    ContainerItem = 0.13;
+                    break;
+                case "Silicon Wafer":
+                    ContainerItem = 0.43;
+                    break;
+                case "Nickel Ingot/Cobalt Ingot":
+                    ContainerItem = 0.11;
+                    break;
+                case "Magnesium Powder":
+                    ContainerItem = 0.58;
+                    break;
+                case "Silver Ingot":
+                    ContainerItem = 0.10;
+                    break;
+                case "Gold Ingot/Uranium Ingot":
+                    ContainerItem = 0.052;
+                    break;
+                case "Platinum Ingot":
+                    ContainerItem = 0.05;
+                    break;
+                case "Power Cell":
+                    ContainerItem = 1.6;
+                    break;
+                case "Girder":
+                    ContainerItem = 1/3;
+                    break;
+                case "Large Steel Tube":
+                    ContainerItem = 1.52;
+                    break;
+                case "Small Steel Tube":
+                    ContainerItem = 0.5;
+                    break;
+                case "Motor":
+                    ContainerItem = 8/(0.024);
+                    break;
+                case "Detector Component":
+                    ContainerItem = 1.2;
+                    break;
+                case "Radio-comm comp.":
+                    ContainerItem = 8.75;
+                    break;
+                default:
+                    ContainerItem = 8 / (15);
+                    break;
+            }
 
 
 
