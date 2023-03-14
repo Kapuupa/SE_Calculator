@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Räknare", "Räknare\Räknare.csproj", "{CC6EBD7E-83A2-42D9-9E52-9E943485DED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RäknareV2", "RäknareV2\RäknareV2.csproj", "{DBFB1F4E-AA3E-435B-AB84-9E8B5173E087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE_Calculator", "SE_Calculator\SE_Calculator.csproj", "{7039F812-6DD6-45F2-AD20-6F5C7067EF62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC6EBD7E-83A2-42D9-9E52-9E943485DED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6EBD7E-83A2-42D9-9E52-9E943485DED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6EBD7E-83A2-42D9-9E52-9E943485DED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6EBD7E-83A2-42D9-9E52-9E943485DED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFB1F4E-AA3E-435B-AB84-9E8B5173E087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFB1F4E-AA3E-435B-AB84-9E8B5173E087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFB1F4E-AA3E-435B-AB84-9E8B5173E087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFB1F4E-AA3E-435B-AB84-9E8B5173E087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7039F812-6DD6-45F2-AD20-6F5C7067EF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7039F812-6DD6-45F2-AD20-6F5C7067EF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7039F812-6DD6-45F2-AD20-6F5C7067EF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7039F812-6DD6-45F2-AD20-6F5C7067EF62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCE97693-9CDE-4D50-AC76-32C9EC98269A}
+	EndGlobalSection
+EndGlobal
