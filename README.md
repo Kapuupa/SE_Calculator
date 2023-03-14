@@ -1,1 +1,2 @@
 # SpaceEngineers
+This is a small app programed entirely in C# that can help you calculate different things. The first tab lets you calculate roughly how many hydrogen thruster you need for a ship to lift up, the second tab lets you calculate your total ship weight with filled cargo container and/or your max lift with the amount of thruster that you have. The third tab lets you calculate your acceleration and how long of a line does it take to reach 100m/s from 0m/s.
