@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tpeSpeed = new System.Windows.Forms.TabPage();
+            this.tbxSträcka = new System.Windows.Forms.TextBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.lblGridSize2 = new System.Windows.Forms.Label();
             this.btnSpeed = new System.Windows.Forms.Button();
             this.tbxTime = new System.Windows.Forms.TextBox();
@@ -51,8 +54,6 @@
             this.lblSHT = new System.Windows.Forms.Label();
             this.tbxShipWeight3 = new System.Windows.Forms.TextBox();
             this.lblShipWeight3 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.lblGravity = new System.Windows.Forms.Label();
             this.tbxSvar4 = new System.Windows.Forms.TextBox();
             this.lblLiftCompare = new System.Windows.Forms.Label();
@@ -74,7 +75,7 @@
             this.lblIonThrusterSmall = new System.Windows.Forms.Label();
             this.lblAtmosphericThrusterSmall = new System.Windows.Forms.Label();
             this.tpeEarth = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnRäknaUt = new System.Windows.Forms.Button();
             this.lblSvar = new System.Windows.Forms.Label();
             this.lblSmallHydrogen = new System.Windows.Forms.Label();
@@ -87,6 +88,9 @@
             this.tbxLargeContainer = new System.Windows.Forms.TextBox();
             this.tclEarth = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.lblAtmosphericThrusterBig = new System.Windows.Forms.Label();
             this.lblHydrogenThrusterBig = new System.Windows.Forms.Label();
             this.lblHydrogenThrusterSmall = new System.Windows.Forms.Label();
@@ -97,10 +101,6 @@
             this.tbxShipWeight2 = new System.Windows.Forms.TextBox();
             this.tbxSmallContainer2 = new System.Windows.Forms.TextBox();
             this.tbxLargeContainer2 = new System.Windows.Forms.TextBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.tbxSträcka = new System.Windows.Forms.TextBox();
-            this.listBox6 = new System.Windows.Forms.ListBox();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -135,10 +135,46 @@
             this.tpeSpeed.Location = new System.Drawing.Point(4, 22);
             this.tpeSpeed.Name = "tpeSpeed";
             this.tpeSpeed.Padding = new System.Windows.Forms.Padding(3);
-            this.tpeSpeed.Size = new System.Drawing.Size(615, 541);
+            this.tpeSpeed.Size = new System.Drawing.Size(656, 541);
             this.tpeSpeed.TabIndex = 2;
             this.tpeSpeed.Text = "Speed";
             this.tpeSpeed.UseVisualStyleBackColor = true;
+            // 
+            // tbxSträcka
+            // 
+            this.tbxSträcka.Location = new System.Drawing.Point(5, 357);
+            this.tbxSträcka.Name = "tbxSträcka";
+            this.tbxSträcka.ReadOnly = true;
+            this.tbxSträcka.Size = new System.Drawing.Size(262, 20);
+            this.tbxSträcka.TabIndex = 63;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Items.AddRange(new object[] {
+            "Large Grid",
+            "Small Grid"});
+            this.listBox5.Location = new System.Drawing.Point(192, 231);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(58, 30);
+            this.listBox5.TabIndex = 62;
+            this.listBox5.Click += new System.EventHandler(this.listBox5_Click);
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Items.AddRange(new object[] {
+            "Earth",
+            "Moon",
+            "Mars",
+            "Europa",
+            "Titan",
+            "Alien"});
+            this.listBox4.Location = new System.Drawing.Point(58, 221);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(44, 82);
+            this.listBox4.TabIndex = 61;
+            this.listBox4.Click += new System.EventHandler(this.listBox4_Click);
             // 
             // lblGridSize2
             // 
@@ -306,38 +342,10 @@
             this.lblShipWeight3.TabIndex = 0;
             this.lblShipWeight3.Text = "ShipWeight";
             // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Items.AddRange(new object[] {
-            "Earth",
-            "Moon ",
-            "Mars",
-            "Titan",
-            "Europa",
-            "Alien"});
-            this.listBox3.Location = new System.Drawing.Point(227, 273);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(46, 82);
-            this.listBox3.TabIndex = 42;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            "Large Grid",
-            "Small Grid"});
-            this.listBox2.Location = new System.Drawing.Point(217, 81);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(56, 30);
-            this.listBox2.TabIndex = 41;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
             // lblGravity
             // 
             this.lblGravity.AutoSize = true;
-            this.lblGravity.Location = new System.Drawing.Point(7, 273);
+            this.lblGravity.Location = new System.Drawing.Point(7, 264);
             this.lblGravity.Name = "lblGravity";
             this.lblGravity.Size = new System.Drawing.Size(40, 13);
             this.lblGravity.TabIndex = 40;
@@ -429,42 +437,42 @@
             // 
             // tbxIonThrusterSmall
             // 
-            this.tbxIonThrusterSmall.Location = new System.Drawing.Point(192, 247);
+            this.tbxIonThrusterSmall.Location = new System.Drawing.Point(192, 238);
             this.tbxIonThrusterSmall.Name = "tbxIonThrusterSmall";
             this.tbxIonThrusterSmall.Size = new System.Drawing.Size(100, 20);
             this.tbxIonThrusterSmall.TabIndex = 29;
             // 
             // tbxIonThrusterBig
             // 
-            this.tbxIonThrusterBig.Location = new System.Drawing.Point(192, 221);
+            this.tbxIonThrusterBig.Location = new System.Drawing.Point(192, 212);
             this.tbxIonThrusterBig.Name = "tbxIonThrusterBig";
             this.tbxIonThrusterBig.Size = new System.Drawing.Size(100, 20);
             this.tbxIonThrusterBig.TabIndex = 28;
             // 
             // tbxAtmosphericThrusterSmall
             // 
-            this.tbxAtmosphericThrusterSmall.Location = new System.Drawing.Point(192, 195);
+            this.tbxAtmosphericThrusterSmall.Location = new System.Drawing.Point(192, 186);
             this.tbxAtmosphericThrusterSmall.Name = "tbxAtmosphericThrusterSmall";
             this.tbxAtmosphericThrusterSmall.Size = new System.Drawing.Size(100, 20);
             this.tbxAtmosphericThrusterSmall.TabIndex = 27;
             // 
             // tbxAtmosphericThrusterBig
             // 
-            this.tbxAtmosphericThrusterBig.Location = new System.Drawing.Point(192, 169);
+            this.tbxAtmosphericThrusterBig.Location = new System.Drawing.Point(192, 160);
             this.tbxAtmosphericThrusterBig.Name = "tbxAtmosphericThrusterBig";
             this.tbxAtmosphericThrusterBig.Size = new System.Drawing.Size(100, 20);
             this.tbxAtmosphericThrusterBig.TabIndex = 26;
             // 
             // tbxHydrogenThrusterSmall
             // 
-            this.tbxHydrogenThrusterSmall.Location = new System.Drawing.Point(192, 143);
+            this.tbxHydrogenThrusterSmall.Location = new System.Drawing.Point(192, 134);
             this.tbxHydrogenThrusterSmall.Name = "tbxHydrogenThrusterSmall";
             this.tbxHydrogenThrusterSmall.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenThrusterSmall.TabIndex = 25;
             // 
             // tbxHydrogenThrusterBig
             // 
-            this.tbxHydrogenThrusterBig.Location = new System.Drawing.Point(192, 117);
+            this.tbxHydrogenThrusterBig.Location = new System.Drawing.Point(192, 108);
             this.tbxHydrogenThrusterBig.Name = "tbxHydrogenThrusterBig";
             this.tbxHydrogenThrusterBig.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenThrusterBig.TabIndex = 24;
@@ -472,7 +480,7 @@
             // lblIonThrusterBig
             // 
             this.lblIonThrusterBig.AutoSize = true;
-            this.lblIonThrusterBig.Location = new System.Drawing.Point(7, 221);
+            this.lblIonThrusterBig.Location = new System.Drawing.Point(7, 212);
             this.lblIonThrusterBig.Name = "lblIonThrusterBig";
             this.lblIonThrusterBig.Size = new System.Drawing.Size(82, 13);
             this.lblIonThrusterBig.TabIndex = 22;
@@ -481,7 +489,7 @@
             // lblIonThrusterSmall
             // 
             this.lblIonThrusterSmall.AutoSize = true;
-            this.lblIonThrusterSmall.Location = new System.Drawing.Point(6, 247);
+            this.lblIonThrusterSmall.Location = new System.Drawing.Point(6, 238);
             this.lblIonThrusterSmall.Name = "lblIonThrusterSmall";
             this.lblIonThrusterSmall.Size = new System.Drawing.Size(92, 13);
             this.lblIonThrusterSmall.TabIndex = 23;
@@ -490,7 +498,7 @@
             // lblAtmosphericThrusterSmall
             // 
             this.lblAtmosphericThrusterSmall.AutoSize = true;
-            this.lblAtmosphericThrusterSmall.Location = new System.Drawing.Point(7, 195);
+            this.lblAtmosphericThrusterSmall.Location = new System.Drawing.Point(7, 186);
             this.lblAtmosphericThrusterSmall.Name = "lblAtmosphericThrusterSmall";
             this.lblAtmosphericThrusterSmall.Size = new System.Drawing.Size(135, 13);
             this.lblAtmosphericThrusterSmall.TabIndex = 21;
@@ -498,7 +506,7 @@
             // 
             // tpeEarth
             // 
-            this.tpeEarth.Controls.Add(this.listBox1);
+            this.tpeEarth.Controls.Add(this.comboBox1);
             this.tpeEarth.Controls.Add(this.btnRäknaUt);
             this.tpeEarth.Controls.Add(this.lblSvar);
             this.tpeEarth.Controls.Add(this.lblSmallHydrogen);
@@ -512,22 +520,22 @@
             this.tpeEarth.Location = new System.Drawing.Point(4, 22);
             this.tpeEarth.Name = "tpeEarth";
             this.tpeEarth.Padding = new System.Windows.Forms.Padding(3);
-            this.tpeEarth.Size = new System.Drawing.Size(302, 541);
+            this.tpeEarth.Size = new System.Drawing.Size(656, 541);
             this.tpeEarth.TabIndex = 0;
             this.tpeEarth.Text = "Earth";
             this.tpeEarth.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // comboBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "Large Grid",
             "Small Grid"});
-            this.listBox1.Location = new System.Drawing.Point(211, 85);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(60, 30);
-            this.listBox1.TabIndex = 14;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.comboBox1.Location = new System.Drawing.Point(192, 85);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 15;
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // btnRäknaUt
             // 
@@ -619,14 +627,14 @@
             this.tclEarth.Location = new System.Drawing.Point(12, 12);
             this.tclEarth.Name = "tclEarth";
             this.tclEarth.SelectedIndex = 0;
-            this.tclEarth.Size = new System.Drawing.Size(681, 567);
+            this.tclEarth.Size = new System.Drawing.Size(664, 567);
             this.tclEarth.TabIndex = 1;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listBox6);
-            this.tabPage2.Controls.Add(this.listBox3);
-            this.tabPage2.Controls.Add(this.listBox2);
+            this.tabPage2.Controls.Add(this.comboBox4);
+            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.lblGravity);
             this.tabPage2.Controls.Add(this.tbxSvar4);
             this.tabPage2.Controls.Add(this.lblLiftCompare);
@@ -659,15 +667,75 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(673, 541);
+            this.tabPage2.Size = new System.Drawing.Size(656, 541);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Weight Calculator";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Ores and Stone",
+            "Steel Plate",
+            "Computer",
+            "Construction Component/Gravity Component/ThrusterComponent",
+            "Metal Grid",
+            "Interior Plate",
+            "Iron Ingot",
+            "Silicon Wafer",
+            "Nickel Ingot/Cobalt Ingot",
+            "Magnesium Powder",
+            "Silver Ingot",
+            "Gold Ingot/Uranium Ingot",
+            "Platinum Ingot",
+            "Power Cell",
+            "Girder",
+            "Large Steel Tube",
+            "Small Steel Tube",
+            "Motor",
+            "Detector Component",
+            "Display",
+            "Radio-comm comp.",
+            "SuperConductor"});
+            this.comboBox4.Location = new System.Drawing.Point(298, 6);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(350, 21);
+            this.comboBox4.TabIndex = 46;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Earth",
+            "Moon ",
+            "Mars",
+            "Titan",
+            "Europa",
+            "Alien"});
+            this.comboBox3.Location = new System.Drawing.Point(192, 264);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.TabIndex = 45;
+            this.comboBox3.Click += new System.EventHandler(this.comboBox3_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Large Grid",
+            "Small Grid"});
+            this.comboBox2.Location = new System.Drawing.Point(192, 81);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 21);
+            this.comboBox2.TabIndex = 44;
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
+            // 
             // lblAtmosphericThrusterBig
             // 
             this.lblAtmosphericThrusterBig.AutoSize = true;
-            this.lblAtmosphericThrusterBig.Location = new System.Drawing.Point(7, 169);
+            this.lblAtmosphericThrusterBig.Location = new System.Drawing.Point(7, 160);
             this.lblAtmosphericThrusterBig.Name = "lblAtmosphericThrusterBig";
             this.lblAtmosphericThrusterBig.Size = new System.Drawing.Size(125, 13);
             this.lblAtmosphericThrusterBig.TabIndex = 20;
@@ -676,7 +744,7 @@
             // lblHydrogenThrusterBig
             // 
             this.lblHydrogenThrusterBig.AutoSize = true;
-            this.lblHydrogenThrusterBig.Location = new System.Drawing.Point(7, 117);
+            this.lblHydrogenThrusterBig.Location = new System.Drawing.Point(7, 108);
             this.lblHydrogenThrusterBig.Name = "lblHydrogenThrusterBig";
             this.lblHydrogenThrusterBig.Size = new System.Drawing.Size(118, 13);
             this.lblHydrogenThrusterBig.TabIndex = 19;
@@ -685,7 +753,7 @@
             // lblHydrogenThrusterSmall
             // 
             this.lblHydrogenThrusterSmall.AutoSize = true;
-            this.lblHydrogenThrusterSmall.Location = new System.Drawing.Point(7, 143);
+            this.lblHydrogenThrusterSmall.Location = new System.Drawing.Point(7, 134);
             this.lblHydrogenThrusterSmall.Name = "lblHydrogenThrusterSmall";
             this.lblHydrogenThrusterSmall.Size = new System.Drawing.Size(123, 13);
             this.lblHydrogenThrusterSmall.TabIndex = 18;
@@ -748,79 +816,11 @@
             this.tbxLargeContainer2.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeContainer2.TabIndex = 10;
             // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Items.AddRange(new object[] {
-            "Earth",
-            "Moon",
-            "Mars",
-            "Europa",
-            "Titan",
-            "Alien"});
-            this.listBox4.Location = new System.Drawing.Point(58, 221);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(44, 82);
-            this.listBox4.TabIndex = 61;
-            this.listBox4.Click += new System.EventHandler(this.listBox4_Click);
-            // 
-            // listBox5
-            // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Items.AddRange(new object[] {
-            "Large Grid",
-            "Small Grid"});
-            this.listBox5.Location = new System.Drawing.Point(192, 231);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(58, 30);
-            this.listBox5.TabIndex = 62;
-            this.listBox5.Click += new System.EventHandler(this.listBox5_Click);
-            // 
-            // tbxSträcka
-            // 
-            this.tbxSträcka.Location = new System.Drawing.Point(5, 357);
-            this.tbxSträcka.Name = "tbxSträcka";
-            this.tbxSträcka.ReadOnly = true;
-            this.tbxSträcka.Size = new System.Drawing.Size(262, 20);
-            this.tbxSträcka.TabIndex = 63;
-            // 
-            // listBox6
-            // 
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Items.AddRange(new object[] {
-            "Ores and Stone",
-            "Steel Plate",
-            "Computer",
-            "Construction Component/Gravity Component/ThrusterComponent",
-            "Metal Grid",
-            "Interior Plate",
-            "Iron Ingot",
-            "Silicon Wafer",
-            "Nickel Ingot/Cobalt Ingot",
-            "Magnesium Powder",
-            "Silver Ingot",
-            "Gold Ingot/Uranium Ingot",
-            "Platinum Ingot",
-            "Power Cell",
-            "Girder",
-            "Large Steel Tube",
-            "Small Steel Tube",
-            "Motor",
-            "Detector Component",
-            "Display",
-            "Radio-comm comp.",
-            "SuperConductor"});
-            this.listBox6.Location = new System.Drawing.Point(314, 3);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(350, 290);
-            this.listBox6.TabIndex = 43;
-            this.listBox6.Click += new System.EventHandler(this.listBox6_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 590);
+            this.ClientSize = new System.Drawing.Size(686, 590);
             this.Controls.Add(this.tclEarth);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -861,8 +861,6 @@
         private System.Windows.Forms.Label lblSHT;
         private System.Windows.Forms.TextBox tbxShipWeight3;
         private System.Windows.Forms.Label lblShipWeight3;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
         protected internal System.Windows.Forms.Label lblGravity;
         private System.Windows.Forms.TextBox tbxSvar4;
         private System.Windows.Forms.Label lblLiftCompare;
@@ -884,7 +882,6 @@
         private System.Windows.Forms.Label lblIonThrusterSmall;
         private System.Windows.Forms.Label lblAtmosphericThrusterSmall;
         private System.Windows.Forms.TabPage tpeEarth;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnRäknaUt;
         private System.Windows.Forms.Label lblSvar;
         private System.Windows.Forms.Label lblSmallHydrogen;
@@ -910,7 +907,10 @@
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.TextBox tbxSträcka;
-        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 

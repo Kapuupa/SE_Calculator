@@ -13,7 +13,7 @@ namespace SE_Calculator
     public partial class Form1 : Form
     {
         int GridSize1 = 0;
-        int GridSize2 = 0;
+        int gs2 = 0;
         int GridSize3 = 0;
         double gravv = 0;
         double gravv2 = 0;
@@ -46,6 +46,17 @@ namespace SE_Calculator
                 lblSmallHydrogen.Text = ((int)(((newton) / 1080000) * 1.02)).ToString() + " st Small LG Hydrogen Thrusters";
 
             }
+            else if (GridSize1 == 2)
+            {
+                double totlc2 = (lc * 260.2) + (lc * 15625 / (0.37));
+                double totsc2 = (sc * (73.4)) + (sc * (125) / (0.37));
+                double newton2 = (sw + totlc2 + totsc2) * 9.80;
+
+                lblSvar.Text = (Math.Round(newton2, 1)).ToString() + "N";
+                lblLargeHydrogen.Text = ((int)(((newton2) / 480000) * 1.1)).ToString() + " st Big SG Hydrogen Thrusters";
+                lblSmallHydrogen.Text = ((int)(((newton2) / 98400) * 1.02)).ToString() + " st Small SG Hydrogen Thrusters";
+
+            }
             else
             {
                 lblSvar.Text = sw.ToString();
@@ -63,14 +74,7 @@ namespace SE_Calculator
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == "Large Grid")
-            {
-                GridSize1 = 1;
-            }
-            else
-            {
-                GridSize1 = 2; 
-            }
+           
 
         }
 
@@ -87,7 +91,7 @@ namespace SE_Calculator
             int sit2 = int.Parse(tbxIonThrusterSmall.Text);
 
 
-            if (GridSize2 == 1)
+            if (gs2 == 1)
             {
                 int totsw = (int)((lc2 * 421000 / ContainerItem) + (sc2 * (15625) / ContainerItem) + sw2);
                 tbxSvar.Text = totsw.ToString() + " kg";
@@ -106,7 +110,7 @@ namespace SE_Calculator
 
 
             }
-            else if (GridSize2 == 2)
+            else if (gs2 == 2)
             {
                 int totsw2 = (int)((lc2 * 15625 / ContainerItem) + (sc2 * (125) / ContainerItem) + sw2);
                 tbxSvar.Text = totsw2.ToString() + " kg";
@@ -135,43 +139,12 @@ namespace SE_Calculator
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox2.SelectedItem == "Large Grid")
-            {
-                GridSize2 = 1;
-
-            }
-            else
-            {
-                GridSize2 = 2;
-            }
+          
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox3.SelectedItem == "Earth")
-            {
-                gravv = 1;
-            }
-            else if (listBox3.SelectedItem == "Moon")
-            {
-                gravv = 0.25;
-            }
-            else if (listBox3.SelectedItem == "Mars")
-            {
-                gravv = 0.9;
-            }
-            else if (listBox3.SelectedItem == "Titan")
-            {
-                gravv = 0.25;
-            }
-            else if (listBox3.SelectedItem == "Europa")
-            {
-                gravv = 0.25;
-            }
-            else
-            {
-                gravv = 1.1;
-            }
+           
         }
 
         private void btnSpeed_Click(object sender, EventArgs e)
@@ -201,7 +174,7 @@ namespace SE_Calculator
             {
                 tbxAcceleration.Text = " WTF?";
                 tbxTime.Text = " WTF?";
-
+                tbxSträcka.Text = " WTF?";
 
             }
 
@@ -233,19 +206,19 @@ namespace SE_Calculator
             {
                 gravv2 = 1;
             }
-            else if (listBox3.SelectedItem == "Moon")
+            else if (listBox4.SelectedItem == "Moon")
             {
                 gravv2 = 0.25;
             }
-            else if (listBox3.SelectedItem == "Mars")
+            else if (listBox4.SelectedItem == "Mars")
             {
                 gravv2 = 0.9;
             }
-            else if (listBox3.SelectedItem == "Titan")
+            else if (listBox4.SelectedItem == "Titan")
             {
                 gravv2 = 0.25;
             }
-            else if (listBox3.SelectedItem == "Europa")
+            else if (listBox4.SelectedItem == "Europa")
             {
                 gravv2 = 0.25;
             }
@@ -258,15 +231,24 @@ namespace SE_Calculator
         private void listBox6_Click(object sender, EventArgs e)
         {
            
-            switch (listBox6.SelectedItem.ToString())
+           
+
+
+
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox4.SelectedItem.ToString())
             {
-                case "Display" :
+                case "Display":
                     ContainerItem = 0.75;
                     break;
                 case "Ores and Stone":
                     ContainerItem = 0.37;
                     break;
-                case "Steel Plate" :
+                case "Steel Plate":
                     ContainerItem = 0.15;
                     break;
                 case "Computer":
@@ -279,7 +261,7 @@ namespace SE_Calculator
                     ContainerItem = 2.5;
                     break;
                 case "Interior Plate":
-                    ContainerItem = 5/3;
+                    ContainerItem = 5 / 3;
                     break;
                 case "Iron Ingot":
                     ContainerItem = 0.13;
@@ -306,7 +288,7 @@ namespace SE_Calculator
                     ContainerItem = 1.6;
                     break;
                 case "Girder":
-                    ContainerItem = 1/3;
+                    ContainerItem = 1 / 3;
                     break;
                 case "Large Steel Tube":
                     ContainerItem = 1.52;
@@ -315,7 +297,7 @@ namespace SE_Calculator
                     ContainerItem = 0.5;
                     break;
                 case "Motor":
-                    ContainerItem = 8/(0.024);
+                    ContainerItem = 8 / (0.024);
                     break;
                 case "Detector Component":
                     ContainerItem = 1.2;
@@ -327,10 +309,65 @@ namespace SE_Calculator
                     ContainerItem = 8 / (15);
                     break;
             }
+        }
 
+        public void comboBox2_Click(object sender, EventArgs e)
+        {
+           if (comboBox2.SelectedItem == "Large Grid")
+            {
+                gs2 = 1;
+            }
+            else
+            {
+                gs2 = 2;
+            }
+           
+        }
 
+        private void comboBox3_Click(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedItem == "Earth")
+            {
+                gravv = 1;
+            }
+            else if (comboBox3.SelectedItem == "Moon")
+            {
+                gravv = 0.25;
+            }
+            else if (comboBox3.SelectedItem == "Mars")
+            {
+                gravv = 0.9;
+            }
+            else if (comboBox3.SelectedItem == "Titan")
+            {
+                gravv = 0.25;
+            }
+            else if (comboBox3.SelectedItem == "Europa")
+            {
+                gravv = 0.25;
+            }
+            else
+            {
+                gravv = 1.1;
+            }
+        }
 
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == "Large Grid")
+            {
+                GridSize1 = 1;
+            }
+            else
+            {
+                GridSize1 = 2;
+            }
+        }
+
+        private void listBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
+
     }
 }
