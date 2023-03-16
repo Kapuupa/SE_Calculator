@@ -18,6 +18,7 @@ namespace SE_Calculator
         double gravv = 0;
         double gravv2 = 0;
         double ContainerItem = 0;
+        int GridSize4 = 0;
             
         public Form1()
         {
@@ -28,6 +29,8 @@ namespace SE_Calculator
         {
 
         }
+
+       
 
         private void btnRäknaUt_Click(object sender, EventArgs e)
         {
@@ -369,5 +372,86 @@ namespace SE_Calculator
 
         }
 
+        private void textBox40_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblOxygenTank_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnResource_Click(object sender, EventArgs e)
+        {
+            int lcc = int.Parse(tbxLargeCargo.Text);
+            int mcc = int.Parse(tbxMediumCargo.Text);
+            int scc = int.Parse(tbxSmallCargo.Text);
+            int hab = int.Parse(tbxHeavyArmorBlock.Text);
+            int lab = int.Parse(tbxLightArmorBlock.Text);
+            int cock = int.Parse(tbxCockpit.Text);
+            int battery = int.Parse(tbxBattery.Text);
+            int lhtank = int.Parse(tbxLargeHydroTank.Text);
+            int shtank = int.Parse(tbxSmallHydroTank.Text);
+            int gyro = int.Parse(tbxGyroscope.Text);
+            int lhthrust = int.Parse(tbxLargeHydroThruster.Text);
+            int shthrust = int.Parse(tbxHydroThruster.Text);
+            int ann = int.Parse(tbxAntenna.Text);
+            int beacon = int.Parse(tbxBeacon.Text);
+            int oredet = int.Parse(tbxOreDetector.Text);
+            int drill = int.Parse(tbxDrill.Text);
+            int spot = int.Parse(tbxSpotlight.Text);
+            int airvent = int.Parse(tbxAirVent.Text);
+            int o2h2 = int.Parse(tbxO2H2gen.Text);
+            int h2eng = int.Parse(tbxHydroEngine.Text);
+            int o2farm = int.Parse(tbxOxygenFarm.Text);
+            int o2tank = int.Parse(tbxOxygenTank.Text);
+            int largeiont = int.Parse(tbxLargeIonThruster.Text);
+            int iont = int.Parse(tbxIonThruster.Text);
+            int largeatmot = int.Parse(tbxLargeAtmosphericThruster.Text);
+            int atmot = int.Parse(tbxAtmosphericThruster.Text);
+                
+            if (GridSize4 == 1)
+            {
+                double irontot = (lcc * 3053) + (scc * 770) + (hab * 3150) + (lab * 525) + (cock * 383) + (battery * 2792.5) + (lhtank * 8984) + (shtank * 3584) + (gyro * 13802.5) + (largeatmot * 30240) + (atmot * 4415) + (ann * 3904) + (lhthrust * 9150) + (shthrust * 1845) + (beacon * 3904) + (drill * 7162.5)
+                + (oredet * 1687.5) + (o2farm * 1700) + (o2tank * 3584) + (h2eng * 3512) + (o2h2 * 2712.5) + (airvent * 1347.5) + (spot * 448) + (largeiont) + (iont);
+                double nickeltot = (lcc * 220) + (scc * 40) + (cock * 5) + (battery * 160) + (gyro * 270) + (largeatmot * 5700) + (atmot * 600) + (lhthrust * 1250) + (shthrust * 200) + (oredet * 400) + (drill * 25) + (airvent * 50) + (o2h2 * 20) + (h2eng * 62) + (largeiont) + (iont);
+                double cobalttot = (lcc * 72) + (scc * 12) + (gyro * 150) + (largeatmot * 120) + (atmot * 30) + (lhthrust * 750) + (shthrust * 120) + (largeiont) + (iont);
+                double silicontot = (lcc * 6.6) + (scc * 5.4) + (cock * 210) + (battery * 85) + (lhtank * 1.6) + (shtank * 1.6) + (gyro) + (ann * 41.6) + (oredet * 5) + (drill) + (airvent) + (spot * 60) + (o2h2) + (h2eng * 1.8) + (o2farm * 1504) + (o2tank * 1.6);
+
+                tbxIronTot.Text = irontot.ToString();
+                tbxNickelTot.Text = nickeltot.ToString();
+                tbxCobaltTot.Text = cobalttot.ToString();
+                tbxSiliconTot.Text = silicontot.ToString(); 
+
+
+
+            }
+
+
+
+        }
+
+        private void cbxGridSize_Click(object sender, EventArgs e)
+        {
+            if (cbxGridSize.SelectedItem == "Large Grid")
+            {
+                GridSize4 = 1;
+            }
+            else
+            {
+                GridSize4 = 2;
+            }
+        }
     }
 }
