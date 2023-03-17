@@ -420,6 +420,8 @@ namespace SE_Calculator
             int iont = int.Parse(tbxIonThruster.Text);
             int largeatmot = int.Parse(tbxLargeAtmosphericThruster.Text);
             int atmot = int.Parse(tbxAtmosphericThruster.Text);
+
+            
                 
             if (GridSize4 == 1)
             {
@@ -432,7 +434,33 @@ namespace SE_Calculator
                 tbxIronTot.Text = irontot.ToString();
                 tbxNickelTot.Text = nickeltot.ToString();
                 tbxCobaltTot.Text = cobalttot.ToString();
-                tbxSiliconTot.Text = silicontot.ToString(); 
+                tbxSiliconTot.Text = silicontot.ToString();
+
+                int pcu = ((lcc + scc + airvent) * 10) + ((lhthrust + atmot + largeatmot + shthrust + battery) * 15) + ((lhtank + shtank + spot + h2eng + o2farm + o2tank) * 25) + ((gyro + beacon + oredet + o2h2) * 50) + (cock * 150) + (drill * 190) + (ann * 100);
+
+                tbxPCUCost.Text = pcu.ToString();
+
+                tbxSteelPlate.Text = (((hab + lhthrust) * 150) + ((lab + shthrust) * 25) + ((battery + shtank + o2tank + beacon + ann) * 80) + (lhtank * 280) + (lhtank * 280) + (gyro * 600) + (largeatmot * 260) + (atmot * 55) + (oredet * 50) + (spot * 8) + (airvent * 45) + (o2h2 * 120) + (h2eng * 100) + (o2farm * 40)).ToString();
+                tbxDetectorComponent.Text = ((oredet) * 25).ToString();
+                tbxRadioComponent.Text = ((ann + beacon) * 40).ToString();
+                tbxPowerCell.Text = ((battery * 80) + (h2eng * 1)).ToString();
+                tbxDisplay.Text = ((lcc+scc) + (cock * 8)).ToString();
+                tbxMetalGrid.Text = ((lcc * 24) + (scc * 4) + (gyro * 50) + ((largeatmot + shthrust) * 40) + (atmot * 10) + (lhthrust * 250)).ToString();
+                tbxMotor.Text = ((lcc * 20) + ((scc + o2h2) * 4) + (cock * 1) + (gyro * 4) + (largeatmot * 1100) + (atmot * 110) + ((oredet + drill) * 5) + (h2eng * 12) + (airvent * 10)).ToString();
+                tbxInteriorPlate.Text = ((lcc * 360) + (scc * 40) + (cock * 30) + (spot * 20)).ToString();
+                tbxBulletproofGlass.Text = ((cock * 10) + (spot * 4) + (o2farm * 100)).ToString();
+                tbxComputer.Text = ((lcc * 8) + (scc * 2) + (cock * 100) + ((battery + oredet) * 25) + ((lhtank + shtank + ann + beacon + o2tank) * 8) + ((gyro + drill + airvent + o2h2) * 5) + (h2eng * 4)).ToString();
+                tbxConstructionComponent.Text = ((lcc * 80) + ((scc + lhtank + shtank + gyro + ann + beacon + oredet + drill + o2tank) * 40) + ((airvent + cock) * 20) + (battery * 30) + ((atmot + h2eng) * 70) + (lhthrust * 180) + (shthrust * 60) + (spot * 15) + (o2h2 * 5)).ToString();
+                tbxSmallSteelTube.Text = (((lcc+lhtank+shtank+ann+beacon+o2tank) * 60) + (scc*20) + (h2eng * 20) + (o2farm * 10)).ToString();
+                tbxLargeSteelTube.Text = ((lhtank * 80) + ((shtank+ann+lhthrust+beacon+o2tank) * 40) + (gyro * 4) + (largeatmot * 50) + ((atmot+shthrust) * 8) + ((h2eng+drill) * 12) + ((o2h2+spot) * 2) + (o2farm * 20)).ToString();
+
+
+
+
+            }
+            else
+            {
+
 
 
 

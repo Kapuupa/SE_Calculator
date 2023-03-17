@@ -104,25 +104,46 @@
             this.tpeResource = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tbxMediumCargo = new System.Windows.Forms.TextBox();
-            this.tbxAntenna = new System.Windows.Forms.TextBox();
-            this.tbxGyroscope = new System.Windows.Forms.TextBox();
-            this.tbxSmallHydroTank = new System.Windows.Forms.TextBox();
-            this.tbxLargeHydroTank = new System.Windows.Forms.TextBox();
-            this.tbxBattery = new System.Windows.Forms.TextBox();
-            this.tbxCockpit = new System.Windows.Forms.TextBox();
-            this.tbxLightArmorBlock = new System.Windows.Forms.TextBox();
-            this.tbxHeavyArmorBlock = new System.Windows.Forms.TextBox();
-            this.tbxSmallCargo = new System.Windows.Forms.TextBox();
-            this.tbxOxygenTank = new System.Windows.Forms.TextBox();
-            this.tbxOxygenFarm = new System.Windows.Forms.TextBox();
-            this.tbxHydroEngine = new System.Windows.Forms.TextBox();
-            this.tbxO2H2gen = new System.Windows.Forms.TextBox();
-            this.tbxSpotlight = new System.Windows.Forms.TextBox();
-            this.tbxDrill = new System.Windows.Forms.TextBox();
-            this.tbxOreDetector = new System.Windows.Forms.TextBox();
-            this.tbxBeacon = new System.Windows.Forms.TextBox();
+            this.btnResource = new System.Windows.Forms.Button();
+            this.cbxGridSize = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lblAirVent = new System.Windows.Forms.Label();
+            this.lblIonThruster = new System.Windows.Forms.Label();
+            this.lblLargeIonThruster = new System.Windows.Forms.Label();
+            this.lblHydroThruster = new System.Windows.Forms.Label();
+            this.lblLargeHydroThruster = new System.Windows.Forms.Label();
+            this.lblAtmosphericThruster = new System.Windows.Forms.Label();
+            this.lblLargeAtmosphericThruster = new System.Windows.Forms.Label();
+            this.lblOxygenTank = new System.Windows.Forms.Label();
+            this.lblOxygenFarm = new System.Windows.Forms.Label();
+            this.lblHydroEngine = new System.Windows.Forms.Label();
+            this.lblO2H2gen = new System.Windows.Forms.Label();
+            this.lblSpotlight = new System.Windows.Forms.Label();
+            this.lblDrill = new System.Windows.Forms.Label();
+            this.lblOreDetector = new System.Windows.Forms.Label();
+            this.lblBeacon = new System.Windows.Forms.Label();
+            this.lblAntenna = new System.Windows.Forms.Label();
+            this.lblGyroscope = new System.Windows.Forms.Label();
+            this.lblSmallHydroTank = new System.Windows.Forms.Label();
+            this.lblLargeHydroTank = new System.Windows.Forms.Label();
+            this.lblBattery = new System.Windows.Forms.Label();
+            this.lblCockpit = new System.Windows.Forms.Label();
+            this.lblLightArmorBlock = new System.Windows.Forms.Label();
+            this.lblHeavyArmorBlock = new System.Windows.Forms.Label();
+            this.lblMediumCargo = new System.Windows.Forms.Label();
+            this.lblSmallCargo = new System.Windows.Forms.Label();
+            this.lblLargeCargo = new System.Windows.Forms.Label();
+            this.tbxLargeCargo = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -141,55 +162,62 @@
             this.textBox36 = new System.Windows.Forms.TextBox();
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.tbxLargeAtmosphericThruster = new System.Windows.Forms.TextBox();
-            this.tbxLargeCargo = new System.Windows.Forms.TextBox();
-            this.lblLargeCargo = new System.Windows.Forms.Label();
-            this.lblSmallCargo = new System.Windows.Forms.Label();
-            this.lblMediumCargo = new System.Windows.Forms.Label();
-            this.lblHeavyArmorBlock = new System.Windows.Forms.Label();
-            this.lblLightArmorBlock = new System.Windows.Forms.Label();
-            this.lblCockpit = new System.Windows.Forms.Label();
-            this.lblBattery = new System.Windows.Forms.Label();
-            this.lblLargeHydroTank = new System.Windows.Forms.Label();
-            this.lblSmallHydroTank = new System.Windows.Forms.Label();
-            this.lblGyroscope = new System.Windows.Forms.Label();
-            this.lblAntenna = new System.Windows.Forms.Label();
-            this.lblBeacon = new System.Windows.Forms.Label();
-            this.lblOreDetector = new System.Windows.Forms.Label();
-            this.lblDrill = new System.Windows.Forms.Label();
-            this.lblSpotlight = new System.Windows.Forms.Label();
-            this.lblO2H2gen = new System.Windows.Forms.Label();
-            this.lblHydroEngine = new System.Windows.Forms.Label();
-            this.lblOxygenFarm = new System.Windows.Forms.Label();
-            this.lblOxygenTank = new System.Windows.Forms.Label();
-            this.lblLargeAtmosphericThruster = new System.Windows.Forms.Label();
-            this.lblAtmosphericThruster = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblLargeHydroThruster = new System.Windows.Forms.Label();
-            this.lblHydroThruster = new System.Windows.Forms.Label();
-            this.lblLargeIonThruster = new System.Windows.Forms.Label();
-            this.lblIonThruster = new System.Windows.Forms.Label();
-            this.lblAirVent = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.cbxGridSize = new System.Windows.Forms.ComboBox();
-            this.btnResource = new System.Windows.Forms.Button();
-            this.lblIronTot = new System.Windows.Forms.Label();
-            this.lblNickelTot = new System.Windows.Forms.Label();
-            this.lblCobaltTot = new System.Windows.Forms.Label();
-            this.lblSiliconTot = new System.Windows.Forms.Label();
-            this.tbxIronTot = new System.Windows.Forms.TextBox();
-            this.tbxSiliconTot = new System.Windows.Forms.TextBox();
-            this.tbxCobaltTot = new System.Windows.Forms.TextBox();
+            this.tbxBeacon = new System.Windows.Forms.TextBox();
+            this.tbxOreDetector = new System.Windows.Forms.TextBox();
+            this.tbxDrill = new System.Windows.Forms.TextBox();
+            this.tbxSpotlight = new System.Windows.Forms.TextBox();
+            this.tbxO2H2gen = new System.Windows.Forms.TextBox();
+            this.tbxHydroEngine = new System.Windows.Forms.TextBox();
+            this.tbxOxygenFarm = new System.Windows.Forms.TextBox();
+            this.tbxOxygenTank = new System.Windows.Forms.TextBox();
+            this.tbxSmallCargo = new System.Windows.Forms.TextBox();
+            this.tbxHeavyArmorBlock = new System.Windows.Forms.TextBox();
+            this.tbxLightArmorBlock = new System.Windows.Forms.TextBox();
+            this.tbxCockpit = new System.Windows.Forms.TextBox();
+            this.tbxBattery = new System.Windows.Forms.TextBox();
+            this.tbxLargeHydroTank = new System.Windows.Forms.TextBox();
+            this.tbxSmallHydroTank = new System.Windows.Forms.TextBox();
+            this.tbxGyroscope = new System.Windows.Forms.TextBox();
+            this.tbxAntenna = new System.Windows.Forms.TextBox();
+            this.tbxMediumCargo = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tbxNickelTot = new System.Windows.Forms.TextBox();
+            this.tbxCobaltTot = new System.Windows.Forms.TextBox();
+            this.tbxSiliconTot = new System.Windows.Forms.TextBox();
+            this.tbxIronTot = new System.Windows.Forms.TextBox();
+            this.lblSiliconTot = new System.Windows.Forms.Label();
+            this.lblCobaltTot = new System.Windows.Forms.Label();
+            this.lblNickelTot = new System.Windows.Forms.Label();
+            this.lblIronTot = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblPCUCost = new System.Windows.Forms.Label();
+            this.tbxPCUCost = new System.Windows.Forms.TextBox();
+            this.lblSteelPlates = new System.Windows.Forms.Label();
+            this.lblLargeSteelTube = new System.Windows.Forms.Label();
+            this.lblSmallSteelTube = new System.Windows.Forms.Label();
+            this.lblConstructionComponent = new System.Windows.Forms.Label();
+            this.lblComputer = new System.Windows.Forms.Label();
+            this.lblBulletproofGlass = new System.Windows.Forms.Label();
+            this.lblInteriorPlate = new System.Windows.Forms.Label();
+            this.lblMotor = new System.Windows.Forms.Label();
+            this.lblMetalGrid = new System.Windows.Forms.Label();
+            this.lblDisplay = new System.Windows.Forms.Label();
+            this.lblPowerCell = new System.Windows.Forms.Label();
+            this.lblRadioComponent = new System.Windows.Forms.Label();
+            this.lblDetectorComponent = new System.Windows.Forms.Label();
+            this.tbxSteelPlate = new System.Windows.Forms.TextBox();
+            this.tbxLargeSteelTube = new System.Windows.Forms.TextBox();
+            this.tbxSmallSteelTube = new System.Windows.Forms.TextBox();
+            this.tbxConstructionComponent = new System.Windows.Forms.TextBox();
+            this.tbxComputer = new System.Windows.Forms.TextBox();
+            this.tbxBulletproofGlass = new System.Windows.Forms.TextBox();
+            this.tbxInteriorPlate = new System.Windows.Forms.TextBox();
+            this.tbxMotor = new System.Windows.Forms.TextBox();
+            this.tbxMetalGrid = new System.Windows.Forms.TextBox();
+            this.tbxDisplay = new System.Windows.Forms.TextBox();
+            this.tbxPowerCell = new System.Windows.Forms.TextBox();
+            this.tbxRadioComponent = new System.Windows.Forms.TextBox();
+            this.tbxDetectorComponent = new System.Windows.Forms.TextBox();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -1017,149 +1045,369 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage3
+            // btnResource
             // 
-            this.tabPage3.Controls.Add(this.tbxNickelTot);
-            this.tabPage3.Controls.Add(this.tbxCobaltTot);
-            this.tabPage3.Controls.Add(this.tbxSiliconTot);
-            this.tabPage3.Controls.Add(this.tbxIronTot);
-            this.tabPage3.Controls.Add(this.lblSiliconTot);
-            this.tabPage3.Controls.Add(this.lblCobaltTot);
-            this.tabPage3.Controls.Add(this.lblNickelTot);
-            this.tabPage3.Controls.Add(this.lblIronTot);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(642, 509);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "Results";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.btnResource.Location = new System.Drawing.Point(536, 474);
+            this.btnResource.Name = "btnResource";
+            this.btnResource.Size = new System.Drawing.Size(100, 23);
+            this.btnResource.TabIndex = 78;
+            this.btnResource.Text = "Calculate";
+            this.btnResource.UseVisualStyleBackColor = true;
+            this.btnResource.Click += new System.EventHandler(this.btnResource_Click);
             // 
-            // tbxMediumCargo
+            // cbxGridSize
             // 
-            this.tbxMediumCargo.Location = new System.Drawing.Point(200, 32);
-            this.tbxMediumCargo.Name = "tbxMediumCargo";
-            this.tbxMediumCargo.Size = new System.Drawing.Size(100, 20);
-            this.tbxMediumCargo.TabIndex = 0;
+            this.cbxGridSize.FormattingEnabled = true;
+            this.cbxGridSize.Items.AddRange(new object[] {
+            "Large Grid",
+            "Small Grid"});
+            this.cbxGridSize.Location = new System.Drawing.Point(336, 471);
+            this.cbxGridSize.Name = "cbxGridSize";
+            this.cbxGridSize.Size = new System.Drawing.Size(121, 21);
+            this.cbxGridSize.TabIndex = 77;
+            this.cbxGridSize.Click += new System.EventHandler(this.cbxGridSize_Click);
             // 
-            // tbxAntenna
+            // label41
             // 
-            this.tbxAntenna.Location = new System.Drawing.Point(200, 266);
-            this.tbxAntenna.Name = "tbxAntenna";
-            this.tbxAntenna.Size = new System.Drawing.Size(100, 20);
-            this.tbxAntenna.TabIndex = 1;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(333, 448);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(41, 13);
+            this.label41.TabIndex = 76;
+            this.label41.Text = "label41";
             // 
-            // tbxGyroscope
+            // label40
             // 
-            this.tbxGyroscope.Location = new System.Drawing.Point(200, 240);
-            this.tbxGyroscope.Name = "tbxGyroscope";
-            this.tbxGyroscope.Size = new System.Drawing.Size(100, 20);
-            this.tbxGyroscope.TabIndex = 2;
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(333, 422);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(41, 13);
+            this.label40.TabIndex = 75;
+            this.label40.Text = "label40";
             // 
-            // tbxSmallHydroTank
+            // label39
             // 
-            this.tbxSmallHydroTank.Location = new System.Drawing.Point(200, 214);
-            this.tbxSmallHydroTank.Name = "tbxSmallHydroTank";
-            this.tbxSmallHydroTank.Size = new System.Drawing.Size(100, 20);
-            this.tbxSmallHydroTank.TabIndex = 3;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(333, 396);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(41, 13);
+            this.label39.TabIndex = 74;
+            this.label39.Text = "label39";
             // 
-            // tbxLargeHydroTank
+            // label38
             // 
-            this.tbxLargeHydroTank.Location = new System.Drawing.Point(200, 188);
-            this.tbxLargeHydroTank.Name = "tbxLargeHydroTank";
-            this.tbxLargeHydroTank.Size = new System.Drawing.Size(100, 20);
-            this.tbxLargeHydroTank.TabIndex = 4;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(333, 370);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(41, 13);
+            this.label38.TabIndex = 73;
+            this.label38.Text = "label38";
             // 
-            // tbxBattery
+            // label37
             // 
-            this.tbxBattery.Location = new System.Drawing.Point(200, 162);
-            this.tbxBattery.Name = "tbxBattery";
-            this.tbxBattery.Size = new System.Drawing.Size(100, 20);
-            this.tbxBattery.TabIndex = 5;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(333, 344);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(41, 13);
+            this.label37.TabIndex = 72;
+            this.label37.Text = "label37";
             // 
-            // tbxCockpit
+            // label36
             // 
-            this.tbxCockpit.Location = new System.Drawing.Point(200, 136);
-            this.tbxCockpit.Name = "tbxCockpit";
-            this.tbxCockpit.Size = new System.Drawing.Size(100, 20);
-            this.tbxCockpit.TabIndex = 6;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(333, 318);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(41, 13);
+            this.label36.TabIndex = 71;
+            this.label36.Text = "label36";
             // 
-            // tbxLightArmorBlock
+            // label35
             // 
-            this.tbxLightArmorBlock.Location = new System.Drawing.Point(200, 110);
-            this.tbxLightArmorBlock.Name = "tbxLightArmorBlock";
-            this.tbxLightArmorBlock.Size = new System.Drawing.Size(100, 20);
-            this.tbxLightArmorBlock.TabIndex = 7;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(333, 266);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(41, 13);
+            this.label35.TabIndex = 70;
+            this.label35.Text = "label35";
             // 
-            // tbxHeavyArmorBlock
+            // label34
             // 
-            this.tbxHeavyArmorBlock.Location = new System.Drawing.Point(200, 84);
-            this.tbxHeavyArmorBlock.Name = "tbxHeavyArmorBlock";
-            this.tbxHeavyArmorBlock.Size = new System.Drawing.Size(100, 20);
-            this.tbxHeavyArmorBlock.TabIndex = 8;
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(333, 292);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(41, 13);
+            this.label34.TabIndex = 69;
+            this.label34.Text = "label34";
             // 
-            // tbxSmallCargo
+            // label33
             // 
-            this.tbxSmallCargo.Location = new System.Drawing.Point(200, 58);
-            this.tbxSmallCargo.Name = "tbxSmallCargo";
-            this.tbxSmallCargo.Size = new System.Drawing.Size(100, 20);
-            this.tbxSmallCargo.TabIndex = 9;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(333, 240);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(41, 13);
+            this.label33.TabIndex = 68;
+            this.label33.Text = "label33";
             // 
-            // tbxOxygenTank
+            // label32
             // 
-            this.tbxOxygenTank.Location = new System.Drawing.Point(200, 474);
-            this.tbxOxygenTank.Name = "tbxOxygenTank";
-            this.tbxOxygenTank.Size = new System.Drawing.Size(100, 20);
-            this.tbxOxygenTank.TabIndex = 12;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(333, 214);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(41, 13);
+            this.label32.TabIndex = 67;
+            this.label32.Text = "label32";
             // 
-            // tbxOxygenFarm
+            // label31
             // 
-            this.tbxOxygenFarm.Location = new System.Drawing.Point(200, 448);
-            this.tbxOxygenFarm.Name = "tbxOxygenFarm";
-            this.tbxOxygenFarm.Size = new System.Drawing.Size(100, 20);
-            this.tbxOxygenFarm.TabIndex = 13;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(333, 188);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 13);
+            this.label31.TabIndex = 66;
+            this.label31.Text = "label31";
             // 
-            // tbxHydroEngine
+            // lblAirVent
             // 
-            this.tbxHydroEngine.Location = new System.Drawing.Point(200, 422);
-            this.tbxHydroEngine.Name = "tbxHydroEngine";
-            this.tbxHydroEngine.Size = new System.Drawing.Size(100, 20);
-            this.tbxHydroEngine.TabIndex = 14;
+            this.lblAirVent.AutoSize = true;
+            this.lblAirVent.Location = new System.Drawing.Point(333, 162);
+            this.lblAirVent.Name = "lblAirVent";
+            this.lblAirVent.Size = new System.Drawing.Size(44, 13);
+            this.lblAirVent.TabIndex = 65;
+            this.lblAirVent.Text = "Air Vent";
             // 
-            // tbxO2H2gen
+            // lblIonThruster
             // 
-            this.tbxO2H2gen.Location = new System.Drawing.Point(200, 396);
-            this.tbxO2H2gen.Name = "tbxO2H2gen";
-            this.tbxO2H2gen.Size = new System.Drawing.Size(100, 20);
-            this.tbxO2H2gen.TabIndex = 15;
+            this.lblIonThruster.AutoSize = true;
+            this.lblIonThruster.Location = new System.Drawing.Point(333, 136);
+            this.lblIonThruster.Name = "lblIonThruster";
+            this.lblIonThruster.Size = new System.Drawing.Size(64, 13);
+            this.lblIonThruster.TabIndex = 64;
+            this.lblIonThruster.Text = "Ion Thruster";
             // 
-            // tbxSpotlight
+            // lblLargeIonThruster
             // 
-            this.tbxSpotlight.Location = new System.Drawing.Point(200, 370);
-            this.tbxSpotlight.Name = "tbxSpotlight";
-            this.tbxSpotlight.Size = new System.Drawing.Size(100, 20);
-            this.tbxSpotlight.TabIndex = 16;
+            this.lblLargeIonThruster.AutoSize = true;
+            this.lblLargeIonThruster.Location = new System.Drawing.Point(333, 110);
+            this.lblLargeIonThruster.Name = "lblLargeIonThruster";
+            this.lblLargeIonThruster.Size = new System.Drawing.Size(94, 13);
+            this.lblLargeIonThruster.TabIndex = 63;
+            this.lblLargeIonThruster.Text = "Large Ion Thruster";
             // 
-            // tbxDrill
+            // lblHydroThruster
             // 
-            this.tbxDrill.Location = new System.Drawing.Point(200, 344);
-            this.tbxDrill.Name = "tbxDrill";
-            this.tbxDrill.Size = new System.Drawing.Size(100, 20);
-            this.tbxDrill.TabIndex = 17;
+            this.lblHydroThruster.AutoSize = true;
+            this.lblHydroThruster.Location = new System.Drawing.Point(333, 84);
+            this.lblHydroThruster.Name = "lblHydroThruster";
+            this.lblHydroThruster.Size = new System.Drawing.Size(95, 13);
+            this.lblHydroThruster.TabIndex = 62;
+            this.lblHydroThruster.Text = "Hydrogen Thruster";
             // 
-            // tbxOreDetector
+            // lblLargeHydroThruster
             // 
-            this.tbxOreDetector.Location = new System.Drawing.Point(200, 318);
-            this.tbxOreDetector.Name = "tbxOreDetector";
-            this.tbxOreDetector.Size = new System.Drawing.Size(100, 20);
-            this.tbxOreDetector.TabIndex = 18;
+            this.lblLargeHydroThruster.AutoSize = true;
+            this.lblLargeHydroThruster.Location = new System.Drawing.Point(333, 58);
+            this.lblLargeHydroThruster.Name = "lblLargeHydroThruster";
+            this.lblLargeHydroThruster.Size = new System.Drawing.Size(125, 13);
+            this.lblLargeHydroThruster.TabIndex = 61;
+            this.lblLargeHydroThruster.Text = "Large Hydrogen Thruster";
             // 
-            // tbxBeacon
+            // lblAtmosphericThruster
             // 
-            this.tbxBeacon.Location = new System.Drawing.Point(200, 292);
-            this.tbxBeacon.Name = "tbxBeacon";
-            this.tbxBeacon.Size = new System.Drawing.Size(100, 20);
-            this.tbxBeacon.TabIndex = 19;
+            this.lblAtmosphericThruster.AutoSize = true;
+            this.lblAtmosphericThruster.Location = new System.Drawing.Point(333, 32);
+            this.lblAtmosphericThruster.Name = "lblAtmosphericThruster";
+            this.lblAtmosphericThruster.Size = new System.Drawing.Size(107, 13);
+            this.lblAtmosphericThruster.TabIndex = 60;
+            this.lblAtmosphericThruster.Text = "Atmospheric Thruster";
+            // 
+            // lblLargeAtmosphericThruster
+            // 
+            this.lblLargeAtmosphericThruster.AutoSize = true;
+            this.lblLargeAtmosphericThruster.Location = new System.Drawing.Point(333, 6);
+            this.lblLargeAtmosphericThruster.Name = "lblLargeAtmosphericThruster";
+            this.lblLargeAtmosphericThruster.Size = new System.Drawing.Size(137, 13);
+            this.lblLargeAtmosphericThruster.TabIndex = 59;
+            this.lblLargeAtmosphericThruster.Text = "Large Atmospheric Thruster";
+            // 
+            // lblOxygenTank
+            // 
+            this.lblOxygenTank.AutoSize = true;
+            this.lblOxygenTank.Location = new System.Drawing.Point(6, 474);
+            this.lblOxygenTank.Name = "lblOxygenTank";
+            this.lblOxygenTank.Size = new System.Drawing.Size(71, 13);
+            this.lblOxygenTank.TabIndex = 58;
+            this.lblOxygenTank.Text = "Oxygen Tank";
+            this.lblOxygenTank.Click += new System.EventHandler(this.lblOxygenTank_Click);
+            // 
+            // lblOxygenFarm
+            // 
+            this.lblOxygenFarm.AutoSize = true;
+            this.lblOxygenFarm.Location = new System.Drawing.Point(6, 448);
+            this.lblOxygenFarm.Name = "lblOxygenFarm";
+            this.lblOxygenFarm.Size = new System.Drawing.Size(69, 13);
+            this.lblOxygenFarm.TabIndex = 57;
+            this.lblOxygenFarm.Text = "Oxygen Farm";
+            // 
+            // lblHydroEngine
+            // 
+            this.lblHydroEngine.AutoSize = true;
+            this.lblHydroEngine.Location = new System.Drawing.Point(6, 422);
+            this.lblHydroEngine.Name = "lblHydroEngine";
+            this.lblHydroEngine.Size = new System.Drawing.Size(89, 13);
+            this.lblHydroEngine.TabIndex = 56;
+            this.lblHydroEngine.Text = "Hydrogen Engine";
+            // 
+            // lblO2H2gen
+            // 
+            this.lblO2H2gen.AutoSize = true;
+            this.lblO2H2gen.Location = new System.Drawing.Point(6, 396);
+            this.lblO2H2gen.Name = "lblO2H2gen";
+            this.lblO2H2gen.Size = new System.Drawing.Size(88, 13);
+            this.lblO2H2gen.TabIndex = 55;
+            this.lblO2H2gen.Text = "O2/H2 generator";
+            // 
+            // lblSpotlight
+            // 
+            this.lblSpotlight.AutoSize = true;
+            this.lblSpotlight.Location = new System.Drawing.Point(6, 370);
+            this.lblSpotlight.Name = "lblSpotlight";
+            this.lblSpotlight.Size = new System.Drawing.Size(48, 13);
+            this.lblSpotlight.TabIndex = 54;
+            this.lblSpotlight.Text = "Spotlight";
+            // 
+            // lblDrill
+            // 
+            this.lblDrill.AutoSize = true;
+            this.lblDrill.Location = new System.Drawing.Point(6, 344);
+            this.lblDrill.Name = "lblDrill";
+            this.lblDrill.Size = new System.Drawing.Size(24, 13);
+            this.lblDrill.TabIndex = 53;
+            this.lblDrill.Text = "Drill";
+            // 
+            // lblOreDetector
+            // 
+            this.lblOreDetector.AutoSize = true;
+            this.lblOreDetector.Location = new System.Drawing.Point(6, 318);
+            this.lblOreDetector.Name = "lblOreDetector";
+            this.lblOreDetector.Size = new System.Drawing.Size(68, 13);
+            this.lblOreDetector.TabIndex = 52;
+            this.lblOreDetector.Text = "Ore Detector";
+            // 
+            // lblBeacon
+            // 
+            this.lblBeacon.AutoSize = true;
+            this.lblBeacon.Location = new System.Drawing.Point(6, 292);
+            this.lblBeacon.Name = "lblBeacon";
+            this.lblBeacon.Size = new System.Drawing.Size(44, 13);
+            this.lblBeacon.TabIndex = 51;
+            this.lblBeacon.Text = "Beacon";
+            // 
+            // lblAntenna
+            // 
+            this.lblAntenna.AutoSize = true;
+            this.lblAntenna.Location = new System.Drawing.Point(6, 266);
+            this.lblAntenna.Name = "lblAntenna";
+            this.lblAntenna.Size = new System.Drawing.Size(47, 13);
+            this.lblAntenna.TabIndex = 50;
+            this.lblAntenna.Text = "Antenna";
+            // 
+            // lblGyroscope
+            // 
+            this.lblGyroscope.AutoSize = true;
+            this.lblGyroscope.Location = new System.Drawing.Point(6, 240);
+            this.lblGyroscope.Name = "lblGyroscope";
+            this.lblGyroscope.Size = new System.Drawing.Size(58, 13);
+            this.lblGyroscope.TabIndex = 49;
+            this.lblGyroscope.Text = "Gyroscope";
+            // 
+            // lblSmallHydroTank
+            // 
+            this.lblSmallHydroTank.AutoSize = true;
+            this.lblSmallHydroTank.Location = new System.Drawing.Point(6, 214);
+            this.lblSmallHydroTank.Name = "lblSmallHydroTank";
+            this.lblSmallHydroTank.Size = new System.Drawing.Size(109, 13);
+            this.lblSmallHydroTank.TabIndex = 48;
+            this.lblSmallHydroTank.Text = "Small Hydrogen Tank";
+            // 
+            // lblLargeHydroTank
+            // 
+            this.lblLargeHydroTank.AutoSize = true;
+            this.lblLargeHydroTank.Location = new System.Drawing.Point(6, 188);
+            this.lblLargeHydroTank.Name = "lblLargeHydroTank";
+            this.lblLargeHydroTank.Size = new System.Drawing.Size(112, 13);
+            this.lblLargeHydroTank.TabIndex = 47;
+            this.lblLargeHydroTank.Text = "Large Hudrogen Tank";
+            this.lblLargeHydroTank.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // lblBattery
+            // 
+            this.lblBattery.AutoSize = true;
+            this.lblBattery.Location = new System.Drawing.Point(6, 162);
+            this.lblBattery.Name = "lblBattery";
+            this.lblBattery.Size = new System.Drawing.Size(40, 13);
+            this.lblBattery.TabIndex = 46;
+            this.lblBattery.Text = "Battery";
+            // 
+            // lblCockpit
+            // 
+            this.lblCockpit.AutoSize = true;
+            this.lblCockpit.Location = new System.Drawing.Point(6, 136);
+            this.lblCockpit.Name = "lblCockpit";
+            this.lblCockpit.Size = new System.Drawing.Size(43, 13);
+            this.lblCockpit.TabIndex = 45;
+            this.lblCockpit.Text = "Cockpit";
+            // 
+            // lblLightArmorBlock
+            // 
+            this.lblLightArmorBlock.AutoSize = true;
+            this.lblLightArmorBlock.Location = new System.Drawing.Point(6, 110);
+            this.lblLightArmorBlock.Name = "lblLightArmorBlock";
+            this.lblLightArmorBlock.Size = new System.Drawing.Size(90, 13);
+            this.lblLightArmorBlock.TabIndex = 44;
+            this.lblLightArmorBlock.Text = "Light Armor Block";
+            // 
+            // lblHeavyArmorBlock
+            // 
+            this.lblHeavyArmorBlock.AutoSize = true;
+            this.lblHeavyArmorBlock.Location = new System.Drawing.Point(6, 84);
+            this.lblHeavyArmorBlock.Name = "lblHeavyArmorBlock";
+            this.lblHeavyArmorBlock.Size = new System.Drawing.Size(98, 13);
+            this.lblHeavyArmorBlock.TabIndex = 43;
+            this.lblHeavyArmorBlock.Text = "Heavy Armor Block";
+            // 
+            // lblMediumCargo
+            // 
+            this.lblMediumCargo.AutoSize = true;
+            this.lblMediumCargo.Location = new System.Drawing.Point(6, 32);
+            this.lblMediumCargo.Name = "lblMediumCargo";
+            this.lblMediumCargo.Size = new System.Drawing.Size(123, 13);
+            this.lblMediumCargo.TabIndex = 42;
+            this.lblMediumCargo.Text = "Medium Cargo Container";
+            // 
+            // lblSmallCargo
+            // 
+            this.lblSmallCargo.AutoSize = true;
+            this.lblSmallCargo.Location = new System.Drawing.Point(6, 58);
+            this.lblSmallCargo.Name = "lblSmallCargo";
+            this.lblSmallCargo.Size = new System.Drawing.Size(111, 13);
+            this.lblSmallCargo.TabIndex = 41;
+            this.lblSmallCargo.Text = "Small Cargo Container";
+            // 
+            // lblLargeCargo
+            // 
+            this.lblLargeCargo.AutoSize = true;
+            this.lblLargeCargo.Location = new System.Drawing.Point(6, 6);
+            this.lblLargeCargo.Name = "lblLargeCargo";
+            this.lblLargeCargo.Size = new System.Drawing.Size(113, 13);
+            this.lblLargeCargo.TabIndex = 40;
+            this.lblLargeCargo.Text = "Large Cargo Container";
+            // 
+            // tbxLargeCargo
+            // 
+            this.tbxLargeCargo.Location = new System.Drawing.Point(200, 6);
+            this.tbxLargeCargo.Name = "tbxLargeCargo";
+            this.tbxLargeCargo.Size = new System.Drawing.Size(100, 20);
+            this.tbxLargeCargo.TabIndex = 39;
             // 
             // textBox11
             // 
@@ -1287,437 +1535,483 @@
             this.tbxLargeAtmosphericThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeAtmosphericThruster.TabIndex = 20;
             // 
-            // tbxLargeCargo
-            // 
-            this.tbxLargeCargo.Location = new System.Drawing.Point(200, 6);
-            this.tbxLargeCargo.Name = "tbxLargeCargo";
-            this.tbxLargeCargo.Size = new System.Drawing.Size(100, 20);
-            this.tbxLargeCargo.TabIndex = 39;
-            // 
-            // lblLargeCargo
-            // 
-            this.lblLargeCargo.AutoSize = true;
-            this.lblLargeCargo.Location = new System.Drawing.Point(6, 6);
-            this.lblLargeCargo.Name = "lblLargeCargo";
-            this.lblLargeCargo.Size = new System.Drawing.Size(113, 13);
-            this.lblLargeCargo.TabIndex = 40;
-            this.lblLargeCargo.Text = "Large Cargo Container";
-            // 
-            // lblSmallCargo
-            // 
-            this.lblSmallCargo.AutoSize = true;
-            this.lblSmallCargo.Location = new System.Drawing.Point(6, 58);
-            this.lblSmallCargo.Name = "lblSmallCargo";
-            this.lblSmallCargo.Size = new System.Drawing.Size(111, 13);
-            this.lblSmallCargo.TabIndex = 41;
-            this.lblSmallCargo.Text = "Small Cargo Container";
-            // 
-            // lblMediumCargo
-            // 
-            this.lblMediumCargo.AutoSize = true;
-            this.lblMediumCargo.Location = new System.Drawing.Point(6, 32);
-            this.lblMediumCargo.Name = "lblMediumCargo";
-            this.lblMediumCargo.Size = new System.Drawing.Size(123, 13);
-            this.lblMediumCargo.TabIndex = 42;
-            this.lblMediumCargo.Text = "Medium Cargo Container";
-            // 
-            // lblHeavyArmorBlock
-            // 
-            this.lblHeavyArmorBlock.AutoSize = true;
-            this.lblHeavyArmorBlock.Location = new System.Drawing.Point(6, 84);
-            this.lblHeavyArmorBlock.Name = "lblHeavyArmorBlock";
-            this.lblHeavyArmorBlock.Size = new System.Drawing.Size(98, 13);
-            this.lblHeavyArmorBlock.TabIndex = 43;
-            this.lblHeavyArmorBlock.Text = "Heavy Armor Block";
-            // 
-            // lblLightArmorBlock
-            // 
-            this.lblLightArmorBlock.AutoSize = true;
-            this.lblLightArmorBlock.Location = new System.Drawing.Point(6, 110);
-            this.lblLightArmorBlock.Name = "lblLightArmorBlock";
-            this.lblLightArmorBlock.Size = new System.Drawing.Size(90, 13);
-            this.lblLightArmorBlock.TabIndex = 44;
-            this.lblLightArmorBlock.Text = "Light Armor Block";
-            // 
-            // lblCockpit
-            // 
-            this.lblCockpit.AutoSize = true;
-            this.lblCockpit.Location = new System.Drawing.Point(6, 136);
-            this.lblCockpit.Name = "lblCockpit";
-            this.lblCockpit.Size = new System.Drawing.Size(43, 13);
-            this.lblCockpit.TabIndex = 45;
-            this.lblCockpit.Text = "Cockpit";
-            // 
-            // lblBattery
-            // 
-            this.lblBattery.AutoSize = true;
-            this.lblBattery.Location = new System.Drawing.Point(6, 162);
-            this.lblBattery.Name = "lblBattery";
-            this.lblBattery.Size = new System.Drawing.Size(40, 13);
-            this.lblBattery.TabIndex = 46;
-            this.lblBattery.Text = "Battery";
-            // 
-            // lblLargeHydroTank
-            // 
-            this.lblLargeHydroTank.AutoSize = true;
-            this.lblLargeHydroTank.Location = new System.Drawing.Point(6, 188);
-            this.lblLargeHydroTank.Name = "lblLargeHydroTank";
-            this.lblLargeHydroTank.Size = new System.Drawing.Size(112, 13);
-            this.lblLargeHydroTank.TabIndex = 47;
-            this.lblLargeHydroTank.Text = "Large Hudrogen Tank";
-            this.lblLargeHydroTank.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // lblSmallHydroTank
-            // 
-            this.lblSmallHydroTank.AutoSize = true;
-            this.lblSmallHydroTank.Location = new System.Drawing.Point(6, 214);
-            this.lblSmallHydroTank.Name = "lblSmallHydroTank";
-            this.lblSmallHydroTank.Size = new System.Drawing.Size(109, 13);
-            this.lblSmallHydroTank.TabIndex = 48;
-            this.lblSmallHydroTank.Text = "Small Hydrogen Tank";
-            // 
-            // lblGyroscope
-            // 
-            this.lblGyroscope.AutoSize = true;
-            this.lblGyroscope.Location = new System.Drawing.Point(6, 240);
-            this.lblGyroscope.Name = "lblGyroscope";
-            this.lblGyroscope.Size = new System.Drawing.Size(58, 13);
-            this.lblGyroscope.TabIndex = 49;
-            this.lblGyroscope.Text = "Gyroscope";
-            // 
-            // lblAntenna
-            // 
-            this.lblAntenna.AutoSize = true;
-            this.lblAntenna.Location = new System.Drawing.Point(6, 266);
-            this.lblAntenna.Name = "lblAntenna";
-            this.lblAntenna.Size = new System.Drawing.Size(47, 13);
-            this.lblAntenna.TabIndex = 50;
-            this.lblAntenna.Text = "Antenna";
-            // 
-            // lblBeacon
-            // 
-            this.lblBeacon.AutoSize = true;
-            this.lblBeacon.Location = new System.Drawing.Point(6, 292);
-            this.lblBeacon.Name = "lblBeacon";
-            this.lblBeacon.Size = new System.Drawing.Size(44, 13);
-            this.lblBeacon.TabIndex = 51;
-            this.lblBeacon.Text = "Beacon";
-            // 
-            // lblOreDetector
-            // 
-            this.lblOreDetector.AutoSize = true;
-            this.lblOreDetector.Location = new System.Drawing.Point(6, 318);
-            this.lblOreDetector.Name = "lblOreDetector";
-            this.lblOreDetector.Size = new System.Drawing.Size(68, 13);
-            this.lblOreDetector.TabIndex = 52;
-            this.lblOreDetector.Text = "Ore Detector";
-            // 
-            // lblDrill
-            // 
-            this.lblDrill.AutoSize = true;
-            this.lblDrill.Location = new System.Drawing.Point(6, 344);
-            this.lblDrill.Name = "lblDrill";
-            this.lblDrill.Size = new System.Drawing.Size(24, 13);
-            this.lblDrill.TabIndex = 53;
-            this.lblDrill.Text = "Drill";
-            // 
-            // lblSpotlight
-            // 
-            this.lblSpotlight.AutoSize = true;
-            this.lblSpotlight.Location = new System.Drawing.Point(6, 370);
-            this.lblSpotlight.Name = "lblSpotlight";
-            this.lblSpotlight.Size = new System.Drawing.Size(48, 13);
-            this.lblSpotlight.TabIndex = 54;
-            this.lblSpotlight.Text = "Spotlight";
-            // 
-            // lblO2H2gen
-            // 
-            this.lblO2H2gen.AutoSize = true;
-            this.lblO2H2gen.Location = new System.Drawing.Point(6, 396);
-            this.lblO2H2gen.Name = "lblO2H2gen";
-            this.lblO2H2gen.Size = new System.Drawing.Size(88, 13);
-            this.lblO2H2gen.TabIndex = 55;
-            this.lblO2H2gen.Text = "O2/H2 generator";
-            // 
-            // lblHydroEngine
-            // 
-            this.lblHydroEngine.AutoSize = true;
-            this.lblHydroEngine.Location = new System.Drawing.Point(6, 422);
-            this.lblHydroEngine.Name = "lblHydroEngine";
-            this.lblHydroEngine.Size = new System.Drawing.Size(89, 13);
-            this.lblHydroEngine.TabIndex = 56;
-            this.lblHydroEngine.Text = "Hydrogen Engine";
-            // 
-            // lblOxygenFarm
-            // 
-            this.lblOxygenFarm.AutoSize = true;
-            this.lblOxygenFarm.Location = new System.Drawing.Point(6, 448);
-            this.lblOxygenFarm.Name = "lblOxygenFarm";
-            this.lblOxygenFarm.Size = new System.Drawing.Size(69, 13);
-            this.lblOxygenFarm.TabIndex = 57;
-            this.lblOxygenFarm.Text = "Oxygen Farm";
-            // 
-            // lblOxygenTank
-            // 
-            this.lblOxygenTank.AutoSize = true;
-            this.lblOxygenTank.Location = new System.Drawing.Point(6, 474);
-            this.lblOxygenTank.Name = "lblOxygenTank";
-            this.lblOxygenTank.Size = new System.Drawing.Size(71, 13);
-            this.lblOxygenTank.TabIndex = 58;
-            this.lblOxygenTank.Text = "Oxygen Tank";
-            this.lblOxygenTank.Click += new System.EventHandler(this.lblOxygenTank_Click);
-            // 
-            // lblLargeAtmosphericThruster
-            // 
-            this.lblLargeAtmosphericThruster.AutoSize = true;
-            this.lblLargeAtmosphericThruster.Location = new System.Drawing.Point(333, 6);
-            this.lblLargeAtmosphericThruster.Name = "lblLargeAtmosphericThruster";
-            this.lblLargeAtmosphericThruster.Size = new System.Drawing.Size(137, 13);
-            this.lblLargeAtmosphericThruster.TabIndex = 59;
-            this.lblLargeAtmosphericThruster.Text = "Large Atmospheric Thruster";
-            // 
-            // lblAtmosphericThruster
-            // 
-            this.lblAtmosphericThruster.AutoSize = true;
-            this.lblAtmosphericThruster.Location = new System.Drawing.Point(333, 32);
-            this.lblAtmosphericThruster.Name = "lblAtmosphericThruster";
-            this.lblAtmosphericThruster.Size = new System.Drawing.Size(107, 13);
-            this.lblAtmosphericThruster.TabIndex = 60;
-            this.lblAtmosphericThruster.Text = "Atmospheric Thruster";
-            // 
-            // lblLargeHydroThruster
-            // 
-            this.lblLargeHydroThruster.AutoSize = true;
-            this.lblLargeHydroThruster.Location = new System.Drawing.Point(333, 58);
-            this.lblLargeHydroThruster.Name = "lblLargeHydroThruster";
-            this.lblLargeHydroThruster.Size = new System.Drawing.Size(125, 13);
-            this.lblLargeHydroThruster.TabIndex = 61;
-            this.lblLargeHydroThruster.Text = "Large Hydrogen Thruster";
-            // 
-            // lblHydroThruster
-            // 
-            this.lblHydroThruster.AutoSize = true;
-            this.lblHydroThruster.Location = new System.Drawing.Point(333, 84);
-            this.lblHydroThruster.Name = "lblHydroThruster";
-            this.lblHydroThruster.Size = new System.Drawing.Size(95, 13);
-            this.lblHydroThruster.TabIndex = 62;
-            this.lblHydroThruster.Text = "Hydrogen Thruster";
-            // 
-            // lblLargeIonThruster
-            // 
-            this.lblLargeIonThruster.AutoSize = true;
-            this.lblLargeIonThruster.Location = new System.Drawing.Point(333, 110);
-            this.lblLargeIonThruster.Name = "lblLargeIonThruster";
-            this.lblLargeIonThruster.Size = new System.Drawing.Size(94, 13);
-            this.lblLargeIonThruster.TabIndex = 63;
-            this.lblLargeIonThruster.Text = "Large Ion Thruster";
-            // 
-            // lblIonThruster
-            // 
-            this.lblIonThruster.AutoSize = true;
-            this.lblIonThruster.Location = new System.Drawing.Point(333, 136);
-            this.lblIonThruster.Name = "lblIonThruster";
-            this.lblIonThruster.Size = new System.Drawing.Size(64, 13);
-            this.lblIonThruster.TabIndex = 64;
-            this.lblIonThruster.Text = "Ion Thruster";
-            // 
-            // lblAirVent
-            // 
-            this.lblAirVent.AutoSize = true;
-            this.lblAirVent.Location = new System.Drawing.Point(333, 162);
-            this.lblAirVent.Name = "lblAirVent";
-            this.lblAirVent.Size = new System.Drawing.Size(44, 13);
-            this.lblAirVent.TabIndex = 65;
-            this.lblAirVent.Text = "Air Vent";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(333, 188);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(41, 13);
-            this.label31.TabIndex = 66;
-            this.label31.Text = "label31";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(333, 214);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 13);
-            this.label32.TabIndex = 67;
-            this.label32.Text = "label32";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(333, 240);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(41, 13);
-            this.label33.TabIndex = 68;
-            this.label33.Text = "label33";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(333, 292);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(41, 13);
-            this.label34.TabIndex = 69;
-            this.label34.Text = "label34";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(333, 266);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(41, 13);
-            this.label35.TabIndex = 70;
-            this.label35.Text = "label35";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(333, 318);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(41, 13);
-            this.label36.TabIndex = 71;
-            this.label36.Text = "label36";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(333, 344);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(41, 13);
-            this.label37.TabIndex = 72;
-            this.label37.Text = "label37";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(333, 370);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(41, 13);
-            this.label38.TabIndex = 73;
-            this.label38.Text = "label38";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(333, 396);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(41, 13);
-            this.label39.TabIndex = 74;
-            this.label39.Text = "label39";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(333, 422);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(41, 13);
-            this.label40.TabIndex = 75;
-            this.label40.Text = "label40";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(333, 448);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(41, 13);
-            this.label41.TabIndex = 76;
-            this.label41.Text = "label41";
-            // 
-            // cbxGridSize
-            // 
-            this.cbxGridSize.FormattingEnabled = true;
-            this.cbxGridSize.Items.AddRange(new object[] {
-            "Large Grid",
-            "Small Grid"});
-            this.cbxGridSize.Location = new System.Drawing.Point(336, 471);
-            this.cbxGridSize.Name = "cbxGridSize";
-            this.cbxGridSize.Size = new System.Drawing.Size(121, 21);
-            this.cbxGridSize.TabIndex = 77;
-            this.cbxGridSize.Click += new System.EventHandler(this.cbxGridSize_Click);
-            // 
-            // btnResource
-            // 
-            this.btnResource.Location = new System.Drawing.Point(536, 474);
-            this.btnResource.Name = "btnResource";
-            this.btnResource.Size = new System.Drawing.Size(100, 23);
-            this.btnResource.TabIndex = 78;
-            this.btnResource.Text = "Calculate";
-            this.btnResource.UseVisualStyleBackColor = true;
-            this.btnResource.Click += new System.EventHandler(this.btnResource_Click);
-            // 
-            // lblIronTot
-            // 
-            this.lblIronTot.AutoSize = true;
-            this.lblIronTot.Location = new System.Drawing.Point(18, 17);
-            this.lblIronTot.Name = "lblIronTot";
-            this.lblIronTot.Size = new System.Drawing.Size(79, 13);
-            this.lblIronTot.TabIndex = 0;
-            this.lblIronTot.Text = "Total Iron Cost:";
-            // 
-            // lblNickelTot
-            // 
-            this.lblNickelTot.AutoSize = true;
-            this.lblNickelTot.Location = new System.Drawing.Point(18, 43);
-            this.lblNickelTot.Name = "lblNickelTot";
-            this.lblNickelTot.Size = new System.Drawing.Size(91, 13);
-            this.lblNickelTot.TabIndex = 1;
-            this.lblNickelTot.Text = "Total Nickel Cost:";
-            // 
-            // lblCobaltTot
-            // 
-            this.lblCobaltTot.AutoSize = true;
-            this.lblCobaltTot.Location = new System.Drawing.Point(18, 69);
-            this.lblCobaltTot.Name = "lblCobaltTot";
-            this.lblCobaltTot.Size = new System.Drawing.Size(88, 13);
-            this.lblCobaltTot.TabIndex = 2;
-            this.lblCobaltTot.Text = "Total Cobalt Cost";
-            // 
-            // lblSiliconTot
-            // 
-            this.lblSiliconTot.AutoSize = true;
-            this.lblSiliconTot.Location = new System.Drawing.Point(18, 95);
-            this.lblSiliconTot.Name = "lblSiliconTot";
-            this.lblSiliconTot.Size = new System.Drawing.Size(92, 13);
-            this.lblSiliconTot.TabIndex = 3;
-            this.lblSiliconTot.Text = "Total Silicon Cost:";
-            // 
-            // tbxIronTot
-            // 
-            this.tbxIronTot.Location = new System.Drawing.Point(121, 17);
-            this.tbxIronTot.Name = "tbxIronTot";
-            this.tbxIronTot.ReadOnly = true;
-            this.tbxIronTot.Size = new System.Drawing.Size(100, 20);
-            this.tbxIronTot.TabIndex = 4;
-            // 
-            // tbxSiliconTot
-            // 
-            this.tbxSiliconTot.Location = new System.Drawing.Point(121, 95);
-            this.tbxSiliconTot.Name = "tbxSiliconTot";
-            this.tbxSiliconTot.ReadOnly = true;
-            this.tbxSiliconTot.Size = new System.Drawing.Size(100, 20);
-            this.tbxSiliconTot.TabIndex = 5;
+            // tbxBeacon
+            // 
+            this.tbxBeacon.Location = new System.Drawing.Point(200, 292);
+            this.tbxBeacon.Name = "tbxBeacon";
+            this.tbxBeacon.Size = new System.Drawing.Size(100, 20);
+            this.tbxBeacon.TabIndex = 19;
+            // 
+            // tbxOreDetector
+            // 
+            this.tbxOreDetector.Location = new System.Drawing.Point(200, 318);
+            this.tbxOreDetector.Name = "tbxOreDetector";
+            this.tbxOreDetector.Size = new System.Drawing.Size(100, 20);
+            this.tbxOreDetector.TabIndex = 18;
+            // 
+            // tbxDrill
+            // 
+            this.tbxDrill.Location = new System.Drawing.Point(200, 344);
+            this.tbxDrill.Name = "tbxDrill";
+            this.tbxDrill.Size = new System.Drawing.Size(100, 20);
+            this.tbxDrill.TabIndex = 17;
+            // 
+            // tbxSpotlight
+            // 
+            this.tbxSpotlight.Location = new System.Drawing.Point(200, 370);
+            this.tbxSpotlight.Name = "tbxSpotlight";
+            this.tbxSpotlight.Size = new System.Drawing.Size(100, 20);
+            this.tbxSpotlight.TabIndex = 16;
+            // 
+            // tbxO2H2gen
+            // 
+            this.tbxO2H2gen.Location = new System.Drawing.Point(200, 396);
+            this.tbxO2H2gen.Name = "tbxO2H2gen";
+            this.tbxO2H2gen.Size = new System.Drawing.Size(100, 20);
+            this.tbxO2H2gen.TabIndex = 15;
+            // 
+            // tbxHydroEngine
+            // 
+            this.tbxHydroEngine.Location = new System.Drawing.Point(200, 422);
+            this.tbxHydroEngine.Name = "tbxHydroEngine";
+            this.tbxHydroEngine.Size = new System.Drawing.Size(100, 20);
+            this.tbxHydroEngine.TabIndex = 14;
+            // 
+            // tbxOxygenFarm
+            // 
+            this.tbxOxygenFarm.Location = new System.Drawing.Point(200, 448);
+            this.tbxOxygenFarm.Name = "tbxOxygenFarm";
+            this.tbxOxygenFarm.Size = new System.Drawing.Size(100, 20);
+            this.tbxOxygenFarm.TabIndex = 13;
+            // 
+            // tbxOxygenTank
+            // 
+            this.tbxOxygenTank.Location = new System.Drawing.Point(200, 474);
+            this.tbxOxygenTank.Name = "tbxOxygenTank";
+            this.tbxOxygenTank.Size = new System.Drawing.Size(100, 20);
+            this.tbxOxygenTank.TabIndex = 12;
+            // 
+            // tbxSmallCargo
+            // 
+            this.tbxSmallCargo.Location = new System.Drawing.Point(200, 58);
+            this.tbxSmallCargo.Name = "tbxSmallCargo";
+            this.tbxSmallCargo.Size = new System.Drawing.Size(100, 20);
+            this.tbxSmallCargo.TabIndex = 9;
+            // 
+            // tbxHeavyArmorBlock
+            // 
+            this.tbxHeavyArmorBlock.Location = new System.Drawing.Point(200, 84);
+            this.tbxHeavyArmorBlock.Name = "tbxHeavyArmorBlock";
+            this.tbxHeavyArmorBlock.Size = new System.Drawing.Size(100, 20);
+            this.tbxHeavyArmorBlock.TabIndex = 8;
+            // 
+            // tbxLightArmorBlock
+            // 
+            this.tbxLightArmorBlock.Location = new System.Drawing.Point(200, 110);
+            this.tbxLightArmorBlock.Name = "tbxLightArmorBlock";
+            this.tbxLightArmorBlock.Size = new System.Drawing.Size(100, 20);
+            this.tbxLightArmorBlock.TabIndex = 7;
+            // 
+            // tbxCockpit
+            // 
+            this.tbxCockpit.Location = new System.Drawing.Point(200, 136);
+            this.tbxCockpit.Name = "tbxCockpit";
+            this.tbxCockpit.Size = new System.Drawing.Size(100, 20);
+            this.tbxCockpit.TabIndex = 6;
+            // 
+            // tbxBattery
+            // 
+            this.tbxBattery.Location = new System.Drawing.Point(200, 162);
+            this.tbxBattery.Name = "tbxBattery";
+            this.tbxBattery.Size = new System.Drawing.Size(100, 20);
+            this.tbxBattery.TabIndex = 5;
+            // 
+            // tbxLargeHydroTank
+            // 
+            this.tbxLargeHydroTank.Location = new System.Drawing.Point(200, 188);
+            this.tbxLargeHydroTank.Name = "tbxLargeHydroTank";
+            this.tbxLargeHydroTank.Size = new System.Drawing.Size(100, 20);
+            this.tbxLargeHydroTank.TabIndex = 4;
+            // 
+            // tbxSmallHydroTank
+            // 
+            this.tbxSmallHydroTank.Location = new System.Drawing.Point(200, 214);
+            this.tbxSmallHydroTank.Name = "tbxSmallHydroTank";
+            this.tbxSmallHydroTank.Size = new System.Drawing.Size(100, 20);
+            this.tbxSmallHydroTank.TabIndex = 3;
+            // 
+            // tbxGyroscope
+            // 
+            this.tbxGyroscope.Location = new System.Drawing.Point(200, 240);
+            this.tbxGyroscope.Name = "tbxGyroscope";
+            this.tbxGyroscope.Size = new System.Drawing.Size(100, 20);
+            this.tbxGyroscope.TabIndex = 2;
+            // 
+            // tbxAntenna
+            // 
+            this.tbxAntenna.Location = new System.Drawing.Point(200, 266);
+            this.tbxAntenna.Name = "tbxAntenna";
+            this.tbxAntenna.Size = new System.Drawing.Size(100, 20);
+            this.tbxAntenna.TabIndex = 1;
+            // 
+            // tbxMediumCargo
+            // 
+            this.tbxMediumCargo.Location = new System.Drawing.Point(200, 32);
+            this.tbxMediumCargo.Name = "tbxMediumCargo";
+            this.tbxMediumCargo.Size = new System.Drawing.Size(100, 20);
+            this.tbxMediumCargo.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.tbxDetectorComponent);
+            this.tabPage3.Controls.Add(this.tbxRadioComponent);
+            this.tabPage3.Controls.Add(this.tbxPowerCell);
+            this.tabPage3.Controls.Add(this.tbxDisplay);
+            this.tabPage3.Controls.Add(this.tbxMetalGrid);
+            this.tabPage3.Controls.Add(this.tbxMotor);
+            this.tabPage3.Controls.Add(this.tbxInteriorPlate);
+            this.tabPage3.Controls.Add(this.tbxBulletproofGlass);
+            this.tabPage3.Controls.Add(this.tbxComputer);
+            this.tabPage3.Controls.Add(this.tbxConstructionComponent);
+            this.tabPage3.Controls.Add(this.tbxSmallSteelTube);
+            this.tabPage3.Controls.Add(this.tbxLargeSteelTube);
+            this.tabPage3.Controls.Add(this.tbxSteelPlate);
+            this.tabPage3.Controls.Add(this.lblDetectorComponent);
+            this.tabPage3.Controls.Add(this.lblRadioComponent);
+            this.tabPage3.Controls.Add(this.lblPowerCell);
+            this.tabPage3.Controls.Add(this.lblDisplay);
+            this.tabPage3.Controls.Add(this.lblMetalGrid);
+            this.tabPage3.Controls.Add(this.lblMotor);
+            this.tabPage3.Controls.Add(this.lblInteriorPlate);
+            this.tabPage3.Controls.Add(this.lblBulletproofGlass);
+            this.tabPage3.Controls.Add(this.lblComputer);
+            this.tabPage3.Controls.Add(this.lblConstructionComponent);
+            this.tabPage3.Controls.Add(this.lblSmallSteelTube);
+            this.tabPage3.Controls.Add(this.lblLargeSteelTube);
+            this.tabPage3.Controls.Add(this.lblSteelPlates);
+            this.tabPage3.Controls.Add(this.tbxPCUCost);
+            this.tabPage3.Controls.Add(this.lblPCUCost);
+            this.tabPage3.Controls.Add(this.tbxNickelTot);
+            this.tabPage3.Controls.Add(this.tbxCobaltTot);
+            this.tabPage3.Controls.Add(this.tbxSiliconTot);
+            this.tabPage3.Controls.Add(this.tbxIronTot);
+            this.tabPage3.Controls.Add(this.lblSiliconTot);
+            this.tabPage3.Controls.Add(this.lblCobaltTot);
+            this.tabPage3.Controls.Add(this.lblNickelTot);
+            this.tabPage3.Controls.Add(this.lblIronTot);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(642, 509);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "Results";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tbxNickelTot
+            // 
+            this.tbxNickelTot.Location = new System.Drawing.Point(515, 47);
+            this.tbxNickelTot.Name = "tbxNickelTot";
+            this.tbxNickelTot.ReadOnly = true;
+            this.tbxNickelTot.Size = new System.Drawing.Size(100, 20);
+            this.tbxNickelTot.TabIndex = 7;
             // 
             // tbxCobaltTot
             // 
-            this.tbxCobaltTot.Location = new System.Drawing.Point(121, 69);
+            this.tbxCobaltTot.Location = new System.Drawing.Point(515, 73);
             this.tbxCobaltTot.Name = "tbxCobaltTot";
             this.tbxCobaltTot.ReadOnly = true;
             this.tbxCobaltTot.Size = new System.Drawing.Size(100, 20);
             this.tbxCobaltTot.TabIndex = 6;
             // 
-            // tbxNickelTot
+            // tbxSiliconTot
             // 
-            this.tbxNickelTot.Location = new System.Drawing.Point(121, 43);
-            this.tbxNickelTot.Name = "tbxNickelTot";
-            this.tbxNickelTot.ReadOnly = true;
-            this.tbxNickelTot.Size = new System.Drawing.Size(100, 20);
-            this.tbxNickelTot.TabIndex = 7;
+            this.tbxSiliconTot.Location = new System.Drawing.Point(515, 99);
+            this.tbxSiliconTot.Name = "tbxSiliconTot";
+            this.tbxSiliconTot.ReadOnly = true;
+            this.tbxSiliconTot.Size = new System.Drawing.Size(100, 20);
+            this.tbxSiliconTot.TabIndex = 5;
+            // 
+            // tbxIronTot
+            // 
+            this.tbxIronTot.Location = new System.Drawing.Point(515, 21);
+            this.tbxIronTot.Name = "tbxIronTot";
+            this.tbxIronTot.ReadOnly = true;
+            this.tbxIronTot.Size = new System.Drawing.Size(100, 20);
+            this.tbxIronTot.TabIndex = 4;
+            // 
+            // lblSiliconTot
+            // 
+            this.lblSiliconTot.AutoSize = true;
+            this.lblSiliconTot.Location = new System.Drawing.Point(412, 99);
+            this.lblSiliconTot.Name = "lblSiliconTot";
+            this.lblSiliconTot.Size = new System.Drawing.Size(92, 13);
+            this.lblSiliconTot.TabIndex = 3;
+            this.lblSiliconTot.Text = "Total Silicon Cost:";
+            // 
+            // lblCobaltTot
+            // 
+            this.lblCobaltTot.AutoSize = true;
+            this.lblCobaltTot.Location = new System.Drawing.Point(412, 73);
+            this.lblCobaltTot.Name = "lblCobaltTot";
+            this.lblCobaltTot.Size = new System.Drawing.Size(88, 13);
+            this.lblCobaltTot.TabIndex = 2;
+            this.lblCobaltTot.Text = "Total Cobalt Cost";
+            // 
+            // lblNickelTot
+            // 
+            this.lblNickelTot.AutoSize = true;
+            this.lblNickelTot.Location = new System.Drawing.Point(412, 47);
+            this.lblNickelTot.Name = "lblNickelTot";
+            this.lblNickelTot.Size = new System.Drawing.Size(91, 13);
+            this.lblNickelTot.TabIndex = 1;
+            this.lblNickelTot.Text = "Total Nickel Cost:";
+            // 
+            // lblIronTot
+            // 
+            this.lblIronTot.AutoSize = true;
+            this.lblIronTot.Location = new System.Drawing.Point(412, 21);
+            this.lblIronTot.Name = "lblIronTot";
+            this.lblIronTot.Size = new System.Drawing.Size(79, 13);
+            this.lblIronTot.TabIndex = 0;
+            this.lblIronTot.Text = "Total Iron Cost:";
+            // 
+            // lblPCUCost
+            // 
+            this.lblPCUCost.AutoSize = true;
+            this.lblPCUCost.Location = new System.Drawing.Point(412, 125);
+            this.lblPCUCost.Name = "lblPCUCost";
+            this.lblPCUCost.Size = new System.Drawing.Size(82, 13);
+            this.lblPCUCost.TabIndex = 8;
+            this.lblPCUCost.Text = "Total PCU cost:";
+            // 
+            // tbxPCUCost
+            // 
+            this.tbxPCUCost.Location = new System.Drawing.Point(515, 125);
+            this.tbxPCUCost.Name = "tbxPCUCost";
+            this.tbxPCUCost.ReadOnly = true;
+            this.tbxPCUCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxPCUCost.TabIndex = 9;
+            // 
+            // lblSteelPlates
+            // 
+            this.lblSteelPlates.AutoSize = true;
+            this.lblSteelPlates.Location = new System.Drawing.Point(6, 27);
+            this.lblSteelPlates.Name = "lblSteelPlates";
+            this.lblSteelPlates.Size = new System.Drawing.Size(63, 13);
+            this.lblSteelPlates.TabIndex = 10;
+            this.lblSteelPlates.Text = "Steel Plates";
+            // 
+            // lblLargeSteelTube
+            // 
+            this.lblLargeSteelTube.AutoSize = true;
+            this.lblLargeSteelTube.Location = new System.Drawing.Point(6, 53);
+            this.lblLargeSteelTube.Name = "lblLargeSteelTube";
+            this.lblLargeSteelTube.Size = new System.Drawing.Size(89, 13);
+            this.lblLargeSteelTube.TabIndex = 11;
+            this.lblLargeSteelTube.Text = "Large Steel Tube";
+            // 
+            // lblSmallSteelTube
+            // 
+            this.lblSmallSteelTube.AutoSize = true;
+            this.lblSmallSteelTube.Location = new System.Drawing.Point(6, 79);
+            this.lblSmallSteelTube.Name = "lblSmallSteelTube";
+            this.lblSmallSteelTube.Size = new System.Drawing.Size(87, 13);
+            this.lblSmallSteelTube.TabIndex = 12;
+            this.lblSmallSteelTube.Text = "Small Steel Tube";
+            // 
+            // lblConstructionComponent
+            // 
+            this.lblConstructionComponent.AutoSize = true;
+            this.lblConstructionComponent.Location = new System.Drawing.Point(6, 105);
+            this.lblConstructionComponent.Name = "lblConstructionComponent";
+            this.lblConstructionComponent.Size = new System.Drawing.Size(123, 13);
+            this.lblConstructionComponent.TabIndex = 13;
+            this.lblConstructionComponent.Text = "Construction Component";
+            // 
+            // lblComputer
+            // 
+            this.lblComputer.AutoSize = true;
+            this.lblComputer.Location = new System.Drawing.Point(6, 131);
+            this.lblComputer.Name = "lblComputer";
+            this.lblComputer.Size = new System.Drawing.Size(52, 13);
+            this.lblComputer.TabIndex = 14;
+            this.lblComputer.Text = "Computer";
+            // 
+            // lblBulletproofGlass
+            // 
+            this.lblBulletproofGlass.AutoSize = true;
+            this.lblBulletproofGlass.Location = new System.Drawing.Point(6, 157);
+            this.lblBulletproofGlass.Name = "lblBulletproofGlass";
+            this.lblBulletproofGlass.Size = new System.Drawing.Size(86, 13);
+            this.lblBulletproofGlass.TabIndex = 15;
+            this.lblBulletproofGlass.Text = "Bulletproof Glass";
+            // 
+            // lblInteriorPlate
+            // 
+            this.lblInteriorPlate.AutoSize = true;
+            this.lblInteriorPlate.Location = new System.Drawing.Point(6, 183);
+            this.lblInteriorPlate.Name = "lblInteriorPlate";
+            this.lblInteriorPlate.Size = new System.Drawing.Size(66, 13);
+            this.lblInteriorPlate.TabIndex = 16;
+            this.lblInteriorPlate.Text = "Interior Plate";
+            // 
+            // lblMotor
+            // 
+            this.lblMotor.AutoSize = true;
+            this.lblMotor.Location = new System.Drawing.Point(6, 209);
+            this.lblMotor.Name = "lblMotor";
+            this.lblMotor.Size = new System.Drawing.Size(34, 13);
+            this.lblMotor.TabIndex = 17;
+            this.lblMotor.Text = "Motor";
+            // 
+            // lblMetalGrid
+            // 
+            this.lblMetalGrid.AutoSize = true;
+            this.lblMetalGrid.Location = new System.Drawing.Point(6, 235);
+            this.lblMetalGrid.Name = "lblMetalGrid";
+            this.lblMetalGrid.Size = new System.Drawing.Size(55, 13);
+            this.lblMetalGrid.TabIndex = 18;
+            this.lblMetalGrid.Text = "Metal Grid";
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Location = new System.Drawing.Point(6, 261);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(41, 13);
+            this.lblDisplay.TabIndex = 19;
+            this.lblDisplay.Text = "Display";
+            // 
+            // lblPowerCell
+            // 
+            this.lblPowerCell.AutoSize = true;
+            this.lblPowerCell.Location = new System.Drawing.Point(6, 287);
+            this.lblPowerCell.Name = "lblPowerCell";
+            this.lblPowerCell.Size = new System.Drawing.Size(57, 13);
+            this.lblPowerCell.TabIndex = 20;
+            this.lblPowerCell.Text = "Power Cell";
+            // 
+            // lblRadioComponent
+            // 
+            this.lblRadioComponent.AutoSize = true;
+            this.lblRadioComponent.Location = new System.Drawing.Point(6, 313);
+            this.lblRadioComponent.Name = "lblRadioComponent";
+            this.lblRadioComponent.Size = new System.Drawing.Size(92, 13);
+            this.lblRadioComponent.TabIndex = 21;
+            this.lblRadioComponent.Text = "Radio Component";
+            // 
+            // lblDetectorComponent
+            // 
+            this.lblDetectorComponent.AutoSize = true;
+            this.lblDetectorComponent.Location = new System.Drawing.Point(6, 339);
+            this.lblDetectorComponent.Name = "lblDetectorComponent";
+            this.lblDetectorComponent.Size = new System.Drawing.Size(105, 13);
+            this.lblDetectorComponent.TabIndex = 22;
+            this.lblDetectorComponent.Text = "Detector Component";
+            // 
+            // tbxSteelPlate
+            // 
+            this.tbxSteelPlate.Location = new System.Drawing.Point(134, 24);
+            this.tbxSteelPlate.Name = "tbxSteelPlate";
+            this.tbxSteelPlate.ReadOnly = true;
+            this.tbxSteelPlate.Size = new System.Drawing.Size(100, 20);
+            this.tbxSteelPlate.TabIndex = 23;
+            // 
+            // tbxLargeSteelTube
+            // 
+            this.tbxLargeSteelTube.Location = new System.Drawing.Point(134, 50);
+            this.tbxLargeSteelTube.Name = "tbxLargeSteelTube";
+            this.tbxLargeSteelTube.ReadOnly = true;
+            this.tbxLargeSteelTube.Size = new System.Drawing.Size(100, 20);
+            this.tbxLargeSteelTube.TabIndex = 24;
+            // 
+            // tbxSmallSteelTube
+            // 
+            this.tbxSmallSteelTube.Location = new System.Drawing.Point(134, 76);
+            this.tbxSmallSteelTube.Name = "tbxSmallSteelTube";
+            this.tbxSmallSteelTube.ReadOnly = true;
+            this.tbxSmallSteelTube.Size = new System.Drawing.Size(100, 20);
+            this.tbxSmallSteelTube.TabIndex = 25;
+            // 
+            // tbxConstructionComponent
+            // 
+            this.tbxConstructionComponent.Location = new System.Drawing.Point(134, 102);
+            this.tbxConstructionComponent.Name = "tbxConstructionComponent";
+            this.tbxConstructionComponent.ReadOnly = true;
+            this.tbxConstructionComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxConstructionComponent.TabIndex = 26;
+            // 
+            // tbxComputer
+            // 
+            this.tbxComputer.Location = new System.Drawing.Point(134, 128);
+            this.tbxComputer.Name = "tbxComputer";
+            this.tbxComputer.ReadOnly = true;
+            this.tbxComputer.Size = new System.Drawing.Size(100, 20);
+            this.tbxComputer.TabIndex = 27;
+            // 
+            // tbxBulletproofGlass
+            // 
+            this.tbxBulletproofGlass.Location = new System.Drawing.Point(134, 154);
+            this.tbxBulletproofGlass.Name = "tbxBulletproofGlass";
+            this.tbxBulletproofGlass.ReadOnly = true;
+            this.tbxBulletproofGlass.Size = new System.Drawing.Size(100, 20);
+            this.tbxBulletproofGlass.TabIndex = 28;
+            // 
+            // tbxInteriorPlate
+            // 
+            this.tbxInteriorPlate.Location = new System.Drawing.Point(134, 180);
+            this.tbxInteriorPlate.Name = "tbxInteriorPlate";
+            this.tbxInteriorPlate.ReadOnly = true;
+            this.tbxInteriorPlate.Size = new System.Drawing.Size(100, 20);
+            this.tbxInteriorPlate.TabIndex = 29;
+            // 
+            // tbxMotor
+            // 
+            this.tbxMotor.Location = new System.Drawing.Point(134, 206);
+            this.tbxMotor.Name = "tbxMotor";
+            this.tbxMotor.ReadOnly = true;
+            this.tbxMotor.Size = new System.Drawing.Size(100, 20);
+            this.tbxMotor.TabIndex = 30;
+            // 
+            // tbxMetalGrid
+            // 
+            this.tbxMetalGrid.Location = new System.Drawing.Point(134, 232);
+            this.tbxMetalGrid.Name = "tbxMetalGrid";
+            this.tbxMetalGrid.ReadOnly = true;
+            this.tbxMetalGrid.Size = new System.Drawing.Size(100, 20);
+            this.tbxMetalGrid.TabIndex = 31;
+            // 
+            // tbxDisplay
+            // 
+            this.tbxDisplay.Location = new System.Drawing.Point(134, 258);
+            this.tbxDisplay.Name = "tbxDisplay";
+            this.tbxDisplay.ReadOnly = true;
+            this.tbxDisplay.Size = new System.Drawing.Size(100, 20);
+            this.tbxDisplay.TabIndex = 32;
+            // 
+            // tbxPowerCell
+            // 
+            this.tbxPowerCell.Location = new System.Drawing.Point(134, 284);
+            this.tbxPowerCell.Name = "tbxPowerCell";
+            this.tbxPowerCell.ReadOnly = true;
+            this.tbxPowerCell.Size = new System.Drawing.Size(100, 20);
+            this.tbxPowerCell.TabIndex = 33;
+            // 
+            // tbxRadioComponent
+            // 
+            this.tbxRadioComponent.Location = new System.Drawing.Point(134, 310);
+            this.tbxRadioComponent.Name = "tbxRadioComponent";
+            this.tbxRadioComponent.ReadOnly = true;
+            this.tbxRadioComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxRadioComponent.TabIndex = 34;
+            // 
+            // tbxDetectorComponent
+            // 
+            this.tbxDetectorComponent.Location = new System.Drawing.Point(134, 336);
+            this.tbxDetectorComponent.Name = "tbxDetectorComponent";
+            this.tbxDetectorComponent.ReadOnly = true;
+            this.tbxDetectorComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxDetectorComponent.TabIndex = 35;
             // 
             // Form1
             // 
@@ -1909,6 +2203,34 @@
         private System.Windows.Forms.Label lblCobaltTot;
         private System.Windows.Forms.Label lblNickelTot;
         private System.Windows.Forms.Label lblIronTot;
+        private System.Windows.Forms.TextBox tbxPCUCost;
+        private System.Windows.Forms.Label lblPCUCost;
+        private System.Windows.Forms.TextBox tbxDetectorComponent;
+        private System.Windows.Forms.TextBox tbxRadioComponent;
+        private System.Windows.Forms.TextBox tbxPowerCell;
+        private System.Windows.Forms.TextBox tbxDisplay;
+        private System.Windows.Forms.TextBox tbxMetalGrid;
+        private System.Windows.Forms.TextBox tbxMotor;
+        private System.Windows.Forms.TextBox tbxInteriorPlate;
+        private System.Windows.Forms.TextBox tbxBulletproofGlass;
+        private System.Windows.Forms.TextBox tbxComputer;
+        private System.Windows.Forms.TextBox tbxConstructionComponent;
+        private System.Windows.Forms.TextBox tbxSmallSteelTube;
+        private System.Windows.Forms.TextBox tbxLargeSteelTube;
+        private System.Windows.Forms.TextBox tbxSteelPlate;
+        private System.Windows.Forms.Label lblDetectorComponent;
+        private System.Windows.Forms.Label lblRadioComponent;
+        private System.Windows.Forms.Label lblPowerCell;
+        private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Label lblMetalGrid;
+        private System.Windows.Forms.Label lblMotor;
+        private System.Windows.Forms.Label lblInteriorPlate;
+        private System.Windows.Forms.Label lblBulletproofGlass;
+        private System.Windows.Forms.Label lblComputer;
+        private System.Windows.Forms.Label lblConstructionComponent;
+        private System.Windows.Forms.Label lblSmallSteelTube;
+        private System.Windows.Forms.Label lblLargeSteelTube;
+        private System.Windows.Forms.Label lblSteelPlates;
     }
 }
 
