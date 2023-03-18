@@ -19,6 +19,7 @@ namespace SE_Calculator
         double gravv2 = 0;
         double ContainerItem = 0;
         int GridSize4 = 0;
+        int antHoll = 1;
             
         public Form1()
         {
@@ -458,10 +459,41 @@ namespace SE_Calculator
 
 
             }
+            else if (GridSize4 == 2)
+            {
+                double irontot2 = (lcc * 676.5) + (mcc * 288) + (scc * 72) + (hab * 105) + (lab * 21) + (cock * 167.5) + (battery * 776) + (lhtank * 3584) + (shtank * 144) + (gyro * 646.5) + (largeatmot * 2736) + (atmot * 685) + (ann * 78.5) + (lhthrust * 1494) + (shthrust * 405) + (beacon * 57.5) + (oredet * 108.5) + (drill * 932.5) + (spot * 64.5) + (airvent * 315.5) + (o2h2 * 329.5) + (h2eng * 1010.5) + (o2tank * 730);
+                double nickeltot2 = (lcc * 40) + (mcc * 20) + (scc * 10) + (cock * 5) + (battery * 40) + (gyro * 10) + (largeatmot * 490) + (atmot * 95) + (lhthrust * 110) + (shthrust * 20) + (oredet * 20) + (drill * 5) + (airvent * 10) + (h2eng * 7);
+                double cobalttot2 = (largeatmot * 24) + (atmot * 3) + (lhthrust * 66) + (shthrust * 12);
+                double silicontot2 = (lcc * 6.2) + (mcc * 5.8) + (scc * 5.2) + (cock * 478) + (battery * 20.4) + (lhtank * 1.6) + (shtank * 0.4) + (gyro * 0.6) + (ann * 4.2) + (beacon * 0.2) + (oredet * 0.2) + (drill * 0.2) + (spot * 30) + (airvent * 3) + (o2h2 * 0.6) + (h2eng * 1.2) + (o2tank * 1.6);
+
+                tbxIronTot.Text = irontot2.ToString();
+                tbxNickelTot.Text = nickeltot2.ToString();
+                tbxCobaltTot.Text = cobalttot2.ToString();
+                tbxSiliconTot.Text = silicontot2.ToString();
+                
+
+            }
+
             else
             {
-
-
+                tbxIronTot.Text = "WTF?????????";
+                tbxNickelTot.Text = "WTF?????????";
+                tbxCobaltTot.Text = "WTF?????????";
+                tbxSiliconTot.Text = "WTF?????????";
+                tbxSteelPlate.Text = "WTF?????????";
+                tbxDetectorComponent.Text = "WTF?????????";
+                tbxRadioComponent.Text = "WTF?????????";
+                tbxPowerCell.Text = "WTF?????????";
+                tbxDisplay.Text = "WTF?????????";
+                tbxMetalGrid.Text = "WTF?????????";
+                tbxMotor.Text = "WTF?????????";
+                tbxInteriorPlate.Text = "WTF?????????";
+                tbxBulletproofGlass.Text = "WTF?????????";
+                tbxComputer.Text = "WTF?????????";
+                tbxConstructionComponent.Text = "WTF?????????";
+                tbxSmallSteelTube.Text = "WTF?????????";
+                tbxLargeSteelTube.Text = "WTF?????????";
+                tbxPCUCost.Text = "WTF?????????";
 
 
             }
@@ -480,6 +512,88 @@ namespace SE_Calculator
             {
                 GridSize4 = 2;
             }
+        }
+
+        private void btnSolve_Click(object sender, EventArgs e)
+        {
+
+            double PCU2 = 1;
+            double massa = 1;
+
+            if(tbxPCU2.Text != "")
+                    PCU2 = double.Parse(tbxPCU2.Text);
+            if(tbxTheMass.Text != "")
+                massa = double.Parse(tbxTheMass.Text);
+
+            antHoll = 1;
+
+            double GBlock = PCU2 / (185 * antHoll + 185);
+            double MassaB = GBlock * 7.4;
+            double Kraft = 495000 * GBlock * MassaB;
+            lblMassBlockSvar.Text = Math.Round(MassaB, 2).ToString();
+            lblGGeneratorSvar.Text = Math.Round(GBlock, 2).ToString();
+            lblForceSvar.Text = Math.Round(Kraft, 2).ToString();
+            massa += GBlock * 8532 + MassaB * 9544;
+            double Speed = 100 / (Kraft / massa);
+            lblSpeedTo100Svar.Text = Math.Round(Speed,2).ToString();
+            lblReactorMassBlock.Text = MassaB.ToString();
+            lblGravityDrivers.Text = GBlock.ToString();
+            tbxAxeleration.Text = (Kraft/massa).ToString();
+
+
+
+        }
+
+        private void btnSolve2_Click(object sender, EventArgs e)
+        {
+            double Massa = double.Parse(tbxSpaceMass.Text);
+            double TidH = double.Parse(tbxSpaceTime.Text);
+            double GMengd = double.Parse(tbxSpaceG.Text);
+            double antall = Massa / (1964 * GMengd * TidH - 7144);
+            lblSpaceBallsSvar.Text = Math.Round(antall, 1).ToString();
+                           
+          
+        }
+
+        private void btnSolve3_Click(object sender, EventArgs e)
+        {
+            double MassaC = double.Parse(tbxReaxtorMassBlock.Text);
+            double Gravitation = double.Parse(tbxGravityDrivers.Text);
+            double Rail = double.Parse(tbxRailgun.Text);
+            double Gyro = double.Parse(tbxGyro.Text);
+            MassaC += 567.13;
+            Gravitation *= 600 * antHoll;
+            Rail *= 38000;
+            Gyro *= 10;
+            lblSpaceMassSvar.Text = Math.Round(MassaC, 1).ToString() + " kw";
+            lblSpaceGravitySvar.Text = Math.Round(Gravitation, 1).ToString() + " kw";
+            lblSpaceRailgunSvar.Text = Math.Round(Rail, 1).ToString() + " kw";
+            lbl0kW.Text = Math.Round(Gyro, 1).ToString() + " kw";
+            double Resultat = MassaC + Gravitation + Rail + Gyro;
+            lblSpaceSvar1.Text = Resultat.ToString();
+            lblSpaceSvar2.Text = Math.Round((Resultat / 300000), 2).ToString();
+            lblSpaceSvar3.Text = Math.Round((Resultat / 15000), 2).ToString();
+
+
+
+
+
+
+
+        }
+
+        private void btnSolve4_Click(object sender, EventArgs e)
+        {
+            double axeleration = double.Parse(tbxAxeleration.Text);
+            double diameter = double.Parse(tbxDiameter.Text);
+            double projektiv = double.Parse(tbxProjektivSpeed.Text);
+            diameter *= 2.5;
+            lblMinimalDodgeSvar.Text = ((Math.Round(diameter/axeleration)) * projektiv).ToString();
+
+
+
+
+
         }
     }
 }
