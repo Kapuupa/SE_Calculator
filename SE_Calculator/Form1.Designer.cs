@@ -115,8 +115,8 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.lblSReactor = new System.Windows.Forms.Label();
+            this.lblLReactor = new System.Windows.Forms.Label();
             this.lblAirVent = new System.Windows.Forms.Label();
             this.lblIonThruster = new System.Windows.Forms.Label();
             this.lblLargeIonThruster = new System.Windows.Forms.Label();
@@ -158,8 +158,8 @@
             this.tbxLargeIonThruster = new System.Windows.Forms.TextBox();
             this.tbxIonThruster = new System.Windows.Forms.TextBox();
             this.tbxAirVent = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.tbxLReactor = new System.Windows.Forms.TextBox();
+            this.tbxSReactor = new System.Windows.Forms.TextBox();
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.tbxLargeAtmosphericThruster = new System.Windows.Forms.TextBox();
             this.tbxBeacon = new System.Windows.Forms.TextBox();
@@ -218,6 +218,36 @@
             this.lblNickelTot = new System.Windows.Forms.Label();
             this.lblIronTot = new System.Windows.Forms.Label();
             this.tpeCapas = new System.Windows.Forms.TabPage();
+            this.btnSolve4 = new System.Windows.Forms.Button();
+            this.tbxDiameter = new System.Windows.Forms.TextBox();
+            this.tbxProjektivSpeed = new System.Windows.Forms.TextBox();
+            this.tbxAxeleration = new System.Windows.Forms.TextBox();
+            this.lblAxeleration = new System.Windows.Forms.Label();
+            this.lblMinimalDodgeSvar = new System.Windows.Forms.Label();
+            this.lblProjektivSpeed = new System.Windows.Forms.Label();
+            this.lblMinimalDodgingDistance = new System.Windows.Forms.Label();
+            this.lblDiameter = new System.Windows.Forms.Label();
+            this.lblDodgingCalculator = new System.Windows.Forms.Label();
+            this.btnSolve3 = new System.Windows.Forms.Button();
+            this.tbxGyro = new System.Windows.Forms.TextBox();
+            this.tbxReaxtorMassBlock = new System.Windows.Forms.TextBox();
+            this.tbxGravityDrivers = new System.Windows.Forms.TextBox();
+            this.tbxRailgun = new System.Windows.Forms.TextBox();
+            this.lblSpaceSvar1 = new System.Windows.Forms.Label();
+            this.lblSpaceSvar2 = new System.Windows.Forms.Label();
+            this.lblSpaceSvar3 = new System.Windows.Forms.Label();
+            this.lblSmallReactor = new System.Windows.Forms.Label();
+            this.lblLargeReactor = new System.Windows.Forms.Label();
+            this.lblkW = new System.Windows.Forms.Label();
+            this.lblGyro = new System.Windows.Forms.Label();
+            this.lblRailgun = new System.Windows.Forms.Label();
+            this.lblGravityDrivers = new System.Windows.Forms.Label();
+            this.lblReactorMassBlock = new System.Windows.Forms.Label();
+            this.lbl0kW = new System.Windows.Forms.Label();
+            this.lblSpaceRailgunSvar = new System.Windows.Forms.Label();
+            this.lblSpaceGravitySvar = new System.Windows.Forms.Label();
+            this.lblSpaceMassSvar = new System.Windows.Forms.Label();
+            this.lblReactor = new System.Windows.Forms.Label();
             this.btnSolve2 = new System.Windows.Forms.Button();
             this.tbxSpaceG = new System.Windows.Forms.TextBox();
             this.tbxSpaceTime = new System.Windows.Forms.TextBox();
@@ -243,36 +273,30 @@
             this.lblTotalMass = new System.Windows.Forms.Label();
             this.lblGDrive = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblReactor = new System.Windows.Forms.Label();
-            this.lblSpaceMassSvar = new System.Windows.Forms.Label();
-            this.lblSpaceGravitySvar = new System.Windows.Forms.Label();
-            this.lblSpaceRailgunSvar = new System.Windows.Forms.Label();
-            this.lbl0kW = new System.Windows.Forms.Label();
-            this.lblReactorMassBlock = new System.Windows.Forms.Label();
-            this.lblGravityDrivers = new System.Windows.Forms.Label();
-            this.lblRailgun = new System.Windows.Forms.Label();
-            this.lblGyro = new System.Windows.Forms.Label();
-            this.lblkW = new System.Windows.Forms.Label();
-            this.lblLargeReactor = new System.Windows.Forms.Label();
-            this.lblSmallReactor = new System.Windows.Forms.Label();
-            this.lblSpaceSvar3 = new System.Windows.Forms.Label();
-            this.lblSpaceSvar2 = new System.Windows.Forms.Label();
-            this.lblSpaceSvar1 = new System.Windows.Forms.Label();
-            this.tbxRailgun = new System.Windows.Forms.TextBox();
-            this.tbxGravityDrivers = new System.Windows.Forms.TextBox();
-            this.tbxReaxtorMassBlock = new System.Windows.Forms.TextBox();
-            this.tbxGyro = new System.Windows.Forms.TextBox();
-            this.btnSolve3 = new System.Windows.Forms.Button();
-            this.lblDodgingCalculator = new System.Windows.Forms.Label();
-            this.lblDiameter = new System.Windows.Forms.Label();
-            this.lblMinimalDodgingDistance = new System.Windows.Forms.Label();
-            this.lblProjektivSpeed = new System.Windows.Forms.Label();
-            this.lblMinimalDodgeSvar = new System.Windows.Forms.Label();
-            this.lblAxeleration = new System.Windows.Forms.Label();
-            this.tbxAxeleration = new System.Windows.Forms.TextBox();
-            this.tbxProjektivSpeed = new System.Windows.Forms.TextBox();
-            this.tbxDiameter = new System.Windows.Forms.TextBox();
-            this.btnSolve4 = new System.Windows.Forms.Button();
+            this.lblSuperConducter = new System.Windows.Forms.Label();
+            this.lblReactorComponent = new System.Windows.Forms.Label();
+            this.lblTotalSilverCost = new System.Windows.Forms.Label();
+            this.lblTotalGravelCost = new System.Windows.Forms.Label();
+            this.lblTotalGoldCost = new System.Windows.Forms.Label();
+            this.tbxSuperConducter = new System.Windows.Forms.TextBox();
+            this.tbxReactorComponent = new System.Windows.Forms.TextBox();
+            this.tbxTotalGoldCost = new System.Windows.Forms.TextBox();
+            this.tbxTotalGravelCost = new System.Windows.Forms.TextBox();
+            this.tbxTotalSilverCost = new System.Windows.Forms.TextBox();
+            this.tbxTotalPlatinaCost = new System.Windows.Forms.TextBox();
+            this.lblTotalPlatinaCost = new System.Windows.Forms.Label();
+            this.tbxThrusterComponent = new System.Windows.Forms.TextBox();
+            this.lblThrusterComponent = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxTotalPowerUsage = new System.Windows.Forms.TextBox();
+            this.tbxPowerConsumption = new System.Windows.Forms.TextBox();
+            this.tbxPowerProduction = new System.Windows.Forms.TextBox();
+            this.lblPowerProduction = new System.Windows.Forms.Label();
+            this.lblPowerConsumption = new System.Windows.Forms.Label();
+            this.lblTotalPowerUsage = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -1028,8 +1052,8 @@
             this.tabPage1.Controls.Add(this.label35);
             this.tabPage1.Controls.Add(this.label34);
             this.tabPage1.Controls.Add(this.label33);
-            this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.lblSReactor);
+            this.tabPage1.Controls.Add(this.lblLReactor);
             this.tabPage1.Controls.Add(this.lblAirVent);
             this.tabPage1.Controls.Add(this.lblIonThruster);
             this.tabPage1.Controls.Add(this.lblLargeIonThruster);
@@ -1071,8 +1095,8 @@
             this.tabPage1.Controls.Add(this.tbxLargeIonThruster);
             this.tabPage1.Controls.Add(this.tbxIonThruster);
             this.tabPage1.Controls.Add(this.tbxAirVent);
-            this.tabPage1.Controls.Add(this.textBox35);
-            this.tabPage1.Controls.Add(this.textBox36);
+            this.tabPage1.Controls.Add(this.tbxLReactor);
+            this.tabPage1.Controls.Add(this.tbxSReactor);
             this.tabPage1.Controls.Add(this.textBox37);
             this.tabPage1.Controls.Add(this.tbxLargeAtmosphericThruster);
             this.tabPage1.Controls.Add(this.tbxBeacon);
@@ -1205,23 +1229,23 @@
             this.label33.TabIndex = 68;
             this.label33.Text = "label33";
             // 
-            // label32
+            // lblSReactor
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(333, 214);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 13);
-            this.label32.TabIndex = 67;
-            this.label32.Text = "label32";
+            this.lblSReactor.AutoSize = true;
+            this.lblSReactor.Location = new System.Drawing.Point(333, 214);
+            this.lblSReactor.Name = "lblSReactor";
+            this.lblSReactor.Size = new System.Drawing.Size(73, 13);
+            this.lblSReactor.TabIndex = 67;
+            this.lblSReactor.Text = "Small Reactor";
             // 
-            // label31
+            // lblLReactor
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(333, 188);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(41, 13);
-            this.label31.TabIndex = 66;
-            this.label31.Text = "label31";
+            this.lblLReactor.AutoSize = true;
+            this.lblLReactor.Location = new System.Drawing.Point(333, 188);
+            this.lblLReactor.Name = "lblLReactor";
+            this.lblLReactor.Size = new System.Drawing.Size(75, 13);
+            this.lblLReactor.TabIndex = 66;
+            this.lblLReactor.Text = "Large Reactor";
             // 
             // lblAirVent
             // 
@@ -1564,19 +1588,19 @@
             this.tbxAirVent.Size = new System.Drawing.Size(100, 20);
             this.tbxAirVent.TabIndex = 24;
             // 
-            // textBox35
+            // tbxLReactor
             // 
-            this.textBox35.Location = new System.Drawing.Point(536, 188);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(100, 20);
-            this.textBox35.TabIndex = 23;
+            this.tbxLReactor.Location = new System.Drawing.Point(536, 188);
+            this.tbxLReactor.Name = "tbxLReactor";
+            this.tbxLReactor.Size = new System.Drawing.Size(100, 20);
+            this.tbxLReactor.TabIndex = 23;
             // 
-            // textBox36
+            // tbxSReactor
             // 
-            this.textBox36.Location = new System.Drawing.Point(536, 214);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(100, 20);
-            this.textBox36.TabIndex = 22;
+            this.tbxSReactor.Location = new System.Drawing.Point(536, 214);
+            this.tbxSReactor.Name = "tbxSReactor";
+            this.tbxSReactor.Size = new System.Drawing.Size(100, 20);
+            this.tbxSReactor.TabIndex = 22;
             // 
             // textBox37
             // 
@@ -1720,6 +1744,30 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.lblTotalPowerUsage);
+            this.tabPage3.Controls.Add(this.lblPowerConsumption);
+            this.tabPage3.Controls.Add(this.lblPowerProduction);
+            this.tabPage3.Controls.Add(this.tbxPowerProduction);
+            this.tabPage3.Controls.Add(this.tbxPowerConsumption);
+            this.tabPage3.Controls.Add(this.tbxTotalPowerUsage);
+            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.lblThrusterComponent);
+            this.tabPage3.Controls.Add(this.tbxThrusterComponent);
+            this.tabPage3.Controls.Add(this.lblTotalPlatinaCost);
+            this.tabPage3.Controls.Add(this.tbxTotalPlatinaCost);
+            this.tabPage3.Controls.Add(this.tbxTotalSilverCost);
+            this.tabPage3.Controls.Add(this.tbxTotalGravelCost);
+            this.tabPage3.Controls.Add(this.tbxTotalGoldCost);
+            this.tabPage3.Controls.Add(this.tbxReactorComponent);
+            this.tabPage3.Controls.Add(this.tbxSuperConducter);
+            this.tabPage3.Controls.Add(this.lblTotalGoldCost);
+            this.tabPage3.Controls.Add(this.lblTotalGravelCost);
+            this.tabPage3.Controls.Add(this.lblTotalSilverCost);
+            this.tabPage3.Controls.Add(this.lblReactorComponent);
+            this.tabPage3.Controls.Add(this.lblSuperConducter);
             this.tabPage3.Controls.Add(this.tbxDetectorComponent);
             this.tabPage3.Controls.Add(this.tbxRadioComponent);
             this.tabPage3.Controls.Add(this.tbxPowerCell);
@@ -1987,7 +2035,7 @@
             // 
             // tbxPCUCost
             // 
-            this.tbxPCUCost.Location = new System.Drawing.Point(515, 125);
+            this.tbxPCUCost.Location = new System.Drawing.Point(515, 229);
             this.tbxPCUCost.Name = "tbxPCUCost";
             this.tbxPCUCost.ReadOnly = true;
             this.tbxPCUCost.Size = new System.Drawing.Size(100, 20);
@@ -1996,7 +2044,7 @@
             // lblPCUCost
             // 
             this.lblPCUCost.AutoSize = true;
-            this.lblPCUCost.Location = new System.Drawing.Point(412, 125);
+            this.lblPCUCost.Location = new System.Drawing.Point(412, 229);
             this.lblPCUCost.Name = "lblPCUCost";
             this.lblPCUCost.Size = new System.Drawing.Size(82, 13);
             this.lblPCUCost.TabIndex = 8;
@@ -2132,6 +2180,265 @@
             this.tpeCapas.TabIndex = 4;
             this.tpeCapas.Text = "Capas G-Drive Calculator";
             this.tpeCapas.UseVisualStyleBackColor = true;
+            // 
+            // btnSolve4
+            // 
+            this.btnSolve4.Location = new System.Drawing.Point(232, 423);
+            this.btnSolve4.Name = "btnSolve4";
+            this.btnSolve4.Size = new System.Drawing.Size(209, 23);
+            this.btnSolve4.TabIndex = 53;
+            this.btnSolve4.Text = "Solve";
+            this.btnSolve4.UseVisualStyleBackColor = true;
+            this.btnSolve4.Click += new System.EventHandler(this.btnSolve4_Click);
+            // 
+            // tbxDiameter
+            // 
+            this.tbxDiameter.Location = new System.Drawing.Point(341, 338);
+            this.tbxDiameter.Name = "tbxDiameter";
+            this.tbxDiameter.Size = new System.Drawing.Size(100, 20);
+            this.tbxDiameter.TabIndex = 52;
+            // 
+            // tbxProjektivSpeed
+            // 
+            this.tbxProjektivSpeed.Location = new System.Drawing.Point(341, 364);
+            this.tbxProjektivSpeed.Name = "tbxProjektivSpeed";
+            this.tbxProjektivSpeed.Size = new System.Drawing.Size(100, 20);
+            this.tbxProjektivSpeed.TabIndex = 51;
+            // 
+            // tbxAxeleration
+            // 
+            this.tbxAxeleration.Location = new System.Drawing.Point(341, 312);
+            this.tbxAxeleration.Name = "tbxAxeleration";
+            this.tbxAxeleration.Size = new System.Drawing.Size(100, 20);
+            this.tbxAxeleration.TabIndex = 50;
+            // 
+            // lblAxeleration
+            // 
+            this.lblAxeleration.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblAxeleration.AutoSize = true;
+            this.lblAxeleration.Location = new System.Drawing.Point(232, 315);
+            this.lblAxeleration.Name = "lblAxeleration";
+            this.lblAxeleration.Size = new System.Drawing.Size(59, 13);
+            this.lblAxeleration.TabIndex = 49;
+            this.lblAxeleration.Text = "Axeleration";
+            // 
+            // lblMinimalDodgeSvar
+            // 
+            this.lblMinimalDodgeSvar.AutoSize = true;
+            this.lblMinimalDodgeSvar.Location = new System.Drawing.Point(232, 407);
+            this.lblMinimalDodgeSvar.Name = "lblMinimalDodgeSvar";
+            this.lblMinimalDodgeSvar.Size = new System.Drawing.Size(35, 13);
+            this.lblMinimalDodgeSvar.TabIndex = 48;
+            this.lblMinimalDodgeSvar.Text = "label9";
+            // 
+            // lblProjektivSpeed
+            // 
+            this.lblProjektivSpeed.AutoSize = true;
+            this.lblProjektivSpeed.Location = new System.Drawing.Point(232, 367);
+            this.lblProjektivSpeed.Name = "lblProjektivSpeed";
+            this.lblProjektivSpeed.Size = new System.Drawing.Size(82, 13);
+            this.lblProjektivSpeed.TabIndex = 47;
+            this.lblProjektivSpeed.Text = "Projektiv Speed";
+            // 
+            // lblMinimalDodgingDistance
+            // 
+            this.lblMinimalDodgingDistance.AutoSize = true;
+            this.lblMinimalDodgingDistance.Location = new System.Drawing.Point(232, 394);
+            this.lblMinimalDodgingDistance.Name = "lblMinimalDodgingDistance";
+            this.lblMinimalDodgingDistance.Size = new System.Drawing.Size(130, 13);
+            this.lblMinimalDodgingDistance.TabIndex = 46;
+            this.lblMinimalDodgingDistance.Text = "Minimal Dodging Distance";
+            // 
+            // lblDiameter
+            // 
+            this.lblDiameter.AutoSize = true;
+            this.lblDiameter.Location = new System.Drawing.Point(232, 341);
+            this.lblDiameter.Name = "lblDiameter";
+            this.lblDiameter.Size = new System.Drawing.Size(86, 13);
+            this.lblDiameter.TabIndex = 45;
+            this.lblDiameter.Text = "Diameter(blocks)";
+            // 
+            // lblDodgingCalculator
+            // 
+            this.lblDodgingCalculator.AutoSize = true;
+            this.lblDodgingCalculator.Location = new System.Drawing.Point(232, 286);
+            this.lblDodgingCalculator.Name = "lblDodgingCalculator";
+            this.lblDodgingCalculator.Size = new System.Drawing.Size(97, 13);
+            this.lblDodgingCalculator.TabIndex = 44;
+            this.lblDodgingCalculator.Text = "Dodging Calculator";
+            // 
+            // btnSolve3
+            // 
+            this.btnSolve3.Location = new System.Drawing.Point(227, 199);
+            this.btnSolve3.Name = "btnSolve3";
+            this.btnSolve3.Size = new System.Drawing.Size(195, 23);
+            this.btnSolve3.TabIndex = 43;
+            this.btnSolve3.Text = "Solve";
+            this.btnSolve3.UseVisualStyleBackColor = true;
+            this.btnSolve3.Click += new System.EventHandler(this.btnSolve3_Click);
+            // 
+            // tbxGyro
+            // 
+            this.tbxGyro.Location = new System.Drawing.Point(322, 128);
+            this.tbxGyro.Name = "tbxGyro";
+            this.tbxGyro.Size = new System.Drawing.Size(100, 20);
+            this.tbxGyro.TabIndex = 42;
+            // 
+            // tbxReaxtorMassBlock
+            // 
+            this.tbxReaxtorMassBlock.Location = new System.Drawing.Point(322, 50);
+            this.tbxReaxtorMassBlock.Name = "tbxReaxtorMassBlock";
+            this.tbxReaxtorMassBlock.Size = new System.Drawing.Size(100, 20);
+            this.tbxReaxtorMassBlock.TabIndex = 41;
+            // 
+            // tbxGravityDrivers
+            // 
+            this.tbxGravityDrivers.Location = new System.Drawing.Point(322, 76);
+            this.tbxGravityDrivers.Name = "tbxGravityDrivers";
+            this.tbxGravityDrivers.Size = new System.Drawing.Size(100, 20);
+            this.tbxGravityDrivers.TabIndex = 40;
+            // 
+            // tbxRailgun
+            // 
+            this.tbxRailgun.Location = new System.Drawing.Point(322, 102);
+            this.tbxRailgun.Name = "tbxRailgun";
+            this.tbxRailgun.Size = new System.Drawing.Size(100, 20);
+            this.tbxRailgun.TabIndex = 39;
+            // 
+            // lblSpaceSvar1
+            // 
+            this.lblSpaceSvar1.AutoSize = true;
+            this.lblSpaceSvar1.Location = new System.Drawing.Point(338, 151);
+            this.lblSpaceSvar1.Name = "lblSpaceSvar1";
+            this.lblSpaceSvar1.Size = new System.Drawing.Size(41, 13);
+            this.lblSpaceSvar1.TabIndex = 38;
+            this.lblSpaceSvar1.Text = "label19";
+            // 
+            // lblSpaceSvar2
+            // 
+            this.lblSpaceSvar2.AutoSize = true;
+            this.lblSpaceSvar2.Location = new System.Drawing.Point(338, 166);
+            this.lblSpaceSvar2.Name = "lblSpaceSvar2";
+            this.lblSpaceSvar2.Size = new System.Drawing.Size(41, 13);
+            this.lblSpaceSvar2.TabIndex = 37;
+            this.lblSpaceSvar2.Text = "label18";
+            // 
+            // lblSpaceSvar3
+            // 
+            this.lblSpaceSvar3.AutoSize = true;
+            this.lblSpaceSvar3.Location = new System.Drawing.Point(338, 183);
+            this.lblSpaceSvar3.Name = "lblSpaceSvar3";
+            this.lblSpaceSvar3.Size = new System.Drawing.Size(41, 13);
+            this.lblSpaceSvar3.TabIndex = 36;
+            this.lblSpaceSvar3.Text = "label17";
+            // 
+            // lblSmallReactor
+            // 
+            this.lblSmallReactor.AutoSize = true;
+            this.lblSmallReactor.Location = new System.Drawing.Point(232, 183);
+            this.lblSmallReactor.Name = "lblSmallReactor";
+            this.lblSmallReactor.Size = new System.Drawing.Size(70, 13);
+            this.lblSmallReactor.TabIndex = 35;
+            this.lblSmallReactor.Text = "SmallReactor";
+            // 
+            // lblLargeReactor
+            // 
+            this.lblLargeReactor.AutoSize = true;
+            this.lblLargeReactor.Location = new System.Drawing.Point(232, 170);
+            this.lblLargeReactor.Name = "lblLargeReactor";
+            this.lblLargeReactor.Size = new System.Drawing.Size(75, 13);
+            this.lblLargeReactor.TabIndex = 34;
+            this.lblLargeReactor.Text = "Large Reactor";
+            // 
+            // lblkW
+            // 
+            this.lblkW.AutoSize = true;
+            this.lblkW.Location = new System.Drawing.Point(232, 157);
+            this.lblkW.Name = "lblkW";
+            this.lblkW.Size = new System.Drawing.Size(24, 13);
+            this.lblkW.TabIndex = 33;
+            this.lblkW.Text = "kW";
+            // 
+            // lblGyro
+            // 
+            this.lblGyro.AutoSize = true;
+            this.lblGyro.Location = new System.Drawing.Point(232, 131);
+            this.lblGyro.Name = "lblGyro";
+            this.lblGyro.Size = new System.Drawing.Size(36, 13);
+            this.lblGyro.TabIndex = 32;
+            this.lblGyro.Text = "Gyro\'s";
+            // 
+            // lblRailgun
+            // 
+            this.lblRailgun.AutoSize = true;
+            this.lblRailgun.Location = new System.Drawing.Point(232, 105);
+            this.lblRailgun.Name = "lblRailgun";
+            this.lblRailgun.Size = new System.Drawing.Size(50, 13);
+            this.lblRailgun.TabIndex = 31;
+            this.lblRailgun.Text = "Railgun\'s";
+            // 
+            // lblGravityDrivers
+            // 
+            this.lblGravityDrivers.AutoSize = true;
+            this.lblGravityDrivers.Location = new System.Drawing.Point(232, 79);
+            this.lblGravityDrivers.Name = "lblGravityDrivers";
+            this.lblGravityDrivers.Size = new System.Drawing.Size(73, 13);
+            this.lblGravityDrivers.TabIndex = 30;
+            this.lblGravityDrivers.Text = "GravityDrivers";
+            // 
+            // lblReactorMassBlock
+            // 
+            this.lblReactorMassBlock.AutoSize = true;
+            this.lblReactorMassBlock.Location = new System.Drawing.Point(232, 53);
+            this.lblReactorMassBlock.Name = "lblReactorMassBlock";
+            this.lblReactorMassBlock.Size = new System.Drawing.Size(59, 13);
+            this.lblReactorMassBlock.TabIndex = 29;
+            this.lblReactorMassBlock.Text = "MassBlock";
+            // 
+            // lbl0kW
+            // 
+            this.lbl0kW.AutoSize = true;
+            this.lbl0kW.Location = new System.Drawing.Point(232, 144);
+            this.lbl0kW.Name = "lbl0kW";
+            this.lbl0kW.Size = new System.Drawing.Size(39, 13);
+            this.lbl0kW.TabIndex = 28;
+            this.lbl0kW.Text = "<0 kW";
+            // 
+            // lblSpaceRailgunSvar
+            // 
+            this.lblSpaceRailgunSvar.AutoSize = true;
+            this.lblSpaceRailgunSvar.Location = new System.Drawing.Point(232, 118);
+            this.lblSpaceRailgunSvar.Name = "lblSpaceRailgunSvar";
+            this.lblSpaceRailgunSvar.Size = new System.Drawing.Size(35, 13);
+            this.lblSpaceRailgunSvar.TabIndex = 27;
+            this.lblSpaceRailgunSvar.Text = "label8";
+            // 
+            // lblSpaceGravitySvar
+            // 
+            this.lblSpaceGravitySvar.AutoSize = true;
+            this.lblSpaceGravitySvar.Location = new System.Drawing.Point(232, 92);
+            this.lblSpaceGravitySvar.Name = "lblSpaceGravitySvar";
+            this.lblSpaceGravitySvar.Size = new System.Drawing.Size(35, 13);
+            this.lblSpaceGravitySvar.TabIndex = 26;
+            this.lblSpaceGravitySvar.Text = "label7";
+            // 
+            // lblSpaceMassSvar
+            // 
+            this.lblSpaceMassSvar.AutoSize = true;
+            this.lblSpaceMassSvar.Location = new System.Drawing.Point(232, 66);
+            this.lblSpaceMassSvar.Name = "lblSpaceMassSvar";
+            this.lblSpaceMassSvar.Size = new System.Drawing.Size(35, 13);
+            this.lblSpaceMassSvar.TabIndex = 25;
+            this.lblSpaceMassSvar.Text = "label6";
+            // 
+            // lblReactor
+            // 
+            this.lblReactor.AutoSize = true;
+            this.lblReactor.Location = new System.Drawing.Point(232, 17);
+            this.lblReactor.Name = "lblReactor";
+            this.lblReactor.Size = new System.Drawing.Size(45, 13);
+            this.lblReactor.TabIndex = 24;
+            this.lblReactor.Text = "Reactor";
             // 
             // btnSolve2
             // 
@@ -2337,264 +2644,208 @@
             this.lblGDrive.TabIndex = 0;
             this.lblGDrive.Text = "G-Drive";
             // 
-            // lblReactor
+            // lblSuperConducter
             // 
-            this.lblReactor.AutoSize = true;
-            this.lblReactor.Location = new System.Drawing.Point(232, 17);
-            this.lblReactor.Name = "lblReactor";
-            this.lblReactor.Size = new System.Drawing.Size(45, 13);
-            this.lblReactor.TabIndex = 24;
-            this.lblReactor.Text = "Reactor";
+            this.lblSuperConducter.AutoSize = true;
+            this.lblSuperConducter.Location = new System.Drawing.Point(6, 369);
+            this.lblSuperConducter.Name = "lblSuperConducter";
+            this.lblSuperConducter.Size = new System.Drawing.Size(84, 13);
+            this.lblSuperConducter.TabIndex = 36;
+            this.lblSuperConducter.Text = "SuperConducter";
             // 
-            // lblSpaceMassSvar
+            // lblReactorComponent
             // 
-            this.lblSpaceMassSvar.AutoSize = true;
-            this.lblSpaceMassSvar.Location = new System.Drawing.Point(232, 66);
-            this.lblSpaceMassSvar.Name = "lblSpaceMassSvar";
-            this.lblSpaceMassSvar.Size = new System.Drawing.Size(35, 13);
-            this.lblSpaceMassSvar.TabIndex = 25;
-            this.lblSpaceMassSvar.Text = "label6";
+            this.lblReactorComponent.AutoSize = true;
+            this.lblReactorComponent.Location = new System.Drawing.Point(6, 391);
+            this.lblReactorComponent.Name = "lblReactorComponent";
+            this.lblReactorComponent.Size = new System.Drawing.Size(102, 13);
+            this.lblReactorComponent.TabIndex = 37;
+            this.lblReactorComponent.Text = "Reactor Component";
             // 
-            // lblSpaceGravitySvar
+            // lblTotalSilverCost
             // 
-            this.lblSpaceGravitySvar.AutoSize = true;
-            this.lblSpaceGravitySvar.Location = new System.Drawing.Point(232, 92);
-            this.lblSpaceGravitySvar.Name = "lblSpaceGravitySvar";
-            this.lblSpaceGravitySvar.Size = new System.Drawing.Size(35, 13);
-            this.lblSpaceGravitySvar.TabIndex = 26;
-            this.lblSpaceGravitySvar.Text = "label7";
+            this.lblTotalSilverCost.AutoSize = true;
+            this.lblTotalSilverCost.Location = new System.Drawing.Point(412, 128);
+            this.lblTotalSilverCost.Name = "lblTotalSilverCost";
+            this.lblTotalSilverCost.Size = new System.Drawing.Size(87, 13);
+            this.lblTotalSilverCost.TabIndex = 38;
+            this.lblTotalSilverCost.Text = "Total Silver Cost:";
             // 
-            // lblSpaceRailgunSvar
+            // lblTotalGravelCost
             // 
-            this.lblSpaceRailgunSvar.AutoSize = true;
-            this.lblSpaceRailgunSvar.Location = new System.Drawing.Point(232, 118);
-            this.lblSpaceRailgunSvar.Name = "lblSpaceRailgunSvar";
-            this.lblSpaceRailgunSvar.Size = new System.Drawing.Size(35, 13);
-            this.lblSpaceRailgunSvar.TabIndex = 27;
-            this.lblSpaceRailgunSvar.Text = "label8";
+            this.lblTotalGravelCost.AutoSize = true;
+            this.lblTotalGravelCost.Location = new System.Drawing.Point(412, 154);
+            this.lblTotalGravelCost.Name = "lblTotalGravelCost";
+            this.lblTotalGravelCost.Size = new System.Drawing.Size(92, 13);
+            this.lblTotalGravelCost.TabIndex = 39;
+            this.lblTotalGravelCost.Text = "Total Gravel Cost:";
             // 
-            // lbl0kW
+            // lblTotalGoldCost
             // 
-            this.lbl0kW.AutoSize = true;
-            this.lbl0kW.Location = new System.Drawing.Point(232, 144);
-            this.lbl0kW.Name = "lbl0kW";
-            this.lbl0kW.Size = new System.Drawing.Size(39, 13);
-            this.lbl0kW.TabIndex = 28;
-            this.lbl0kW.Text = "<0 kW";
+            this.lblTotalGoldCost.AutoSize = true;
+            this.lblTotalGoldCost.Location = new System.Drawing.Point(412, 180);
+            this.lblTotalGoldCost.Name = "lblTotalGoldCost";
+            this.lblTotalGoldCost.Size = new System.Drawing.Size(83, 13);
+            this.lblTotalGoldCost.TabIndex = 40;
+            this.lblTotalGoldCost.Text = "Total Gold Cost:";
             // 
-            // lblReactorMassBlock
+            // tbxSuperConducter
             // 
-            this.lblReactorMassBlock.AutoSize = true;
-            this.lblReactorMassBlock.Location = new System.Drawing.Point(232, 53);
-            this.lblReactorMassBlock.Name = "lblReactorMassBlock";
-            this.lblReactorMassBlock.Size = new System.Drawing.Size(59, 13);
-            this.lblReactorMassBlock.TabIndex = 29;
-            this.lblReactorMassBlock.Text = "MassBlock";
+            this.tbxSuperConducter.Location = new System.Drawing.Point(134, 362);
+            this.tbxSuperConducter.Name = "tbxSuperConducter";
+            this.tbxSuperConducter.ReadOnly = true;
+            this.tbxSuperConducter.Size = new System.Drawing.Size(100, 20);
+            this.tbxSuperConducter.TabIndex = 41;
             // 
-            // lblGravityDrivers
+            // tbxReactorComponent
             // 
-            this.lblGravityDrivers.AutoSize = true;
-            this.lblGravityDrivers.Location = new System.Drawing.Point(232, 79);
-            this.lblGravityDrivers.Name = "lblGravityDrivers";
-            this.lblGravityDrivers.Size = new System.Drawing.Size(73, 13);
-            this.lblGravityDrivers.TabIndex = 30;
-            this.lblGravityDrivers.Text = "GravityDrivers";
+            this.tbxReactorComponent.Location = new System.Drawing.Point(134, 388);
+            this.tbxReactorComponent.Name = "tbxReactorComponent";
+            this.tbxReactorComponent.ReadOnly = true;
+            this.tbxReactorComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxReactorComponent.TabIndex = 42;
             // 
-            // lblRailgun
+            // tbxTotalGoldCost
             // 
-            this.lblRailgun.AutoSize = true;
-            this.lblRailgun.Location = new System.Drawing.Point(232, 105);
-            this.lblRailgun.Name = "lblRailgun";
-            this.lblRailgun.Size = new System.Drawing.Size(50, 13);
-            this.lblRailgun.TabIndex = 31;
-            this.lblRailgun.Text = "Railgun\'s";
+            this.tbxTotalGoldCost.Location = new System.Drawing.Point(515, 177);
+            this.tbxTotalGoldCost.Name = "tbxTotalGoldCost";
+            this.tbxTotalGoldCost.ReadOnly = true;
+            this.tbxTotalGoldCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalGoldCost.TabIndex = 43;
             // 
-            // lblGyro
+            // tbxTotalGravelCost
             // 
-            this.lblGyro.AutoSize = true;
-            this.lblGyro.Location = new System.Drawing.Point(232, 131);
-            this.lblGyro.Name = "lblGyro";
-            this.lblGyro.Size = new System.Drawing.Size(36, 13);
-            this.lblGyro.TabIndex = 32;
-            this.lblGyro.Text = "Gyro\'s";
+            this.tbxTotalGravelCost.Location = new System.Drawing.Point(515, 151);
+            this.tbxTotalGravelCost.Name = "tbxTotalGravelCost";
+            this.tbxTotalGravelCost.ReadOnly = true;
+            this.tbxTotalGravelCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalGravelCost.TabIndex = 44;
             // 
-            // lblkW
+            // tbxTotalSilverCost
             // 
-            this.lblkW.AutoSize = true;
-            this.lblkW.Location = new System.Drawing.Point(232, 157);
-            this.lblkW.Name = "lblkW";
-            this.lblkW.Size = new System.Drawing.Size(24, 13);
-            this.lblkW.TabIndex = 33;
-            this.lblkW.Text = "kW";
+            this.tbxTotalSilverCost.Location = new System.Drawing.Point(515, 125);
+            this.tbxTotalSilverCost.Name = "tbxTotalSilverCost";
+            this.tbxTotalSilverCost.ReadOnly = true;
+            this.tbxTotalSilverCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalSilverCost.TabIndex = 45;
             // 
-            // lblLargeReactor
+            // tbxTotalPlatinaCost
             // 
-            this.lblLargeReactor.AutoSize = true;
-            this.lblLargeReactor.Location = new System.Drawing.Point(232, 170);
-            this.lblLargeReactor.Name = "lblLargeReactor";
-            this.lblLargeReactor.Size = new System.Drawing.Size(75, 13);
-            this.lblLargeReactor.TabIndex = 34;
-            this.lblLargeReactor.Text = "Large Reactor";
+            this.tbxTotalPlatinaCost.Location = new System.Drawing.Point(515, 203);
+            this.tbxTotalPlatinaCost.Name = "tbxTotalPlatinaCost";
+            this.tbxTotalPlatinaCost.ReadOnly = true;
+            this.tbxTotalPlatinaCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalPlatinaCost.TabIndex = 46;
             // 
-            // lblSmallReactor
+            // lblTotalPlatinaCost
             // 
-            this.lblSmallReactor.AutoSize = true;
-            this.lblSmallReactor.Location = new System.Drawing.Point(232, 183);
-            this.lblSmallReactor.Name = "lblSmallReactor";
-            this.lblSmallReactor.Size = new System.Drawing.Size(70, 13);
-            this.lblSmallReactor.TabIndex = 35;
-            this.lblSmallReactor.Text = "SmallReactor";
+            this.lblTotalPlatinaCost.AutoSize = true;
+            this.lblTotalPlatinaCost.Location = new System.Drawing.Point(412, 206);
+            this.lblTotalPlatinaCost.Name = "lblTotalPlatinaCost";
+            this.lblTotalPlatinaCost.Size = new System.Drawing.Size(93, 13);
+            this.lblTotalPlatinaCost.TabIndex = 47;
+            this.lblTotalPlatinaCost.Text = "Total Platina Cost:";
             // 
-            // lblSpaceSvar3
+            // tbxThrusterComponent
             // 
-            this.lblSpaceSvar3.AutoSize = true;
-            this.lblSpaceSvar3.Location = new System.Drawing.Point(338, 183);
-            this.lblSpaceSvar3.Name = "lblSpaceSvar3";
-            this.lblSpaceSvar3.Size = new System.Drawing.Size(41, 13);
-            this.lblSpaceSvar3.TabIndex = 36;
-            this.lblSpaceSvar3.Text = "label17";
+            this.tbxThrusterComponent.Location = new System.Drawing.Point(134, 414);
+            this.tbxThrusterComponent.Name = "tbxThrusterComponent";
+            this.tbxThrusterComponent.ReadOnly = true;
+            this.tbxThrusterComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxThrusterComponent.TabIndex = 48;
             // 
-            // lblSpaceSvar2
+            // lblThrusterComponent
             // 
-            this.lblSpaceSvar2.AutoSize = true;
-            this.lblSpaceSvar2.Location = new System.Drawing.Point(338, 166);
-            this.lblSpaceSvar2.Name = "lblSpaceSvar2";
-            this.lblSpaceSvar2.Size = new System.Drawing.Size(41, 13);
-            this.lblSpaceSvar2.TabIndex = 37;
-            this.lblSpaceSvar2.Text = "label18";
+            this.lblThrusterComponent.AutoSize = true;
+            this.lblThrusterComponent.Location = new System.Drawing.Point(6, 417);
+            this.lblThrusterComponent.Name = "lblThrusterComponent";
+            this.lblThrusterComponent.Size = new System.Drawing.Size(103, 13);
+            this.lblThrusterComponent.TabIndex = 49;
+            this.lblThrusterComponent.Text = "Thruster Component";
             // 
-            // lblSpaceSvar1
+            // textBox1
             // 
-            this.lblSpaceSvar1.AutoSize = true;
-            this.lblSpaceSvar1.Location = new System.Drawing.Point(338, 151);
-            this.lblSpaceSvar1.Name = "lblSpaceSvar1";
-            this.lblSpaceSvar1.Size = new System.Drawing.Size(41, 13);
-            this.lblSpaceSvar1.TabIndex = 38;
-            this.lblSpaceSvar1.Text = "label19";
+            this.textBox1.Location = new System.Drawing.Point(515, 255);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 50;
             // 
-            // tbxRailgun
+            // textBox2
             // 
-            this.tbxRailgun.Location = new System.Drawing.Point(322, 102);
-            this.tbxRailgun.Name = "tbxRailgun";
-            this.tbxRailgun.Size = new System.Drawing.Size(100, 20);
-            this.tbxRailgun.TabIndex = 39;
+            this.textBox2.Location = new System.Drawing.Point(515, 281);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 51;
             // 
-            // tbxGravityDrivers
+            // textBox3
             // 
-            this.tbxGravityDrivers.Location = new System.Drawing.Point(322, 76);
-            this.tbxGravityDrivers.Name = "tbxGravityDrivers";
-            this.tbxGravityDrivers.Size = new System.Drawing.Size(100, 20);
-            this.tbxGravityDrivers.TabIndex = 40;
+            this.textBox3.Location = new System.Drawing.Point(515, 384);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 52;
             // 
-            // tbxReaxtorMassBlock
+            // tbxTotalPowerUsage
             // 
-            this.tbxReaxtorMassBlock.Location = new System.Drawing.Point(322, 50);
-            this.tbxReaxtorMassBlock.Name = "tbxReaxtorMassBlock";
-            this.tbxReaxtorMassBlock.Size = new System.Drawing.Size(100, 20);
-            this.tbxReaxtorMassBlock.TabIndex = 41;
+            this.tbxTotalPowerUsage.Location = new System.Drawing.Point(515, 358);
+            this.tbxTotalPowerUsage.Name = "tbxTotalPowerUsage";
+            this.tbxTotalPowerUsage.ReadOnly = true;
+            this.tbxTotalPowerUsage.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalPowerUsage.TabIndex = 53;
             // 
-            // tbxGyro
+            // tbxPowerConsumption
             // 
-            this.tbxGyro.Location = new System.Drawing.Point(322, 128);
-            this.tbxGyro.Name = "tbxGyro";
-            this.tbxGyro.Size = new System.Drawing.Size(100, 20);
-            this.tbxGyro.TabIndex = 42;
+            this.tbxPowerConsumption.Location = new System.Drawing.Point(515, 332);
+            this.tbxPowerConsumption.Name = "tbxPowerConsumption";
+            this.tbxPowerConsumption.ReadOnly = true;
+            this.tbxPowerConsumption.Size = new System.Drawing.Size(100, 20);
+            this.tbxPowerConsumption.TabIndex = 54;
             // 
-            // btnSolve3
+            // tbxPowerProduction
             // 
-            this.btnSolve3.Location = new System.Drawing.Point(227, 199);
-            this.btnSolve3.Name = "btnSolve3";
-            this.btnSolve3.Size = new System.Drawing.Size(195, 23);
-            this.btnSolve3.TabIndex = 43;
-            this.btnSolve3.Text = "Solve";
-            this.btnSolve3.UseVisualStyleBackColor = true;
-            this.btnSolve3.Click += new System.EventHandler(this.btnSolve3_Click);
+            this.tbxPowerProduction.Location = new System.Drawing.Point(515, 306);
+            this.tbxPowerProduction.Name = "tbxPowerProduction";
+            this.tbxPowerProduction.ReadOnly = true;
+            this.tbxPowerProduction.Size = new System.Drawing.Size(100, 20);
+            this.tbxPowerProduction.TabIndex = 55;
             // 
-            // lblDodgingCalculator
+            // lblPowerProduction
             // 
-            this.lblDodgingCalculator.AutoSize = true;
-            this.lblDodgingCalculator.Location = new System.Drawing.Point(232, 286);
-            this.lblDodgingCalculator.Name = "lblDodgingCalculator";
-            this.lblDodgingCalculator.Size = new System.Drawing.Size(97, 13);
-            this.lblDodgingCalculator.TabIndex = 44;
-            this.lblDodgingCalculator.Text = "Dodging Calculator";
+            this.lblPowerProduction.AutoSize = true;
+            this.lblPowerProduction.Location = new System.Drawing.Point(412, 309);
+            this.lblPowerProduction.Name = "lblPowerProduction";
+            this.lblPowerProduction.Size = new System.Drawing.Size(91, 13);
+            this.lblPowerProduction.TabIndex = 56;
+            this.lblPowerProduction.Text = "Power Production";
             // 
-            // lblDiameter
+            // lblPowerConsumption
             // 
-            this.lblDiameter.AutoSize = true;
-            this.lblDiameter.Location = new System.Drawing.Point(232, 341);
-            this.lblDiameter.Name = "lblDiameter";
-            this.lblDiameter.Size = new System.Drawing.Size(86, 13);
-            this.lblDiameter.TabIndex = 45;
-            this.lblDiameter.Text = "Diameter(blocks)";
+            this.lblPowerConsumption.AutoSize = true;
+            this.lblPowerConsumption.Location = new System.Drawing.Point(412, 335);
+            this.lblPowerConsumption.Name = "lblPowerConsumption";
+            this.lblPowerConsumption.Size = new System.Drawing.Size(101, 13);
+            this.lblPowerConsumption.TabIndex = 57;
+            this.lblPowerConsumption.Text = "Power Consumption";
             // 
-            // lblMinimalDodgingDistance
+            // lblTotalPowerUsage
             // 
-            this.lblMinimalDodgingDistance.AutoSize = true;
-            this.lblMinimalDodgingDistance.Location = new System.Drawing.Point(232, 394);
-            this.lblMinimalDodgingDistance.Name = "lblMinimalDodgingDistance";
-            this.lblMinimalDodgingDistance.Size = new System.Drawing.Size(130, 13);
-            this.lblMinimalDodgingDistance.TabIndex = 46;
-            this.lblMinimalDodgingDistance.Text = "Minimal Dodging Distance";
+            this.lblTotalPowerUsage.AutoSize = true;
+            this.lblTotalPowerUsage.Location = new System.Drawing.Point(412, 361);
+            this.lblTotalPowerUsage.Name = "lblTotalPowerUsage";
+            this.lblTotalPowerUsage.Size = new System.Drawing.Size(98, 13);
+            this.lblTotalPowerUsage.TabIndex = 58;
+            this.lblTotalPowerUsage.Text = "Total Power Usage";
             // 
-            // lblProjektivSpeed
+            // label8
             // 
-            this.lblProjektivSpeed.AutoSize = true;
-            this.lblProjektivSpeed.Location = new System.Drawing.Point(232, 367);
-            this.lblProjektivSpeed.Name = "lblProjektivSpeed";
-            this.lblProjektivSpeed.Size = new System.Drawing.Size(82, 13);
-            this.lblProjektivSpeed.TabIndex = 47;
-            this.lblProjektivSpeed.Text = "Projektiv Speed";
-            // 
-            // lblMinimalDodgeSvar
-            // 
-            this.lblMinimalDodgeSvar.AutoSize = true;
-            this.lblMinimalDodgeSvar.Location = new System.Drawing.Point(232, 407);
-            this.lblMinimalDodgeSvar.Name = "lblMinimalDodgeSvar";
-            this.lblMinimalDodgeSvar.Size = new System.Drawing.Size(35, 13);
-            this.lblMinimalDodgeSvar.TabIndex = 48;
-            this.lblMinimalDodgeSvar.Text = "label9";
-            // 
-            // lblAxeleration
-            // 
-            this.lblAxeleration.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.lblAxeleration.AutoSize = true;
-            this.lblAxeleration.Location = new System.Drawing.Point(232, 315);
-            this.lblAxeleration.Name = "lblAxeleration";
-            this.lblAxeleration.Size = new System.Drawing.Size(59, 13);
-            this.lblAxeleration.TabIndex = 49;
-            this.lblAxeleration.Text = "Axeleration";
-            // 
-            // tbxAxeleration
-            // 
-            this.tbxAxeleration.Location = new System.Drawing.Point(341, 312);
-            this.tbxAxeleration.Name = "tbxAxeleration";
-            this.tbxAxeleration.Size = new System.Drawing.Size(100, 20);
-            this.tbxAxeleration.TabIndex = 50;
-            // 
-            // tbxProjektivSpeed
-            // 
-            this.tbxProjektivSpeed.Location = new System.Drawing.Point(341, 364);
-            this.tbxProjektivSpeed.Name = "tbxProjektivSpeed";
-            this.tbxProjektivSpeed.Size = new System.Drawing.Size(100, 20);
-            this.tbxProjektivSpeed.TabIndex = 51;
-            // 
-            // tbxDiameter
-            // 
-            this.tbxDiameter.Location = new System.Drawing.Point(341, 338);
-            this.tbxDiameter.Name = "tbxDiameter";
-            this.tbxDiameter.Size = new System.Drawing.Size(100, 20);
-            this.tbxDiameter.TabIndex = 52;
-            // 
-            // btnSolve4
-            // 
-            this.btnSolve4.Location = new System.Drawing.Point(232, 423);
-            this.btnSolve4.Name = "btnSolve4";
-            this.btnSolve4.Size = new System.Drawing.Size(209, 23);
-            this.btnSolve4.TabIndex = 53;
-            this.btnSolve4.Text = "Solve";
-            this.btnSolve4.UseVisualStyleBackColor = true;
-            this.btnSolve4.Click += new System.EventHandler(this.btnSolve4_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(412, 387);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "label8";
             // 
             // Form1
             // 
@@ -2716,8 +2967,8 @@
         private System.Windows.Forms.TextBox tbxLargeIonThruster;
         private System.Windows.Forms.TextBox tbxIonThruster;
         private System.Windows.Forms.TextBox tbxAirVent;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox tbxLReactor;
+        private System.Windows.Forms.TextBox tbxSReactor;
         private System.Windows.Forms.TextBox textBox37;
         private System.Windows.Forms.TextBox tbxLargeAtmosphericThruster;
         private System.Windows.Forms.TextBox tbxBeacon;
@@ -2771,8 +3022,8 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label lblSReactor;
+        private System.Windows.Forms.Label lblLReactor;
         private System.Windows.Forms.Label lblAirVent;
         private System.Windows.Forms.Label lblIonThruster;
         private System.Windows.Forms.Label lblLargeIonThruster;
@@ -2871,6 +3122,30 @@
         private System.Windows.Forms.Label lblMinimalDodgingDistance;
         private System.Windows.Forms.Label lblDiameter;
         private System.Windows.Forms.Label lblDodgingCalculator;
+        private System.Windows.Forms.Label lblTotalPlatinaCost;
+        private System.Windows.Forms.TextBox tbxTotalPlatinaCost;
+        private System.Windows.Forms.TextBox tbxTotalSilverCost;
+        private System.Windows.Forms.TextBox tbxTotalGravelCost;
+        private System.Windows.Forms.TextBox tbxTotalGoldCost;
+        private System.Windows.Forms.TextBox tbxReactorComponent;
+        private System.Windows.Forms.TextBox tbxSuperConducter;
+        private System.Windows.Forms.Label lblTotalGoldCost;
+        private System.Windows.Forms.Label lblTotalGravelCost;
+        private System.Windows.Forms.Label lblTotalSilverCost;
+        private System.Windows.Forms.Label lblReactorComponent;
+        private System.Windows.Forms.Label lblSuperConducter;
+        private System.Windows.Forms.Label lblThrusterComponent;
+        private System.Windows.Forms.TextBox tbxThrusterComponent;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTotalPowerUsage;
+        private System.Windows.Forms.Label lblPowerConsumption;
+        private System.Windows.Forms.Label lblPowerProduction;
+        private System.Windows.Forms.TextBox tbxPowerProduction;
+        private System.Windows.Forms.TextBox tbxPowerConsumption;
+        private System.Windows.Forms.TextBox tbxTotalPowerUsage;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

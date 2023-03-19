@@ -421,21 +421,33 @@ namespace SE_Calculator
             int iont = int.Parse(tbxIonThruster.Text);
             int largeatmot = int.Parse(tbxLargeAtmosphericThruster.Text);
             int atmot = int.Parse(tbxAtmosphericThruster.Text);
+            int lreactor = int.Parse(tbxLReactor.Text);
+            int sractor = int.Parse(tbxSReactor.Text);
 
             
                 
             if (GridSize4 == 1)
             {
                 double irontot = (lcc * 3053) + (scc * 770) + (hab * 3150) + (lab * 525) + (cock * 383) + (battery * 2792.5) + (lhtank * 8984) + (shtank * 3584) + (gyro * 13802.5) + (largeatmot * 30240) + (atmot * 4415) + (ann * 3904) + (lhthrust * 9150) + (shthrust * 1845) + (beacon * 3904) + (drill * 7162.5)
-                + (oredet * 1687.5) + (o2farm * 1700) + (o2tank * 3584) + (h2eng * 3512) + (o2h2 * 2712.5) + (airvent * 1347.5) + (spot * 448) + (largeiont) + (iont);
-                double nickeltot = (lcc * 220) + (scc * 40) + (cock * 5) + (battery * 160) + (gyro * 270) + (largeatmot * 5700) + (atmot * 600) + (lhthrust * 1250) + (shthrust * 200) + (oredet * 400) + (drill * 25) + (airvent * 50) + (o2h2 * 20) + (h2eng * 62) + (largeiont) + (iont);
-                double cobalttot = (lcc * 72) + (scc * 12) + (gyro * 150) + (largeatmot * 120) + (atmot * 30) + (lhthrust * 750) + (shthrust * 120) + (largeiont) + (iont);
-                double silicontot = (lcc * 6.6) + (scc * 5.4) + (cock * 210) + (battery * 85) + (lhtank * 1.6) + (shtank * 1.6) + (gyro) + (ann * 41.6) + (oredet * 5) + (drill) + (airvent) + (spot * 60) + (o2h2) + (h2eng * 1.8) + (o2farm * 1504) + (o2tank * 1.6);
+                + (oredet * 1687.5) + (o2farm * 1700) + (o2tank * 3584) + (h2eng * 3512) + (o2h2 * 2712.5) + (airvent * 1347.5) + (spot * 448) + (lreactor * 54817.5) + (sractor * 4000.5) + (largeiont * 35950) + (iont * 3765);
+                double nickeltot = (lcc * 220) + (scc * 40) + (cock * 5) + (battery * 160) + (gyro * 270) + (largeatmot * 5700) + (atmot * 600) + (lhthrust * 1250) + (shthrust * 200) + (oredet * 400) + (drill * 25) + (airvent * 50) + (o2h2 * 20) + (h2eng * 62) + (lreactor * 300) + (sractor * 50);
+                double cobalttot = (lcc * 72) + (scc * 12) + (gyro * 150) + (largeatmot * 120) + (atmot * 30) + (lhthrust * 750) + (shthrust * 120) + (largeiont * 9600) + (iont * 800) + (lreactor * 120) + (sractor * 12);
+                double silicontot = (lcc * 6.6) + (scc * 5.4) + (cock * 210) + (battery * 85) + (lhtank * 1.6) + (shtank * 1.6) + (gyro) + (ann * 41.6) + (oredet * 5) + (drill) + (airvent) + (spot * 60) + (o2h2) + (h2eng * 1.8) + (o2farm * 1504) + (o2tank * 1.6) + (lreactor * 15) + (sractor * 5);
+                double silvertot = (lreactor * 40000) + (sractor * 2000);
+                double graveltot = (lreactor * 10000) + (sractor * 500);
+                double gulttot = (lreactor * 200) + (largeiont * 960) + (iont * 80);
+                double platinatot = (largeiont * 384) + (iont * 32);
+
+
 
                 tbxIronTot.Text = irontot.ToString();
                 tbxNickelTot.Text = nickeltot.ToString();
                 tbxCobaltTot.Text = cobalttot.ToString();
                 tbxSiliconTot.Text = silicontot.ToString();
+                tbxTotalSilverCost.Text = silvertot.ToString();
+                tbxTotalGravelCost.Text = graveltot.ToString();
+                tbxTotalGoldCost.Text = gulttot.ToString();
+                tbxTotalPlatinaCost.Text = platinatot.ToString();
 
                 int pcu = ((lcc + scc + airvent) * 10) + ((lhthrust + atmot + largeatmot + shthrust + battery) * 15) + ((lhtank + shtank + spot + h2eng + o2farm + o2tank) * 25) + ((gyro + beacon + oredet + o2h2) * 50) + (cock * 150) + (drill * 190) + (ann * 100);
 
@@ -454,6 +466,29 @@ namespace SE_Calculator
                 tbxConstructionComponent.Text = ((lcc * 80) + ((scc + lhtank + shtank + gyro + ann + beacon + oredet + drill + o2tank) * 40) + ((airvent + cock) * 20) + (battery * 30) + ((atmot + h2eng) * 70) + (lhthrust * 180) + (shthrust * 60) + (spot * 15) + (o2h2 * 5)).ToString();
                 tbxSmallSteelTube.Text = (((lcc+lhtank+shtank+ann+beacon+o2tank) * 60) + (scc*20) + (h2eng * 20) + (o2farm * 10)).ToString();
                 tbxLargeSteelTube.Text = ((lhtank * 80) + ((shtank+ann+lhthrust+beacon+o2tank) * 40) + (gyro * 4) + (largeatmot * 50) + ((atmot+shthrust) * 8) + ((h2eng+drill) * 12) + ((o2h2+spot) * 2) + (o2farm * 20)).ToString();
+                tbxSuperConducter.Text = (lreactor * 100).ToString();
+                tbxReactorComponent.Text = ((lreactor * 2000) + (sractor * 100)).ToString();
+                tbxThrusterComponent.Text = ((largeiont * 960) + (iont * 80)).ToString();
+
+                double powerproduction = (lreactor * 300) + (sractor * 15) + (h2eng * 5);
+                double powerconsumtion = (lhtank * 0.001) + (gyro * 0.00003) + (largeatmot * 16.36) + (atmot * 2.36) + (ann * 0.2) + (beacon * 0.01) + (drill * 0.002) + (spot * 0.001) + (o2h2 * 0.33) + (o2farm * 0.001) + (o2tank * 0.001) + (largeiont * 33.60) + (iont * 3.36);
+                tbxPowerProduction.Text = powerproduction.ToString() + " MW";
+                tbxPowerConsumption.Text = powerconsumtion.ToString() + " MW";
+                
+                if (powerproduction < powerconsumtion)
+                {
+                    double power = powerconsumtion - powerproduction;
+                    double batterylife = battery * 3;
+                    double powerlife = batterylife / power;
+                    tbxTotalPowerUsage.Text = Math.Round(powerlife, 2).ToString() + " h";
+
+
+
+                }
+                else
+                {
+
+                }
 
 
 
