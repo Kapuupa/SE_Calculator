@@ -244,75 +244,13 @@ namespace SE_Calculator
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBox4.SelectedItem.ToString())
-            {
-                case "Display":
-                    ContainerItem = 0.75;
-                    break;
-                case "Ores and Stone":
-                    ContainerItem = 0.37;
-                    break;
-                case "Steel Plate":
-                    ContainerItem = 0.15;
-                    break;
-                case "Computer":
-                    ContainerItem = 5;
-                    break;
-                case "Construction Component/Gravity Component/ThrusterComponent":
-                    ContainerItem = 0.25;
-                    break;
-                case "Metal Grid":
-                    ContainerItem = 2.5;
-                    break;
-                case "Interior Plate":
-                    ContainerItem = 5 / 3;
-                    break;
-                case "Iron Ingot":
-                    ContainerItem = 0.13;
-                    break;
-                case "Silicon Wafer":
-                    ContainerItem = 0.43;
-                    break;
-                case "Nickel Ingot/Cobalt Ingot":
-                    ContainerItem = 0.11;
-                    break;
-                case "Magnesium Powder":
-                    ContainerItem = 0.58;
-                    break;
-                case "Silver Ingot":
-                    ContainerItem = 0.10;
-                    break;
-                case "Gold Ingot/Uranium Ingot":
-                    ContainerItem = 0.052;
-                    break;
-                case "Platinum Ingot":
-                    ContainerItem = 0.05;
-                    break;
-                case "Power Cell":
-                    ContainerItem = 1.6;
-                    break;
-                case "Girder":
-                    ContainerItem = 1 / 3;
-                    break;
-                case "Large Steel Tube":
-                    ContainerItem = 1.52;
-                    break;
-                case "Small Steel Tube":
-                    ContainerItem = 0.5;
-                    break;
-                case "Motor":
-                    ContainerItem = 8 / (0.024);
-                    break;
-                case "Detector Component":
-                    ContainerItem = 1.2;
-                    break;
-                case "Radio-comm comp.":
-                    ContainerItem = 8.75;
-                    break;
-                default:
-                    ContainerItem = 8 / (15);
-                    break;
-            }
+            int nuValdItem = comboBox4.SelectedIndex;
+            double[] föremåtListo = new double[]
+            {0.75,0.37,0.15,5,0.25,2.5,(5/3),0.13,0.43,0.11,0.58,0.1,0.052,0.01,1.6,(1/3),1.52,0.5,(8 / (0.024)),1.2,8.75,(8 / (15))};
+            ContainerItem = föremåtListo[nuValdItem];
+
+
+            
         }
 
         public void comboBox2_Click(object sender, EventArgs e)
@@ -330,30 +268,9 @@ namespace SE_Calculator
 
         private void comboBox3_Click(object sender, EventArgs e)
         {
-            if (comboBox3.SelectedItem == "Earth")
-            {
-                gravv = 1;
-            }
-            else if (comboBox3.SelectedItem == "Moon")
-            {
-                gravv = 0.25;
-            }
-            else if (comboBox3.SelectedItem == "Mars")
-            {
-                gravv = 0.9;
-            }
-            else if (comboBox3.SelectedItem == "Titan")
-            {
-                gravv = 0.25;
-            }
-            else if (comboBox3.SelectedItem == "Europa")
-            {
-                gravv = 0.25;
-            }
-            else
-            {
-                gravv = 1.1;
-            }
+            double[] valdItom = new double[]
+             {1,0.25,0.9,0.25,0.25,1.1};
+            gravv = valdItom[comboBox3.SelectedIndex];
         }
 
         private void comboBox1_Click(object sender, EventArgs e)
@@ -487,8 +404,26 @@ namespace SE_Calculator
                 }
                 else
                 {
-
+                    tbxTotalPowerUsage.Text = " Infinity";
                 }
+
+                double totalhydrogen = (lhtank * 15000000) + (shtank * 1000000) + (h2eng * 100000);
+                double hydrogenconsumption = (lhthrust * 4821.29) + (shthrust * 803.55) + (h2eng * 500);
+                double hydrogentime = totalhydrogen/hydrogenconsumption;
+
+                if (hydrogentime >= 300)
+                {
+                    tbxHydrogenTime.Text = Math.Round((hydrogentime/60), 2).ToString() + " m";
+                }
+                else
+                {
+                    tbxHydrogenTime.Text = Math.Round(hydrogentime, 2).ToString() + " s";
+                }
+
+                tbxHydrogenCapacity.Text = totalhydrogen.ToString() + " L";
+                tbxHydrogenUse.Text = hydrogenconsumption.ToString() + " L/s";
+                
+
 
 
 

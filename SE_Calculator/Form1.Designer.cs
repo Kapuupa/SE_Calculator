@@ -189,7 +189,7 @@
             this.tbxPowerConsumption = new System.Windows.Forms.TextBox();
             this.tbxTotalPowerUsage = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxHydrogenCapacity = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblThrusterComponent = new System.Windows.Forms.Label();
             this.tbxThrusterComponent = new System.Windows.Forms.TextBox();
@@ -242,6 +242,8 @@
             this.lblNickelTot = new System.Windows.Forms.Label();
             this.lblIronTot = new System.Windows.Forms.Label();
             this.tpeCapas = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxAxlar = new System.Windows.Forms.TextBox();
             this.btnSolve4 = new System.Windows.Forms.Button();
             this.tbxDiameter = new System.Windows.Forms.TextBox();
             this.tbxProjektivSpeed = new System.Windows.Forms.TextBox();
@@ -297,8 +299,12 @@
             this.lblTotalMass = new System.Windows.Forms.Label();
             this.lblGDrive = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tbxAxlar = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.tbxHydrogenUse = new System.Windows.Forms.TextBox();
+            this.tbxHydrogenTime = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lblHydrogenCapacity = new System.Windows.Forms.Label();
+            this.lblTotalHydrogenUse = new System.Windows.Forms.Label();
+            this.lblHydrogenTime = new System.Windows.Forms.Label();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -1746,6 +1752,12 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblHydrogenTime);
+            this.tabPage3.Controls.Add(this.lblTotalHydrogenUse);
+            this.tabPage3.Controls.Add(this.lblHydrogenCapacity);
+            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.tbxHydrogenTime);
+            this.tabPage3.Controls.Add(this.tbxHydrogenUse);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.lblTotalPowerUsage);
             this.tabPage3.Controls.Add(this.lblPowerConsumption);
@@ -1754,7 +1766,7 @@
             this.tabPage3.Controls.Add(this.tbxPowerConsumption);
             this.tabPage3.Controls.Add(this.tbxTotalPowerUsage);
             this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.tbxHydrogenCapacity);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.lblThrusterComponent);
             this.tabPage3.Controls.Add(this.tbxThrusterComponent);
@@ -1817,7 +1829,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(412, 387);
+            this.label8.Location = new System.Drawing.Point(412, 466);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 59;
@@ -1826,7 +1838,7 @@
             // lblTotalPowerUsage
             // 
             this.lblTotalPowerUsage.AutoSize = true;
-            this.lblTotalPowerUsage.Location = new System.Drawing.Point(412, 361);
+            this.lblTotalPowerUsage.Location = new System.Drawing.Point(412, 440);
             this.lblTotalPowerUsage.Name = "lblTotalPowerUsage";
             this.lblTotalPowerUsage.Size = new System.Drawing.Size(98, 13);
             this.lblTotalPowerUsage.TabIndex = 58;
@@ -1835,7 +1847,7 @@
             // lblPowerConsumption
             // 
             this.lblPowerConsumption.AutoSize = true;
-            this.lblPowerConsumption.Location = new System.Drawing.Point(412, 335);
+            this.lblPowerConsumption.Location = new System.Drawing.Point(412, 414);
             this.lblPowerConsumption.Name = "lblPowerConsumption";
             this.lblPowerConsumption.Size = new System.Drawing.Size(101, 13);
             this.lblPowerConsumption.TabIndex = 57;
@@ -1844,7 +1856,7 @@
             // lblPowerProduction
             // 
             this.lblPowerProduction.AutoSize = true;
-            this.lblPowerProduction.Location = new System.Drawing.Point(412, 309);
+            this.lblPowerProduction.Location = new System.Drawing.Point(412, 388);
             this.lblPowerProduction.Name = "lblPowerProduction";
             this.lblPowerProduction.Size = new System.Drawing.Size(91, 13);
             this.lblPowerProduction.TabIndex = 56;
@@ -1852,7 +1864,7 @@
             // 
             // tbxPowerProduction
             // 
-            this.tbxPowerProduction.Location = new System.Drawing.Point(515, 306);
+            this.tbxPowerProduction.Location = new System.Drawing.Point(515, 385);
             this.tbxPowerProduction.Name = "tbxPowerProduction";
             this.tbxPowerProduction.ReadOnly = true;
             this.tbxPowerProduction.Size = new System.Drawing.Size(100, 20);
@@ -1860,7 +1872,7 @@
             // 
             // tbxPowerConsumption
             // 
-            this.tbxPowerConsumption.Location = new System.Drawing.Point(515, 332);
+            this.tbxPowerConsumption.Location = new System.Drawing.Point(515, 411);
             this.tbxPowerConsumption.Name = "tbxPowerConsumption";
             this.tbxPowerConsumption.ReadOnly = true;
             this.tbxPowerConsumption.Size = new System.Drawing.Size(100, 20);
@@ -1868,7 +1880,7 @@
             // 
             // tbxTotalPowerUsage
             // 
-            this.tbxTotalPowerUsage.Location = new System.Drawing.Point(515, 358);
+            this.tbxTotalPowerUsage.Location = new System.Drawing.Point(515, 437);
             this.tbxTotalPowerUsage.Name = "tbxTotalPowerUsage";
             this.tbxTotalPowerUsage.ReadOnly = true;
             this.tbxTotalPowerUsage.Size = new System.Drawing.Size(100, 20);
@@ -1876,19 +1888,19 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(515, 384);
+            this.textBox3.Location = new System.Drawing.Point(515, 463);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 52;
             // 
-            // textBox2
+            // tbxHydrogenCapacity
             // 
-            this.textBox2.Location = new System.Drawing.Point(515, 281);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 51;
+            this.tbxHydrogenCapacity.Location = new System.Drawing.Point(515, 281);
+            this.tbxHydrogenCapacity.Name = "tbxHydrogenCapacity";
+            this.tbxHydrogenCapacity.ReadOnly = true;
+            this.tbxHydrogenCapacity.Size = new System.Drawing.Size(100, 20);
+            this.tbxHydrogenCapacity.TabIndex = 51;
             // 
             // textBox1
             // 
@@ -2388,6 +2400,22 @@
             this.tpeCapas.Text = "Capas G-Drive Calculator";
             this.tpeCapas.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Axis of travle";
+            // 
+            // tbxAxlar
+            // 
+            this.tbxAxlar.Location = new System.Drawing.Point(89, 27);
+            this.tbxAxlar.Name = "tbxAxlar";
+            this.tbxAxlar.Size = new System.Drawing.Size(100, 20);
+            this.tbxAxlar.TabIndex = 54;
+            // 
             // btnSolve4
             // 
             this.btnSolve4.Location = new System.Drawing.Point(232, 423);
@@ -2851,21 +2879,56 @@
             this.lblGDrive.TabIndex = 0;
             this.lblGDrive.Text = "G-Drive";
             // 
-            // tbxAxlar
+            // tbxHydrogenUse
             // 
-            this.tbxAxlar.Location = new System.Drawing.Point(89, 27);
-            this.tbxAxlar.Name = "tbxAxlar";
-            this.tbxAxlar.Size = new System.Drawing.Size(100, 20);
-            this.tbxAxlar.TabIndex = 54;
+            this.tbxHydrogenUse.Location = new System.Drawing.Point(515, 307);
+            this.tbxHydrogenUse.Name = "tbxHydrogenUse";
+            this.tbxHydrogenUse.ReadOnly = true;
+            this.tbxHydrogenUse.Size = new System.Drawing.Size(100, 20);
+            this.tbxHydrogenUse.TabIndex = 60;
             // 
-            // label5
+            // tbxHydrogenTime
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Axis of travle";
+            this.tbxHydrogenTime.Location = new System.Drawing.Point(515, 333);
+            this.tbxHydrogenTime.Name = "tbxHydrogenTime";
+            this.tbxHydrogenTime.ReadOnly = true;
+            this.tbxHydrogenTime.Size = new System.Drawing.Size(100, 20);
+            this.tbxHydrogenTime.TabIndex = 61;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(515, 359);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 62;
+            // 
+            // lblHydrogenCapacity
+            // 
+            this.lblHydrogenCapacity.AutoSize = true;
+            this.lblHydrogenCapacity.Location = new System.Drawing.Point(412, 284);
+            this.lblHydrogenCapacity.Name = "lblHydrogenCapacity";
+            this.lblHydrogenCapacity.Size = new System.Drawing.Size(100, 13);
+            this.lblHydrogenCapacity.TabIndex = 63;
+            this.lblHydrogenCapacity.Text = "Hydrogen Capacity:";
+            // 
+            // lblTotalHydrogenUse
+            // 
+            this.lblTotalHydrogenUse.AutoSize = true;
+            this.lblTotalHydrogenUse.Location = new System.Drawing.Point(412, 310);
+            this.lblTotalHydrogenUse.Name = "lblTotalHydrogenUse";
+            this.lblTotalHydrogenUse.Size = new System.Drawing.Size(102, 13);
+            this.lblTotalHydrogenUse.TabIndex = 64;
+            this.lblTotalHydrogenUse.Text = "Total Hydrogen Use";
+            // 
+            // lblHydrogenTime
+            // 
+            this.lblHydrogenTime.AutoSize = true;
+            this.lblHydrogenTime.Location = new System.Drawing.Point(412, 336);
+            this.lblHydrogenTime.Name = "lblHydrogenTime";
+            this.lblHydrogenTime.Size = new System.Drawing.Size(97, 13);
+            this.lblHydrogenTime.TabIndex = 65;
+            this.lblHydrogenTime.Text = "Hydrogen Last For:";
             // 
             // Form1
             // 
@@ -3164,10 +3227,16 @@
         private System.Windows.Forms.TextBox tbxPowerConsumption;
         private System.Windows.Forms.TextBox tbxTotalPowerUsage;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxHydrogenCapacity;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbxAxlar;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbxHydrogenTime;
+        private System.Windows.Forms.TextBox tbxHydrogenUse;
+        private System.Windows.Forms.Label lblHydrogenTime;
+        private System.Windows.Forms.Label lblTotalHydrogenUse;
+        private System.Windows.Forms.Label lblHydrogenCapacity;
     }
 }
 
