@@ -181,6 +181,30 @@
             this.tbxAntenna = new System.Windows.Forms.TextBox();
             this.tbxMediumCargo = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblTotalPowerUsage = new System.Windows.Forms.Label();
+            this.lblPowerConsumption = new System.Windows.Forms.Label();
+            this.lblPowerProduction = new System.Windows.Forms.Label();
+            this.tbxPowerProduction = new System.Windows.Forms.TextBox();
+            this.tbxPowerConsumption = new System.Windows.Forms.TextBox();
+            this.tbxTotalPowerUsage = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblThrusterComponent = new System.Windows.Forms.Label();
+            this.tbxThrusterComponent = new System.Windows.Forms.TextBox();
+            this.lblTotalPlatinaCost = new System.Windows.Forms.Label();
+            this.tbxTotalPlatinaCost = new System.Windows.Forms.TextBox();
+            this.tbxTotalSilverCost = new System.Windows.Forms.TextBox();
+            this.tbxTotalGravelCost = new System.Windows.Forms.TextBox();
+            this.tbxTotalGoldCost = new System.Windows.Forms.TextBox();
+            this.tbxReactorComponent = new System.Windows.Forms.TextBox();
+            this.tbxSuperConducter = new System.Windows.Forms.TextBox();
+            this.lblTotalGoldCost = new System.Windows.Forms.Label();
+            this.lblTotalGravelCost = new System.Windows.Forms.Label();
+            this.lblTotalSilverCost = new System.Windows.Forms.Label();
+            this.lblReactorComponent = new System.Windows.Forms.Label();
+            this.lblSuperConducter = new System.Windows.Forms.Label();
             this.tbxDetectorComponent = new System.Windows.Forms.TextBox();
             this.tbxRadioComponent = new System.Windows.Forms.TextBox();
             this.tbxPowerCell = new System.Windows.Forms.TextBox();
@@ -273,30 +297,8 @@
             this.lblTotalMass = new System.Windows.Forms.Label();
             this.lblGDrive = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblSuperConducter = new System.Windows.Forms.Label();
-            this.lblReactorComponent = new System.Windows.Forms.Label();
-            this.lblTotalSilverCost = new System.Windows.Forms.Label();
-            this.lblTotalGravelCost = new System.Windows.Forms.Label();
-            this.lblTotalGoldCost = new System.Windows.Forms.Label();
-            this.tbxSuperConducter = new System.Windows.Forms.TextBox();
-            this.tbxReactorComponent = new System.Windows.Forms.TextBox();
-            this.tbxTotalGoldCost = new System.Windows.Forms.TextBox();
-            this.tbxTotalGravelCost = new System.Windows.Forms.TextBox();
-            this.tbxTotalSilverCost = new System.Windows.Forms.TextBox();
-            this.tbxTotalPlatinaCost = new System.Windows.Forms.TextBox();
-            this.lblTotalPlatinaCost = new System.Windows.Forms.Label();
-            this.tbxThrusterComponent = new System.Windows.Forms.TextBox();
-            this.lblThrusterComponent = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.tbxTotalPowerUsage = new System.Windows.Forms.TextBox();
-            this.tbxPowerConsumption = new System.Windows.Forms.TextBox();
-            this.tbxPowerProduction = new System.Windows.Forms.TextBox();
-            this.lblPowerProduction = new System.Windows.Forms.Label();
-            this.lblPowerConsumption = new System.Windows.Forms.Label();
-            this.lblTotalPowerUsage = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.tbxAxlar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -1812,6 +1814,209 @@
             this.tabPage3.Text = "Results";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(412, 387);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "label8";
+            // 
+            // lblTotalPowerUsage
+            // 
+            this.lblTotalPowerUsage.AutoSize = true;
+            this.lblTotalPowerUsage.Location = new System.Drawing.Point(412, 361);
+            this.lblTotalPowerUsage.Name = "lblTotalPowerUsage";
+            this.lblTotalPowerUsage.Size = new System.Drawing.Size(98, 13);
+            this.lblTotalPowerUsage.TabIndex = 58;
+            this.lblTotalPowerUsage.Text = "Total Power Usage";
+            // 
+            // lblPowerConsumption
+            // 
+            this.lblPowerConsumption.AutoSize = true;
+            this.lblPowerConsumption.Location = new System.Drawing.Point(412, 335);
+            this.lblPowerConsumption.Name = "lblPowerConsumption";
+            this.lblPowerConsumption.Size = new System.Drawing.Size(101, 13);
+            this.lblPowerConsumption.TabIndex = 57;
+            this.lblPowerConsumption.Text = "Power Consumption";
+            // 
+            // lblPowerProduction
+            // 
+            this.lblPowerProduction.AutoSize = true;
+            this.lblPowerProduction.Location = new System.Drawing.Point(412, 309);
+            this.lblPowerProduction.Name = "lblPowerProduction";
+            this.lblPowerProduction.Size = new System.Drawing.Size(91, 13);
+            this.lblPowerProduction.TabIndex = 56;
+            this.lblPowerProduction.Text = "Power Production";
+            // 
+            // tbxPowerProduction
+            // 
+            this.tbxPowerProduction.Location = new System.Drawing.Point(515, 306);
+            this.tbxPowerProduction.Name = "tbxPowerProduction";
+            this.tbxPowerProduction.ReadOnly = true;
+            this.tbxPowerProduction.Size = new System.Drawing.Size(100, 20);
+            this.tbxPowerProduction.TabIndex = 55;
+            // 
+            // tbxPowerConsumption
+            // 
+            this.tbxPowerConsumption.Location = new System.Drawing.Point(515, 332);
+            this.tbxPowerConsumption.Name = "tbxPowerConsumption";
+            this.tbxPowerConsumption.ReadOnly = true;
+            this.tbxPowerConsumption.Size = new System.Drawing.Size(100, 20);
+            this.tbxPowerConsumption.TabIndex = 54;
+            // 
+            // tbxTotalPowerUsage
+            // 
+            this.tbxTotalPowerUsage.Location = new System.Drawing.Point(515, 358);
+            this.tbxTotalPowerUsage.Name = "tbxTotalPowerUsage";
+            this.tbxTotalPowerUsage.ReadOnly = true;
+            this.tbxTotalPowerUsage.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalPowerUsage.TabIndex = 53;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(515, 384);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 52;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(515, 281);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 51;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(515, 255);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 50;
+            // 
+            // lblThrusterComponent
+            // 
+            this.lblThrusterComponent.AutoSize = true;
+            this.lblThrusterComponent.Location = new System.Drawing.Point(6, 417);
+            this.lblThrusterComponent.Name = "lblThrusterComponent";
+            this.lblThrusterComponent.Size = new System.Drawing.Size(103, 13);
+            this.lblThrusterComponent.TabIndex = 49;
+            this.lblThrusterComponent.Text = "Thruster Component";
+            // 
+            // tbxThrusterComponent
+            // 
+            this.tbxThrusterComponent.Location = new System.Drawing.Point(134, 414);
+            this.tbxThrusterComponent.Name = "tbxThrusterComponent";
+            this.tbxThrusterComponent.ReadOnly = true;
+            this.tbxThrusterComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxThrusterComponent.TabIndex = 48;
+            // 
+            // lblTotalPlatinaCost
+            // 
+            this.lblTotalPlatinaCost.AutoSize = true;
+            this.lblTotalPlatinaCost.Location = new System.Drawing.Point(412, 206);
+            this.lblTotalPlatinaCost.Name = "lblTotalPlatinaCost";
+            this.lblTotalPlatinaCost.Size = new System.Drawing.Size(93, 13);
+            this.lblTotalPlatinaCost.TabIndex = 47;
+            this.lblTotalPlatinaCost.Text = "Total Platina Cost:";
+            // 
+            // tbxTotalPlatinaCost
+            // 
+            this.tbxTotalPlatinaCost.Location = new System.Drawing.Point(515, 203);
+            this.tbxTotalPlatinaCost.Name = "tbxTotalPlatinaCost";
+            this.tbxTotalPlatinaCost.ReadOnly = true;
+            this.tbxTotalPlatinaCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalPlatinaCost.TabIndex = 46;
+            // 
+            // tbxTotalSilverCost
+            // 
+            this.tbxTotalSilverCost.Location = new System.Drawing.Point(515, 125);
+            this.tbxTotalSilverCost.Name = "tbxTotalSilverCost";
+            this.tbxTotalSilverCost.ReadOnly = true;
+            this.tbxTotalSilverCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalSilverCost.TabIndex = 45;
+            // 
+            // tbxTotalGravelCost
+            // 
+            this.tbxTotalGravelCost.Location = new System.Drawing.Point(515, 151);
+            this.tbxTotalGravelCost.Name = "tbxTotalGravelCost";
+            this.tbxTotalGravelCost.ReadOnly = true;
+            this.tbxTotalGravelCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalGravelCost.TabIndex = 44;
+            // 
+            // tbxTotalGoldCost
+            // 
+            this.tbxTotalGoldCost.Location = new System.Drawing.Point(515, 177);
+            this.tbxTotalGoldCost.Name = "tbxTotalGoldCost";
+            this.tbxTotalGoldCost.ReadOnly = true;
+            this.tbxTotalGoldCost.Size = new System.Drawing.Size(100, 20);
+            this.tbxTotalGoldCost.TabIndex = 43;
+            // 
+            // tbxReactorComponent
+            // 
+            this.tbxReactorComponent.Location = new System.Drawing.Point(134, 388);
+            this.tbxReactorComponent.Name = "tbxReactorComponent";
+            this.tbxReactorComponent.ReadOnly = true;
+            this.tbxReactorComponent.Size = new System.Drawing.Size(100, 20);
+            this.tbxReactorComponent.TabIndex = 42;
+            // 
+            // tbxSuperConducter
+            // 
+            this.tbxSuperConducter.Location = new System.Drawing.Point(134, 362);
+            this.tbxSuperConducter.Name = "tbxSuperConducter";
+            this.tbxSuperConducter.ReadOnly = true;
+            this.tbxSuperConducter.Size = new System.Drawing.Size(100, 20);
+            this.tbxSuperConducter.TabIndex = 41;
+            // 
+            // lblTotalGoldCost
+            // 
+            this.lblTotalGoldCost.AutoSize = true;
+            this.lblTotalGoldCost.Location = new System.Drawing.Point(412, 180);
+            this.lblTotalGoldCost.Name = "lblTotalGoldCost";
+            this.lblTotalGoldCost.Size = new System.Drawing.Size(83, 13);
+            this.lblTotalGoldCost.TabIndex = 40;
+            this.lblTotalGoldCost.Text = "Total Gold Cost:";
+            // 
+            // lblTotalGravelCost
+            // 
+            this.lblTotalGravelCost.AutoSize = true;
+            this.lblTotalGravelCost.Location = new System.Drawing.Point(412, 154);
+            this.lblTotalGravelCost.Name = "lblTotalGravelCost";
+            this.lblTotalGravelCost.Size = new System.Drawing.Size(92, 13);
+            this.lblTotalGravelCost.TabIndex = 39;
+            this.lblTotalGravelCost.Text = "Total Gravel Cost:";
+            // 
+            // lblTotalSilverCost
+            // 
+            this.lblTotalSilverCost.AutoSize = true;
+            this.lblTotalSilverCost.Location = new System.Drawing.Point(412, 128);
+            this.lblTotalSilverCost.Name = "lblTotalSilverCost";
+            this.lblTotalSilverCost.Size = new System.Drawing.Size(87, 13);
+            this.lblTotalSilverCost.TabIndex = 38;
+            this.lblTotalSilverCost.Text = "Total Silver Cost:";
+            // 
+            // lblReactorComponent
+            // 
+            this.lblReactorComponent.AutoSize = true;
+            this.lblReactorComponent.Location = new System.Drawing.Point(6, 391);
+            this.lblReactorComponent.Name = "lblReactorComponent";
+            this.lblReactorComponent.Size = new System.Drawing.Size(102, 13);
+            this.lblReactorComponent.TabIndex = 37;
+            this.lblReactorComponent.Text = "Reactor Component";
+            // 
+            // lblSuperConducter
+            // 
+            this.lblSuperConducter.AutoSize = true;
+            this.lblSuperConducter.Location = new System.Drawing.Point(6, 369);
+            this.lblSuperConducter.Name = "lblSuperConducter";
+            this.lblSuperConducter.Size = new System.Drawing.Size(84, 13);
+            this.lblSuperConducter.TabIndex = 36;
+            this.lblSuperConducter.Text = "SuperConducter";
+            // 
             // tbxDetectorComponent
             // 
             this.tbxDetectorComponent.Location = new System.Drawing.Point(134, 336);
@@ -2120,6 +2325,8 @@
             // 
             // tpeCapas
             // 
+            this.tpeCapas.Controls.Add(this.label5);
+            this.tpeCapas.Controls.Add(this.tbxAxlar);
             this.tpeCapas.Controls.Add(this.btnSolve4);
             this.tpeCapas.Controls.Add(this.tbxDiameter);
             this.tpeCapas.Controls.Add(this.tbxProjektivSpeed);
@@ -2434,7 +2641,7 @@
             // lblReactor
             // 
             this.lblReactor.AutoSize = true;
-            this.lblReactor.Location = new System.Drawing.Point(232, 17);
+            this.lblReactor.Location = new System.Drawing.Point(232, 11);
             this.lblReactor.Name = "lblReactor";
             this.lblReactor.Size = new System.Drawing.Size(45, 13);
             this.lblReactor.TabIndex = 24;
@@ -2638,214 +2845,27 @@
             // lblGDrive
             // 
             this.lblGDrive.AutoSize = true;
-            this.lblGDrive.Location = new System.Drawing.Point(19, 17);
+            this.lblGDrive.Location = new System.Drawing.Point(19, 11);
             this.lblGDrive.Name = "lblGDrive";
             this.lblGDrive.Size = new System.Drawing.Size(43, 13);
             this.lblGDrive.TabIndex = 0;
             this.lblGDrive.Text = "G-Drive";
             // 
-            // lblSuperConducter
+            // tbxAxlar
             // 
-            this.lblSuperConducter.AutoSize = true;
-            this.lblSuperConducter.Location = new System.Drawing.Point(6, 369);
-            this.lblSuperConducter.Name = "lblSuperConducter";
-            this.lblSuperConducter.Size = new System.Drawing.Size(84, 13);
-            this.lblSuperConducter.TabIndex = 36;
-            this.lblSuperConducter.Text = "SuperConducter";
+            this.tbxAxlar.Location = new System.Drawing.Point(89, 27);
+            this.tbxAxlar.Name = "tbxAxlar";
+            this.tbxAxlar.Size = new System.Drawing.Size(100, 20);
+            this.tbxAxlar.TabIndex = 54;
             // 
-            // lblReactorComponent
+            // label5
             // 
-            this.lblReactorComponent.AutoSize = true;
-            this.lblReactorComponent.Location = new System.Drawing.Point(6, 391);
-            this.lblReactorComponent.Name = "lblReactorComponent";
-            this.lblReactorComponent.Size = new System.Drawing.Size(102, 13);
-            this.lblReactorComponent.TabIndex = 37;
-            this.lblReactorComponent.Text = "Reactor Component";
-            // 
-            // lblTotalSilverCost
-            // 
-            this.lblTotalSilverCost.AutoSize = true;
-            this.lblTotalSilverCost.Location = new System.Drawing.Point(412, 128);
-            this.lblTotalSilverCost.Name = "lblTotalSilverCost";
-            this.lblTotalSilverCost.Size = new System.Drawing.Size(87, 13);
-            this.lblTotalSilverCost.TabIndex = 38;
-            this.lblTotalSilverCost.Text = "Total Silver Cost:";
-            // 
-            // lblTotalGravelCost
-            // 
-            this.lblTotalGravelCost.AutoSize = true;
-            this.lblTotalGravelCost.Location = new System.Drawing.Point(412, 154);
-            this.lblTotalGravelCost.Name = "lblTotalGravelCost";
-            this.lblTotalGravelCost.Size = new System.Drawing.Size(92, 13);
-            this.lblTotalGravelCost.TabIndex = 39;
-            this.lblTotalGravelCost.Text = "Total Gravel Cost:";
-            // 
-            // lblTotalGoldCost
-            // 
-            this.lblTotalGoldCost.AutoSize = true;
-            this.lblTotalGoldCost.Location = new System.Drawing.Point(412, 180);
-            this.lblTotalGoldCost.Name = "lblTotalGoldCost";
-            this.lblTotalGoldCost.Size = new System.Drawing.Size(83, 13);
-            this.lblTotalGoldCost.TabIndex = 40;
-            this.lblTotalGoldCost.Text = "Total Gold Cost:";
-            // 
-            // tbxSuperConducter
-            // 
-            this.tbxSuperConducter.Location = new System.Drawing.Point(134, 362);
-            this.tbxSuperConducter.Name = "tbxSuperConducter";
-            this.tbxSuperConducter.ReadOnly = true;
-            this.tbxSuperConducter.Size = new System.Drawing.Size(100, 20);
-            this.tbxSuperConducter.TabIndex = 41;
-            // 
-            // tbxReactorComponent
-            // 
-            this.tbxReactorComponent.Location = new System.Drawing.Point(134, 388);
-            this.tbxReactorComponent.Name = "tbxReactorComponent";
-            this.tbxReactorComponent.ReadOnly = true;
-            this.tbxReactorComponent.Size = new System.Drawing.Size(100, 20);
-            this.tbxReactorComponent.TabIndex = 42;
-            // 
-            // tbxTotalGoldCost
-            // 
-            this.tbxTotalGoldCost.Location = new System.Drawing.Point(515, 177);
-            this.tbxTotalGoldCost.Name = "tbxTotalGoldCost";
-            this.tbxTotalGoldCost.ReadOnly = true;
-            this.tbxTotalGoldCost.Size = new System.Drawing.Size(100, 20);
-            this.tbxTotalGoldCost.TabIndex = 43;
-            // 
-            // tbxTotalGravelCost
-            // 
-            this.tbxTotalGravelCost.Location = new System.Drawing.Point(515, 151);
-            this.tbxTotalGravelCost.Name = "tbxTotalGravelCost";
-            this.tbxTotalGravelCost.ReadOnly = true;
-            this.tbxTotalGravelCost.Size = new System.Drawing.Size(100, 20);
-            this.tbxTotalGravelCost.TabIndex = 44;
-            // 
-            // tbxTotalSilverCost
-            // 
-            this.tbxTotalSilverCost.Location = new System.Drawing.Point(515, 125);
-            this.tbxTotalSilverCost.Name = "tbxTotalSilverCost";
-            this.tbxTotalSilverCost.ReadOnly = true;
-            this.tbxTotalSilverCost.Size = new System.Drawing.Size(100, 20);
-            this.tbxTotalSilverCost.TabIndex = 45;
-            // 
-            // tbxTotalPlatinaCost
-            // 
-            this.tbxTotalPlatinaCost.Location = new System.Drawing.Point(515, 203);
-            this.tbxTotalPlatinaCost.Name = "tbxTotalPlatinaCost";
-            this.tbxTotalPlatinaCost.ReadOnly = true;
-            this.tbxTotalPlatinaCost.Size = new System.Drawing.Size(100, 20);
-            this.tbxTotalPlatinaCost.TabIndex = 46;
-            // 
-            // lblTotalPlatinaCost
-            // 
-            this.lblTotalPlatinaCost.AutoSize = true;
-            this.lblTotalPlatinaCost.Location = new System.Drawing.Point(412, 206);
-            this.lblTotalPlatinaCost.Name = "lblTotalPlatinaCost";
-            this.lblTotalPlatinaCost.Size = new System.Drawing.Size(93, 13);
-            this.lblTotalPlatinaCost.TabIndex = 47;
-            this.lblTotalPlatinaCost.Text = "Total Platina Cost:";
-            // 
-            // tbxThrusterComponent
-            // 
-            this.tbxThrusterComponent.Location = new System.Drawing.Point(134, 414);
-            this.tbxThrusterComponent.Name = "tbxThrusterComponent";
-            this.tbxThrusterComponent.ReadOnly = true;
-            this.tbxThrusterComponent.Size = new System.Drawing.Size(100, 20);
-            this.tbxThrusterComponent.TabIndex = 48;
-            // 
-            // lblThrusterComponent
-            // 
-            this.lblThrusterComponent.AutoSize = true;
-            this.lblThrusterComponent.Location = new System.Drawing.Point(6, 417);
-            this.lblThrusterComponent.Name = "lblThrusterComponent";
-            this.lblThrusterComponent.Size = new System.Drawing.Size(103, 13);
-            this.lblThrusterComponent.TabIndex = 49;
-            this.lblThrusterComponent.Text = "Thruster Component";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(515, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 50;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(515, 281);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 51;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(515, 384);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 52;
-            // 
-            // tbxTotalPowerUsage
-            // 
-            this.tbxTotalPowerUsage.Location = new System.Drawing.Point(515, 358);
-            this.tbxTotalPowerUsage.Name = "tbxTotalPowerUsage";
-            this.tbxTotalPowerUsage.ReadOnly = true;
-            this.tbxTotalPowerUsage.Size = new System.Drawing.Size(100, 20);
-            this.tbxTotalPowerUsage.TabIndex = 53;
-            // 
-            // tbxPowerConsumption
-            // 
-            this.tbxPowerConsumption.Location = new System.Drawing.Point(515, 332);
-            this.tbxPowerConsumption.Name = "tbxPowerConsumption";
-            this.tbxPowerConsumption.ReadOnly = true;
-            this.tbxPowerConsumption.Size = new System.Drawing.Size(100, 20);
-            this.tbxPowerConsumption.TabIndex = 54;
-            // 
-            // tbxPowerProduction
-            // 
-            this.tbxPowerProduction.Location = new System.Drawing.Point(515, 306);
-            this.tbxPowerProduction.Name = "tbxPowerProduction";
-            this.tbxPowerProduction.ReadOnly = true;
-            this.tbxPowerProduction.Size = new System.Drawing.Size(100, 20);
-            this.tbxPowerProduction.TabIndex = 55;
-            // 
-            // lblPowerProduction
-            // 
-            this.lblPowerProduction.AutoSize = true;
-            this.lblPowerProduction.Location = new System.Drawing.Point(412, 309);
-            this.lblPowerProduction.Name = "lblPowerProduction";
-            this.lblPowerProduction.Size = new System.Drawing.Size(91, 13);
-            this.lblPowerProduction.TabIndex = 56;
-            this.lblPowerProduction.Text = "Power Production";
-            // 
-            // lblPowerConsumption
-            // 
-            this.lblPowerConsumption.AutoSize = true;
-            this.lblPowerConsumption.Location = new System.Drawing.Point(412, 335);
-            this.lblPowerConsumption.Name = "lblPowerConsumption";
-            this.lblPowerConsumption.Size = new System.Drawing.Size(101, 13);
-            this.lblPowerConsumption.TabIndex = 57;
-            this.lblPowerConsumption.Text = "Power Consumption";
-            // 
-            // lblTotalPowerUsage
-            // 
-            this.lblTotalPowerUsage.AutoSize = true;
-            this.lblTotalPowerUsage.Location = new System.Drawing.Point(412, 361);
-            this.lblTotalPowerUsage.Name = "lblTotalPowerUsage";
-            this.lblTotalPowerUsage.Size = new System.Drawing.Size(98, 13);
-            this.lblTotalPowerUsage.TabIndex = 58;
-            this.lblTotalPowerUsage.Text = "Total Power Usage";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(412, 387);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 59;
-            this.label8.Text = "label8";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Axis of travle";
             // 
             // Form1
             // 
@@ -3146,6 +3166,8 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxAxlar;
     }
 }
 

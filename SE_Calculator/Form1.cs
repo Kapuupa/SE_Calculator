@@ -554,19 +554,25 @@ namespace SE_Calculator
 
             double PCU2 = 1;
             double massa = 1;
-
-            if(tbxPCU2.Text != "")
-                    PCU2 = double.Parse(tbxPCU2.Text);
-            if(tbxTheMass.Text != "")
-                massa = double.Parse(tbxTheMass.Text);
-
             antHoll = 1;
+
+         
+                if (double.TryParse(tbxPCU2.Text, out PCU2))
+                    PCU2 = double.Parse(tbxPCU2.Text);
+           
+                if (double.TryParse(tbxTheMass.Text, out massa))
+                    massa = double.Parse(tbxTheMass.Text);
+            if(int.TryParse(tbxAxlar.Text,out antHoll))
+            {
+                antHoll = int.Parse(tbxAxlar.Text);
+            }
+            
 
             double GBlock = PCU2 / (185 * antHoll + 185);
             double MassaB = GBlock * 7.4;
             double Kraft = 495000 * GBlock * MassaB;
             lblMassBlockSvar.Text = Math.Round(MassaB, 2).ToString();
-            lblGGeneratorSvar.Text = Math.Round(GBlock, 2).ToString();
+            lblGGeneratorSvar.Text = Math.Round(GBlock, 2).ToString()+" * " + antHoll.ToString()+" Axlar";
             lblForceSvar.Text = Math.Round(Kraft, 2).ToString();
             massa += GBlock * 8532 + MassaB * 9544;
             double Speed = 100 / (Kraft / massa);
