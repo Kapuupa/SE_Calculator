@@ -193,15 +193,7 @@ namespace SE_Calculator
 
         private void listBox5_Click(object sender, EventArgs e)
         {
-            if (listBox5.SelectedItem == "Large Grid")
-            {
-                GridSize3 = 1;
-
-            }
-            else
-            {
-                GridSize3 = 2;
-            }
+            GridSize3 = listBox5.SelectedIndex + 1;
         }
 
         private void listBox4_Click(object sender, EventArgs e)
