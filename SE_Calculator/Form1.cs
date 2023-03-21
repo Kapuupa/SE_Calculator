@@ -432,14 +432,7 @@ namespace SE_Calculator
 
         private void cbxGridSize_Click(object sender, EventArgs e)
         {
-            if (cbxGridSize.SelectedItem == "Large Grid")
-            {
-                GridSize4 = 1;
-            }
-            else
-            {
-                GridSize4 = 2;
-            }
+            GridSize4 = cbxGridSize.SelectedIndex + 1;
         }
 
         private void btnSolve_Click(object sender, EventArgs e)
