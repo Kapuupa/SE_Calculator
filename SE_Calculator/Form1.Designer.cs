@@ -181,6 +181,12 @@
             this.tbxAntenna = new System.Windows.Forms.TextBox();
             this.tbxMediumCargo = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblHydrogenTime = new System.Windows.Forms.Label();
+            this.lblTotalHydrogenUse = new System.Windows.Forms.Label();
+            this.lblHydrogenCapacity = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbxHydrogenTime = new System.Windows.Forms.TextBox();
+            this.tbxHydrogenUse = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblTotalPowerUsage = new System.Windows.Forms.Label();
             this.lblPowerConsumption = new System.Windows.Forms.Label();
@@ -299,12 +305,6 @@
             this.lblTotalMass = new System.Windows.Forms.Label();
             this.lblGDrive = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tbxHydrogenUse = new System.Windows.Forms.TextBox();
-            this.tbxHydrogenTime = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.lblHydrogenCapacity = new System.Windows.Forms.Label();
-            this.lblTotalHydrogenUse = new System.Windows.Forms.Label();
-            this.lblHydrogenTime = new System.Windows.Forms.Label();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -1497,6 +1497,7 @@
             this.tbxLargeCargo.Name = "tbxLargeCargo";
             this.tbxLargeCargo.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeCargo.TabIndex = 39;
+            this.tbxLargeCargo.Text = "0";
             // 
             // textBox11
             // 
@@ -1504,6 +1505,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 20);
             this.textBox11.TabIndex = 38;
+            this.textBox11.Text = "0";
             // 
             // textBox21
             // 
@@ -1511,6 +1513,7 @@
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 20);
             this.textBox21.TabIndex = 37;
+            this.textBox21.Text = "0";
             // 
             // textBox22
             // 
@@ -1518,6 +1521,7 @@
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(100, 20);
             this.textBox22.TabIndex = 36;
+            this.textBox22.Text = "0";
             // 
             // textBox23
             // 
@@ -1525,6 +1529,7 @@
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(100, 20);
             this.textBox23.TabIndex = 35;
+            this.textBox23.Text = "0";
             // 
             // textBox24
             // 
@@ -1532,6 +1537,7 @@
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(100, 20);
             this.textBox24.TabIndex = 34;
+            this.textBox24.Text = "0";
             // 
             // textBox25
             // 
@@ -1539,6 +1545,7 @@
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(100, 20);
             this.textBox25.TabIndex = 33;
+            this.textBox25.Text = "0";
             // 
             // textBox26
             // 
@@ -1546,6 +1553,7 @@
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(100, 20);
             this.textBox26.TabIndex = 32;
+            this.textBox26.Text = "0";
             // 
             // textBox27
             // 
@@ -1553,6 +1561,7 @@
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(100, 20);
             this.textBox27.TabIndex = 31;
+            this.textBox27.Text = "0";
             // 
             // tbxAtmosphericThruster
             // 
@@ -1560,6 +1569,7 @@
             this.tbxAtmosphericThruster.Name = "tbxAtmosphericThruster";
             this.tbxAtmosphericThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxAtmosphericThruster.TabIndex = 29;
+            this.tbxAtmosphericThruster.Text = "0";
             // 
             // tbxLargeHydroThruster
             // 
@@ -1567,6 +1577,7 @@
             this.tbxLargeHydroThruster.Name = "tbxLargeHydroThruster";
             this.tbxLargeHydroThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeHydroThruster.TabIndex = 28;
+            this.tbxLargeHydroThruster.Text = "0";
             // 
             // tbxHydroThruster
             // 
@@ -1574,6 +1585,7 @@
             this.tbxHydroThruster.Name = "tbxHydroThruster";
             this.tbxHydroThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxHydroThruster.TabIndex = 27;
+            this.tbxHydroThruster.Text = "0";
             // 
             // tbxLargeIonThruster
             // 
@@ -1581,6 +1593,7 @@
             this.tbxLargeIonThruster.Name = "tbxLargeIonThruster";
             this.tbxLargeIonThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeIonThruster.TabIndex = 26;
+            this.tbxLargeIonThruster.Text = "0";
             // 
             // tbxIonThruster
             // 
@@ -1588,6 +1601,7 @@
             this.tbxIonThruster.Name = "tbxIonThruster";
             this.tbxIonThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxIonThruster.TabIndex = 25;
+            this.tbxIonThruster.Text = "0";
             // 
             // tbxAirVent
             // 
@@ -1595,6 +1609,7 @@
             this.tbxAirVent.Name = "tbxAirVent";
             this.tbxAirVent.Size = new System.Drawing.Size(100, 20);
             this.tbxAirVent.TabIndex = 24;
+            this.tbxAirVent.Text = "0";
             // 
             // tbxLReactor
             // 
@@ -1602,6 +1617,7 @@
             this.tbxLReactor.Name = "tbxLReactor";
             this.tbxLReactor.Size = new System.Drawing.Size(100, 20);
             this.tbxLReactor.TabIndex = 23;
+            this.tbxLReactor.Text = "0";
             // 
             // tbxSReactor
             // 
@@ -1609,6 +1625,7 @@
             this.tbxSReactor.Name = "tbxSReactor";
             this.tbxSReactor.Size = new System.Drawing.Size(100, 20);
             this.tbxSReactor.TabIndex = 22;
+            this.tbxSReactor.Text = "0";
             // 
             // textBox37
             // 
@@ -1616,6 +1633,7 @@
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(100, 20);
             this.textBox37.TabIndex = 21;
+            this.textBox37.Text = "0";
             // 
             // tbxLargeAtmosphericThruster
             // 
@@ -1623,6 +1641,7 @@
             this.tbxLargeAtmosphericThruster.Name = "tbxLargeAtmosphericThruster";
             this.tbxLargeAtmosphericThruster.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeAtmosphericThruster.TabIndex = 20;
+            this.tbxLargeAtmosphericThruster.Text = "0";
             // 
             // tbxBeacon
             // 
@@ -1630,6 +1649,7 @@
             this.tbxBeacon.Name = "tbxBeacon";
             this.tbxBeacon.Size = new System.Drawing.Size(100, 20);
             this.tbxBeacon.TabIndex = 19;
+            this.tbxBeacon.Text = "0";
             // 
             // tbxOreDetector
             // 
@@ -1637,6 +1657,7 @@
             this.tbxOreDetector.Name = "tbxOreDetector";
             this.tbxOreDetector.Size = new System.Drawing.Size(100, 20);
             this.tbxOreDetector.TabIndex = 18;
+            this.tbxOreDetector.Text = "0";
             // 
             // tbxDrill
             // 
@@ -1644,6 +1665,7 @@
             this.tbxDrill.Name = "tbxDrill";
             this.tbxDrill.Size = new System.Drawing.Size(100, 20);
             this.tbxDrill.TabIndex = 17;
+            this.tbxDrill.Text = "0";
             // 
             // tbxSpotlight
             // 
@@ -1651,6 +1673,7 @@
             this.tbxSpotlight.Name = "tbxSpotlight";
             this.tbxSpotlight.Size = new System.Drawing.Size(100, 20);
             this.tbxSpotlight.TabIndex = 16;
+            this.tbxSpotlight.Text = "0";
             // 
             // tbxO2H2gen
             // 
@@ -1658,6 +1681,7 @@
             this.tbxO2H2gen.Name = "tbxO2H2gen";
             this.tbxO2H2gen.Size = new System.Drawing.Size(100, 20);
             this.tbxO2H2gen.TabIndex = 15;
+            this.tbxO2H2gen.Text = "0";
             // 
             // tbxHydroEngine
             // 
@@ -1665,6 +1689,7 @@
             this.tbxHydroEngine.Name = "tbxHydroEngine";
             this.tbxHydroEngine.Size = new System.Drawing.Size(100, 20);
             this.tbxHydroEngine.TabIndex = 14;
+            this.tbxHydroEngine.Text = "0";
             // 
             // tbxOxygenFarm
             // 
@@ -1672,6 +1697,7 @@
             this.tbxOxygenFarm.Name = "tbxOxygenFarm";
             this.tbxOxygenFarm.Size = new System.Drawing.Size(100, 20);
             this.tbxOxygenFarm.TabIndex = 13;
+            this.tbxOxygenFarm.Text = "0";
             // 
             // tbxOxygenTank
             // 
@@ -1679,6 +1705,7 @@
             this.tbxOxygenTank.Name = "tbxOxygenTank";
             this.tbxOxygenTank.Size = new System.Drawing.Size(100, 20);
             this.tbxOxygenTank.TabIndex = 12;
+            this.tbxOxygenTank.Text = "0";
             // 
             // tbxSmallCargo
             // 
@@ -1686,6 +1713,7 @@
             this.tbxSmallCargo.Name = "tbxSmallCargo";
             this.tbxSmallCargo.Size = new System.Drawing.Size(100, 20);
             this.tbxSmallCargo.TabIndex = 9;
+            this.tbxSmallCargo.Text = "0";
             // 
             // tbxHeavyArmorBlock
             // 
@@ -1693,6 +1721,7 @@
             this.tbxHeavyArmorBlock.Name = "tbxHeavyArmorBlock";
             this.tbxHeavyArmorBlock.Size = new System.Drawing.Size(100, 20);
             this.tbxHeavyArmorBlock.TabIndex = 8;
+            this.tbxHeavyArmorBlock.Text = "0";
             // 
             // tbxLightArmorBlock
             // 
@@ -1700,6 +1729,7 @@
             this.tbxLightArmorBlock.Name = "tbxLightArmorBlock";
             this.tbxLightArmorBlock.Size = new System.Drawing.Size(100, 20);
             this.tbxLightArmorBlock.TabIndex = 7;
+            this.tbxLightArmorBlock.Text = "0";
             // 
             // tbxCockpit
             // 
@@ -1707,6 +1737,7 @@
             this.tbxCockpit.Name = "tbxCockpit";
             this.tbxCockpit.Size = new System.Drawing.Size(100, 20);
             this.tbxCockpit.TabIndex = 6;
+            this.tbxCockpit.Text = "0";
             // 
             // tbxBattery
             // 
@@ -1714,6 +1745,7 @@
             this.tbxBattery.Name = "tbxBattery";
             this.tbxBattery.Size = new System.Drawing.Size(100, 20);
             this.tbxBattery.TabIndex = 5;
+            this.tbxBattery.Text = "0";
             // 
             // tbxLargeHydroTank
             // 
@@ -1721,6 +1753,7 @@
             this.tbxLargeHydroTank.Name = "tbxLargeHydroTank";
             this.tbxLargeHydroTank.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeHydroTank.TabIndex = 4;
+            this.tbxLargeHydroTank.Text = "0";
             // 
             // tbxSmallHydroTank
             // 
@@ -1728,6 +1761,7 @@
             this.tbxSmallHydroTank.Name = "tbxSmallHydroTank";
             this.tbxSmallHydroTank.Size = new System.Drawing.Size(100, 20);
             this.tbxSmallHydroTank.TabIndex = 3;
+            this.tbxSmallHydroTank.Text = "0";
             // 
             // tbxGyroscope
             // 
@@ -1735,6 +1769,7 @@
             this.tbxGyroscope.Name = "tbxGyroscope";
             this.tbxGyroscope.Size = new System.Drawing.Size(100, 20);
             this.tbxGyroscope.TabIndex = 2;
+            this.tbxGyroscope.Text = "0";
             // 
             // tbxAntenna
             // 
@@ -1742,6 +1777,7 @@
             this.tbxAntenna.Name = "tbxAntenna";
             this.tbxAntenna.Size = new System.Drawing.Size(100, 20);
             this.tbxAntenna.TabIndex = 1;
+            this.tbxAntenna.Text = "0";
             // 
             // tbxMediumCargo
             // 
@@ -1749,6 +1785,7 @@
             this.tbxMediumCargo.Name = "tbxMediumCargo";
             this.tbxMediumCargo.Size = new System.Drawing.Size(100, 20);
             this.tbxMediumCargo.TabIndex = 0;
+            this.tbxMediumCargo.Text = "0";
             // 
             // tabPage3
             // 
@@ -1825,6 +1862,57 @@
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Results";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblHydrogenTime
+            // 
+            this.lblHydrogenTime.AutoSize = true;
+            this.lblHydrogenTime.Location = new System.Drawing.Point(412, 336);
+            this.lblHydrogenTime.Name = "lblHydrogenTime";
+            this.lblHydrogenTime.Size = new System.Drawing.Size(97, 13);
+            this.lblHydrogenTime.TabIndex = 65;
+            this.lblHydrogenTime.Text = "Hydrogen Last For:";
+            // 
+            // lblTotalHydrogenUse
+            // 
+            this.lblTotalHydrogenUse.AutoSize = true;
+            this.lblTotalHydrogenUse.Location = new System.Drawing.Point(412, 310);
+            this.lblTotalHydrogenUse.Name = "lblTotalHydrogenUse";
+            this.lblTotalHydrogenUse.Size = new System.Drawing.Size(102, 13);
+            this.lblTotalHydrogenUse.TabIndex = 64;
+            this.lblTotalHydrogenUse.Text = "Total Hydrogen Use";
+            // 
+            // lblHydrogenCapacity
+            // 
+            this.lblHydrogenCapacity.AutoSize = true;
+            this.lblHydrogenCapacity.Location = new System.Drawing.Point(412, 284);
+            this.lblHydrogenCapacity.Name = "lblHydrogenCapacity";
+            this.lblHydrogenCapacity.Size = new System.Drawing.Size(100, 13);
+            this.lblHydrogenCapacity.TabIndex = 63;
+            this.lblHydrogenCapacity.Text = "Hydrogen Capacity:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(515, 359);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 62;
+            // 
+            // tbxHydrogenTime
+            // 
+            this.tbxHydrogenTime.Location = new System.Drawing.Point(515, 333);
+            this.tbxHydrogenTime.Name = "tbxHydrogenTime";
+            this.tbxHydrogenTime.ReadOnly = true;
+            this.tbxHydrogenTime.Size = new System.Drawing.Size(100, 20);
+            this.tbxHydrogenTime.TabIndex = 61;
+            // 
+            // tbxHydrogenUse
+            // 
+            this.tbxHydrogenUse.Location = new System.Drawing.Point(515, 307);
+            this.tbxHydrogenUse.Name = "tbxHydrogenUse";
+            this.tbxHydrogenUse.ReadOnly = true;
+            this.tbxHydrogenUse.Size = new System.Drawing.Size(100, 20);
+            this.tbxHydrogenUse.TabIndex = 60;
             // 
             // label8
             // 
@@ -2878,57 +2966,6 @@
             this.lblGDrive.Size = new System.Drawing.Size(43, 13);
             this.lblGDrive.TabIndex = 0;
             this.lblGDrive.Text = "G-Drive";
-            // 
-            // tbxHydrogenUse
-            // 
-            this.tbxHydrogenUse.Location = new System.Drawing.Point(515, 307);
-            this.tbxHydrogenUse.Name = "tbxHydrogenUse";
-            this.tbxHydrogenUse.ReadOnly = true;
-            this.tbxHydrogenUse.Size = new System.Drawing.Size(100, 20);
-            this.tbxHydrogenUse.TabIndex = 60;
-            // 
-            // tbxHydrogenTime
-            // 
-            this.tbxHydrogenTime.Location = new System.Drawing.Point(515, 333);
-            this.tbxHydrogenTime.Name = "tbxHydrogenTime";
-            this.tbxHydrogenTime.ReadOnly = true;
-            this.tbxHydrogenTime.Size = new System.Drawing.Size(100, 20);
-            this.tbxHydrogenTime.TabIndex = 61;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(515, 359);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 62;
-            // 
-            // lblHydrogenCapacity
-            // 
-            this.lblHydrogenCapacity.AutoSize = true;
-            this.lblHydrogenCapacity.Location = new System.Drawing.Point(412, 284);
-            this.lblHydrogenCapacity.Name = "lblHydrogenCapacity";
-            this.lblHydrogenCapacity.Size = new System.Drawing.Size(100, 13);
-            this.lblHydrogenCapacity.TabIndex = 63;
-            this.lblHydrogenCapacity.Text = "Hydrogen Capacity:";
-            // 
-            // lblTotalHydrogenUse
-            // 
-            this.lblTotalHydrogenUse.AutoSize = true;
-            this.lblTotalHydrogenUse.Location = new System.Drawing.Point(412, 310);
-            this.lblTotalHydrogenUse.Name = "lblTotalHydrogenUse";
-            this.lblTotalHydrogenUse.Size = new System.Drawing.Size(102, 13);
-            this.lblTotalHydrogenUse.TabIndex = 64;
-            this.lblTotalHydrogenUse.Text = "Total Hydrogen Use";
-            // 
-            // lblHydrogenTime
-            // 
-            this.lblHydrogenTime.AutoSize = true;
-            this.lblHydrogenTime.Location = new System.Drawing.Point(412, 336);
-            this.lblHydrogenTime.Name = "lblHydrogenTime";
-            this.lblHydrogenTime.Size = new System.Drawing.Size(97, 13);
-            this.lblHydrogenTime.TabIndex = 65;
-            this.lblHydrogenTime.Text = "Hydrogen Last For:";
             // 
             // Form1
             // 

@@ -84,6 +84,7 @@ namespace SE_Calculator
 
         private void btnRäkna_Click(object sender, EventArgs e)
         {
+            
             double lc2 = double.Parse(tbxLargeContainer2.Text);
             int sc2 = int.Parse(tbxSmallContainer2.Text);
             int sw2 = int.Parse(tbxShipWeight2.Text);
@@ -270,6 +271,7 @@ namespace SE_Calculator
 
         private void btnResource_Click(object sender, EventArgs e)
         {
+            GridSize4 = (cbxGridSize.SelectedIndex) + 1;
             int lcc = int.Parse(tbxLargeCargo.Text);
             int mcc = int.Parse(tbxMediumCargo.Text);
             int scc = int.Parse(tbxSmallCargo.Text);
@@ -432,7 +434,8 @@ namespace SE_Calculator
 
         private void cbxGridSize_Click(object sender, EventArgs e)
         {
-            GridSize4 = cbxGridSize.SelectedIndex + 1;
+            GridSize4 = (cbxGridSize.SelectedIndex) + 1;
+            
         }
 
         private void btnSolve_Click(object sender, EventArgs e)
