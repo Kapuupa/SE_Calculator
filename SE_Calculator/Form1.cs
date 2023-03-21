@@ -206,30 +206,9 @@ namespace SE_Calculator
 
         private void listBox4_Click(object sender, EventArgs e)
         {
-            if (listBox4.SelectedItem == "Earth")
-            {
-                gravv2 = 1;
-            }
-            else if (listBox4.SelectedItem == "Moon")
-            {
-                gravv2 = 0.25;
-            }
-            else if (listBox4.SelectedItem == "Mars")
-            {
-                gravv2 = 0.9;
-            }
-            else if (listBox4.SelectedItem == "Titan")
-            {
-                gravv2 = 0.25;
-            }
-            else if (listBox4.SelectedItem == "Europa")
-            {
-                gravv2 = 0.25;
-            }
-            else
-            {
-                gravv2 = 1.1;
-            }
+            double[] planeterGravitation = new double[]
+            {1,0.25,0.9,0.25,0.25,1.1 };
+            gravv2 = planeterGravitation[listBox4.SelectedIndex];
         }
 
         private void listBox6_Click(object sender, EventArgs e)
