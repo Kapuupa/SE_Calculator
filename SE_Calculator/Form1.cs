@@ -226,15 +226,8 @@ namespace SE_Calculator
 
         public void comboBox2_Click(object sender, EventArgs e)
         {
-           if (comboBox2.SelectedItem == "Large Grid")
-            {
-                gs2 = 1;
-            }
-            else
-            {
-                gs2 = 2;
-            }
-           
+            gs2 = comboBox2.SelectedIndex + 1;
+
         }
 
         private void comboBox3_Click(object sender, EventArgs e)
