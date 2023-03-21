@@ -326,11 +326,33 @@ namespace SE_Calculator
                 tbxTotalGoldCost.Text = gulttot.ToString();
                 tbxTotalPlatinaCost.Text = platinatot.ToString();
 
-                int pcu = ((lcc + scc + airvent) * 10) + ((lhthrust + atmot + largeatmot + shthrust + battery) * 15) + ((lhtank + shtank + spot + h2eng + o2farm + o2tank) * 25) + ((gyro + beacon + oredet + o2h2) * 50) + (cock * 150) + (drill * 190) + (ann * 100);
-
+                int[,] PCU = new int[7, 2] { { (lcc + scc + airvent), 10 }, { (lhthrust + atmot + largeatmot + shthrust + battery), 15 }, { (lhtank + shtank + spot + h2eng + o2farm + o2tank), 25 }, { (gyro + beacon + oredet + o2h2), 50 }, { cock, 150 }, { drill, 190 }, { ann, 100 } };
+                int pcu = 0;
+                for (int i = 0; i < PCU.GetLength(0); i++)
+                {
+                    pcu += PCU[i, 0] * PCU[i, 1];
+                }
                 tbxPCUCost.Text = pcu.ToString();
 
-                tbxSteelPlate.Text = (((hab + lhthrust) * 150) + ((lab + shthrust) * 25) + ((battery + shtank + o2tank + beacon + ann) * 80) + (lhtank * 280) + (lhtank * 280) + (gyro * 600) + (largeatmot * 260) + (atmot * 55) + (oredet * 50) + (spot * 8) + (airvent * 45) + (o2h2 * 120) + (h2eng * 100) + (o2farm * 40)).ToString();
+
+                int[,] SteelPlates = new int[12, 2] { { (hab + lhthrust), 150 }, { (lab + shthrust), 25 }, { (battery + shtank + o2tank + beacon + ann), 80 }, { (lhtank + lhtank), 280 }, { (gyro), 600 }, { (largeatmot), 260 }, { (oredet), 50 }, { (spot), 8 }, { (airvent), 45 }, { (o2h2), 120 }, { (h2eng), 100 }, { (o2farm), 400 } };
+                int järnplattor = 0;
+                for (int i = 0; i < SteelPlates.GetLength(0); i++)
+                {
+                    järnplattor += SteelPlates[i, 0] * SteelPlates[i, 1];
+                }
+                tbxSteelPlate.Text = järnplattor.ToString();
+
+
+                int[,] componentconstruction = new int[9, 2] { { lcc, 80 }, { (scc + lhtank + shtank + gyro + ann + beacon + oredet + drill + o2tank), 40 }, { (airvent + cock), 20 }, { (battery), 30 }, { (atmot + h2eng), 70 }, { (lhthrust), 70 }, { (shthrust), 60 }, { (spot), 15 }, { (o2h2), 5 } };
+                int con = 0;
+                for (int i = 0; i < componentconstruction.GetLength(0); i++)
+                {
+                    con += componentconstruction[i, 0] * componentconstruction[i, 1];
+                }
+                tbxConstructionComponent.Text = con.ToString();
+
+
                 tbxDetectorComponent.Text = ((oredet) * 25).ToString();
                 tbxRadioComponent.Text = ((ann + beacon) * 40).ToString();
                 tbxPowerCell.Text = ((battery * 80) + (h2eng * 1)).ToString();
@@ -340,7 +362,9 @@ namespace SE_Calculator
                 tbxInteriorPlate.Text = ((lcc * 360) + (scc * 40) + (cock * 30) + (spot * 20)).ToString();
                 tbxBulletproofGlass.Text = ((cock * 10) + (spot * 4) + (o2farm * 100)).ToString();
                 tbxComputer.Text = ((lcc * 8) + (scc * 2) + (cock * 100) + ((battery + oredet) * 25) + ((lhtank + shtank + ann + beacon + o2tank) * 8) + ((gyro + drill + airvent + o2h2) * 5) + (h2eng * 4)).ToString();
-                tbxConstructionComponent.Text = ((lcc * 80) + ((scc + lhtank + shtank + gyro + ann + beacon + oredet + drill + o2tank) * 40) + ((airvent + cock) * 20) + (battery * 30) + ((atmot + h2eng) * 70) + (lhthrust * 180) + (shthrust * 60) + (spot * 15) + (o2h2 * 5)).ToString();
+                                
+               
+
                 tbxSmallSteelTube.Text = (((lcc+lhtank+shtank+ann+beacon+o2tank) * 60) + (scc*20) + (h2eng * 20) + (o2farm * 10)).ToString();
                 tbxLargeSteelTube.Text = ((lhtank * 80) + ((shtank+ann+lhthrust+beacon+o2tank) * 40) + (gyro * 4) + (largeatmot * 50) + ((atmot+shthrust) * 8) + ((h2eng+drill) * 12) + ((o2h2+spot) * 2) + (o2farm * 20)).ToString();
                 tbxSuperConducter.Text = (lreactor * 100).ToString();
