@@ -239,14 +239,8 @@ namespace SE_Calculator
 
         private void comboBox1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == "Large Grid")
-            {
-                GridSize1 = 1;
-            }
-            else
-            {
-                GridSize1 = 2;
-            }
+            GridSize1 = comboBox1.SelectedIndex + 1;
+            
         }
 
         private void listBox6_SelectedIndexChanged(object sender, EventArgs e)
