@@ -353,26 +353,60 @@ namespace SE_Calculator
                 tbxConstructionComponent.Text = con.ToString();
 
 
+                int[,] MetalGrid = new int[6, 2] { { lcc, 24}, { scc, 4}, {gyro, 50 }, { (largeatmot + shthrust), 40 }, {atmot, 10 }, { lhthrust, 250 } };
+                int men = 0;
+                for (int i = 0; i < MetalGrid.GetLength(0); i++)
+                {
+                    men += MetalGrid[i, 0] * MetalGrid[i, 1];
+                }
+                tbxMetalGrid.Text = men.ToString();
+
+
+                int[,] Motor = new int[9, 2] { { lcc, 20 }, { (scc + o2h2) , 4}, { cock, 1 }, { gyro, 4 }, {largeatmot, 1100 }, { atmot, 110 }, { (oredet + drill), 5 }, { h2eng, 12 }, { airvent, 10} };
+                int mon = 0;
+                for (int i = 0; i < Motor.GetLength(0); i++)
+                {
+                    mon += Motor[i, 0] * Motor[i, 1];
+                }
+                tbxMotor.Text = mon.ToString();
+
+
+                int[,] Computer = new int[7, 2] { { lcc, 8 }, { scc, 2}, { cock, 100 }, { (battery + oredet), 25 }, { (lhtank + shtank + ann + beacon + o2tank), 8 }, { (gyro + drill + airvent + o2h2), 5 }, { h2eng, 4} };
+                int com = 0;
+                for (int i = 0; i < Computer.GetLength(0); i++)
+                {
+                    com += Computer[i, 0] * Computer[i, 1];
+                }
+                tbxComputer.Text = com.ToString();
+
+
+                int[,] LargeSteelTubes = new int[8, 2] { { lhtank, 80}, { (shtank + ann + lhthrust + beacon + o2tank), 40 }, { gyro, 4 }, { largeatmot, 50 }, { (atmot + shthrust), 8 }, { (h2eng + drill), 12 }, { (o2h2 + spot), 2 }, { o2farm, 20 } };
+                int lst = 0;
+                for (int i = 0; i < LargeSteelTubes.GetLength(0); i++)
+                {
+                    lst += LargeSteelTubes[i, 0] * LargeSteelTubes[i, 1];
+                }
+                tbxLargeSteelTube.Text = lst.ToString();
+
                 tbxDetectorComponent.Text = ((oredet) * 25).ToString();
                 tbxRadioComponent.Text = ((ann + beacon) * 40).ToString();
                 tbxPowerCell.Text = ((battery * 80) + (h2eng * 1)).ToString();
-                tbxDisplay.Text = ((lcc+scc) + (cock * 8)).ToString();
-                tbxMetalGrid.Text = ((lcc * 24) + (scc * 4) + (gyro * 50) + ((largeatmot + shthrust) * 40) + (atmot * 10) + (lhthrust * 250)).ToString();
-                tbxMotor.Text = ((lcc * 20) + ((scc + o2h2) * 4) + (cock * 1) + (gyro * 4) + (largeatmot * 1100) + (atmot * 110) + ((oredet + drill) * 5) + (h2eng * 12) + (airvent * 10)).ToString();
+                tbxDisplay.Text = ((lcc+scc) + (cock * 8)).ToString();            
                 tbxInteriorPlate.Text = ((lcc * 360) + (scc * 40) + (cock * 30) + (spot * 20)).ToString();
-                tbxBulletproofGlass.Text = ((cock * 10) + (spot * 4) + (o2farm * 100)).ToString();
-                tbxComputer.Text = ((lcc * 8) + (scc * 2) + (cock * 100) + ((battery + oredet) * 25) + ((lhtank + shtank + ann + beacon + o2tank) * 8) + ((gyro + drill + airvent + o2h2) * 5) + (h2eng * 4)).ToString();
-                                
-               
-
-                tbxSmallSteelTube.Text = (((lcc+lhtank+shtank+ann+beacon+o2tank) * 60) + (scc*20) + (h2eng * 20) + (o2farm * 10)).ToString();
-                tbxLargeSteelTube.Text = ((lhtank * 80) + ((shtank+ann+lhthrust+beacon+o2tank) * 40) + (gyro * 4) + (largeatmot * 50) + ((atmot+shthrust) * 8) + ((h2eng+drill) * 12) + ((o2h2+spot) * 2) + (o2farm * 20)).ToString();
+                tbxBulletproofGlass.Text = ((cock * 10) + (spot * 4) + (o2farm * 100)).ToString();           
+                tbxSmallSteelTube.Text = (((lcc+lhtank+shtank+ann+beacon+o2tank) * 60) + (scc*20) + (h2eng * 20) + (o2farm * 10)).ToString();                
                 tbxSuperConducter.Text = (lreactor * 100).ToString();
                 tbxReactorComponent.Text = ((lreactor * 2000) + (sractor * 100)).ToString();
                 tbxThrusterComponent.Text = ((largeiont * 960) + (iont * 80)).ToString();
 
                 double powerproduction = (lreactor * 300) + (sractor * 15) + (h2eng * 5);
-                double powerconsumtion = (lhtank * 0.001) + (gyro * 0.00003) + (largeatmot * 16.36) + (atmot * 2.36) + (ann * 0.2) + (beacon * 0.01) + (drill * 0.002) + (spot * 0.001) + (o2h2 * 0.33) + (o2farm * 0.001) + (o2tank * 0.001) + (largeiont * 33.60) + (iont * 3.36);
+                double[,] powercom = new double[10, 2] { { (lhtank+spot+o2farm+o2tank), 0.001}, { gyro, 0.00003 }, { largeatmot, 16.36}, { atmot, 2.36}, { ann, 0.2 }, { beacon, 0.01 }, { drill, 0.002}, { o2h2, 0.33 }, { largeiont, 33.60 }, { iont, 3.36} };
+                double powerconsumtion = 0;
+                for (int i = 0; i < powercom.GetLength(0); i++)
+                {
+                    powerconsumtion += powercom[i, 0] * powercom[i, 1];
+                }
+                
                 tbxPowerProduction.Text = powerproduction.ToString() + " MW";
                 tbxPowerConsumption.Text = powerconsumtion.ToString() + " MW";
                 
