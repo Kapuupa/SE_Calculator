@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SE_Calculator
 {
@@ -305,114 +306,133 @@ namespace SE_Calculator
                 
             if (GridSize4 == 1)
             {
-                double irontot = (lcc * 3053) + (scc * 770) + (hab * 3150) + (lab * 525) + (cock * 383) + (battery * 2792.5) + (lhtank * 8984) + (shtank * 3584) + (gyro * 13802.5) + (largeatmot * 30240) + (atmot * 4415) + (ann * 3904) + (lhthrust * 9150) + (shthrust * 1845) + (beacon * 3904) + (drill * 7162.5)
-                + (oredet * 1687.5) + (o2farm * 1700) + (o2tank * 3584) + (h2eng * 3512) + (o2h2 * 2712.5) + (airvent * 1347.5) + (spot * 448) + (lreactor * 54817.5) + (sractor * 4000.5) + (largeiont * 35950) + (iont * 3765);
-                double nickeltot = (lcc * 220) + (scc * 40) + (cock * 5) + (battery * 160) + (gyro * 270) + (largeatmot * 5700) + (atmot * 600) + (lhthrust * 1250) + (shthrust * 200) + (oredet * 400) + (drill * 25) + (airvent * 50) + (o2h2 * 20) + (h2eng * 62) + (lreactor * 300) + (sractor * 50);
-                double cobalttot = (lcc * 72) + (scc * 12) + (gyro * 150) + (largeatmot * 120) + (atmot * 30) + (lhthrust * 750) + (shthrust * 120) + (largeiont * 9600) + (iont * 800) + (lreactor * 120) + (sractor * 12);
-                double silicontot = (lcc * 6.6) + (scc * 5.4) + (cock * 210) + (battery * 85) + (lhtank * 1.6) + (shtank * 1.6) + (gyro) + (ann * 41.6) + (oredet * 5) + (drill) + (airvent) + (spot * 60) + (o2h2) + (h2eng * 1.8) + (o2farm * 1504) + (o2tank * 1.6) + (lreactor * 15) + (sractor * 5);
-                double silvertot = (lreactor * 40000) + (sractor * 2000);
-                double graveltot = (lreactor * 10000) + (sractor * 500);
-                double gulttot = (lreactor * 200) + (largeiont * 960) + (iont * 80);
-                double platinatot = (largeiont * 384) + (iont * 32);
+                //PCU, Stell Plates, L Steel tube, S Stell tubes, constructiom, computer, bulletproof, interior, motor, metal grid, display, power cell, radio comp, detector comp, superconducter, reactor comp, thruster comp, iron, nickel, cobalt, silicon, silver, gravel, gold, platina, power pro, power con, hydro pro/storage, hydro con
+                double[,] CostList = new double[28, 30] { 
+                    {lcc,10, 0,0,60,80,8,0,360,20,24,1,0,0,0,0,0,0,3053,220,72,6.6,0,0,0,0,0,0,15000000,0 }, 
+                    {scc, 10,0,0,20,40,2,0,40,4,4,1,0,0,0,0,0,0,770,40,12,5.4,0,0,0,0,0,0,1000000,0 }, 
+                    {hab,1,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3150,0,0,0,0,0,0,0,0,0,0,0 }, 
+                    {lab,1,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,525,0,0,0,0,0,0,0,0,0,0,0 }, 
+                    {cock,150,0,0,0,20,100,10,30,1,0,8,0,0,0,0,0,0,383,5,0,210,0,0,0,0,0,0,0,0 }, 
+                    {battery,15,80,0,0,30,25,0,0,0,0,0,80,0,0,0,0,0,2792.5,160,0,85,0,0,0,0,0,0,0,0 }, 
+                    {lhtank,25,280,80,60,40,8,0,0,0,0,0,0,0,0,0,0,0,8984,0,0,1.6,0,0,0,0,0,0.001,0,0 }, 
+                    {shtank,25,80,40,60,40,8,0,0,0,0,0,0,0,0,0,0,0,3584,0,0,1.6,0,0,0,0,0,0.001,0,0 },
+                    {gyro,50,600,4,0,40,5,0,0,4,50,0,0,0,0,0,0,0,13802.5,270,150,1,0,0,0,0,0,0.00003,0,0 },
+                    {largeatmot,15,260,50,0,80,0,0,0,1100,40,0,0,0,0,0,0,0,30240,5700,120,0,0,0,0,0,0,16.36,0,0 }, 
+                    {atmot,15,55,8,0,70,0,0,0,110,10,0,0,0,0,0,0,0,4415,600,30,0,0,0,0,0,0,2.36,0,0 }, 
+                    {ann,100,80,40,60,40,8,0,0,0,0,0,0,40,0,0,0,0,3094,0,0,41.6,0,0,0,0,0,0.2,0,0 }, 
+                    {lhthrust,15,150,40,0,180,0,0,0,0,250,0,0,0,0,0,0,0,9150,1250,750,0,0,0,0,0,0,0,0,4821.29 }, 
+                    {shthrust,15,25,8,0,60,0,0,0,0,40,0,0,0,0,0,0,0,1845,200,120,0,0,0,0,0,0,0,0,803.55 }, 
+                    {beacon,50,80,40,60,40,9,0,0,0,0,0,0,40,0,0,0,0,3904,0,0,41.6,0,0,0,0,0,0.01,0,0 }, 
+                    {oredet,50,50,0,0,40,25,0,0,5,0,0,0,0,25,0,0,0,1687.5,400,0,5,0,0,0,0,0,0.002,0,0 }, 
+                    {drill,190,300,12,0,40,5,0,0,5,0,0,0,0,0,0,0,0,7162.5,25,0,1,0,0,0,0,0,0.002,0,0 }, 
+                    {spot,25,8,2,0,15,0,4,20,0,0,0,0,0,0,0,0,0,448,0,0,60,0,0,0,0,0,0.001,0,0 }, 
+                    {airvent,10,45,0,0,20,5,0,0,10,0,0,0,0,0,0,0,0,1347.5,50,0,1,0,0,0,0,0,0,0,0}, 
+                    {o2h2,50,120,2,0,5,5,0,0,4,0,0,0,0,0,0,0,0,2712.5,20,0,1,0,0,0,0,0,0.33,100000,0 }, 
+                    {h2eng,25,100,12,20,70,4,0,0,12,0,0,1,0,0,0,0,0,3512,62,0,1.8,0,0,0,0,5,0,0,500 }, 
+                    {o2farm,25,40,20,10,20,20,100,0,0,0,0,0,0,0,0,0,0,1700,0,0,1504,0,0,0,0,0,0.001,0,0 },
+                    {o2tank,25,80,40,60,40,8,0,0,0,0,0,0,0,0,0,0,0,3584,0,0,1.6,0,0,0,0,0,0.001,0,0}, 
+                    {lreactor,25,1000,40,0,70,75,0,0,20,40,0,0,0,0,100,2000,0,54817.5,300,120,15,40000,10000,200,0,300,0,0,0 }, 
+                    {sractor,25,80,8,0,40,25,0,0,6,4,0,0,0,0,0,100,0,4000.5,50,12,5,2000,500,0,0,15,0,0,0 }, 
+                    {largeiont,15,150,100,0,100,0,0,0,0,0,0,0,0,0,0,0,960,25950,0,9600,0,0,0,960,384,0,33.6,0,0 }, 
+                    {iont,15,25,8,0,60,0,0,0,0,0,0,0,0,0,0,0,80,3765,0,800,0,0,0,80,32,0,3.36,0,0 }, 
+                    {mcc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 } };
+
+                double pcu = 0;
+                double steelplates = 0;
+                double largesteeltube = 0;
+                double smallsteeltube = 0;
+                double construction = 0;
+                double computer = 0;
+                double bulletproof = 0;
+                double interior = 0;
+                double motor = 0; 
+                double metalgrid = 0;
+                double display = 0;
+                double powercell = 0;
+                double radio = 0;
+                double detector = 0;
+                double superconducter = 0;
+                double reactor = 0;
+                double thruster = 0;
+                double irontot = 0;
+                double nickeltot = 0;
+                double cobalttot = 0;
+                double silicontot = 0;
+                double silvertot = 0;
+                double graveltot = 0;
+                double goldtot = 0;
+                double platinatot = 0;
+                double powerproduction = 0;
+                double powerconsumption = 0;
+                double hydrogenproduction = 0;
+                double hydrogenconsumption = 0;
 
 
+                for (int i = 0; i < CostList.GetLength(0); i++)
+                {
+                    pcu += CostList[i, 0] * CostList[i,1];
+                    steelplates += CostList[i, 0] * CostList[i, 2];
+                    largesteeltube += CostList[i, 0] * CostList[i, 3];
+                    smallsteeltube += CostList[i, 0] * CostList[i, 4];
+                    construction += CostList[i, 0] * CostList[i, 5];
+                    computer += CostList[i, 0] * CostList[i, 6];
+                    bulletproof += CostList[i, 0] * CostList[i, 7];
+                    interior += CostList[i, 0] * CostList[i, 8];
+                    motor += CostList[i, 0] * CostList[i, 9];
+                    metalgrid += CostList[i, 0] * CostList[i, 10];
+                    display += CostList[i, 0] * CostList[i, 11];
+                    powercell += CostList[i, 0] * CostList[i, 12];
+                    radio += CostList[i, 0] * CostList[i, 13];
+                    detector += CostList[i, 0] * CostList[i, 14];
+                    superconducter += CostList[i, 0] * CostList[i, 15];
+                    reactor += CostList[i, 0] * CostList[i, 16];
+                    thruster += CostList[i, 0] * CostList[i, 17];
+                    irontot += CostList[i, 0] * CostList[i, 18];
+                    nickeltot += CostList[i, 0] * CostList[i, 19];
+                    cobalttot += CostList[i, 0] * CostList[i, 20];
+                    silicontot += CostList[i, 0] * CostList[i, 21];
+                    silvertot += CostList[i, 0] * CostList[i, 22];
+                    graveltot += CostList[i, 0] * CostList[i, 23];
+                    goldtot += CostList[i, 0] * CostList[i, 24];
+                    platinatot += CostList[i, 0] * CostList[i, 25];
+                    powerproduction += CostList[i, 0] * CostList[i, 26];
+                    powerconsumption += CostList[i, 0] * CostList[i, 27];
+                    hydrogenproduction += CostList[i, 0] * CostList[i, 28];
+                    hydrogenconsumption += CostList[i, 0] * CostList[i, 29];
+                }
 
+                tbxSteelPlate.Text = steelplates.ToString();
                 tbxIronTot.Text = irontot.ToString();
                 tbxNickelTot.Text = nickeltot.ToString();
                 tbxCobaltTot.Text = cobalttot.ToString();
                 tbxSiliconTot.Text = silicontot.ToString();
                 tbxTotalSilverCost.Text = silvertot.ToString();
                 tbxTotalGravelCost.Text = graveltot.ToString();
-                tbxTotalGoldCost.Text = gulttot.ToString();
+                tbxTotalGoldCost.Text = goldtot.ToString();
                 tbxTotalPlatinaCost.Text = platinatot.ToString();
-
-                int[,] PCU = new int[7, 2] { { (lcc + scc + airvent), 10 }, { (lhthrust + atmot + largeatmot + shthrust + battery), 15 }, { (lhtank + shtank + spot + h2eng + o2farm + o2tank), 25 }, { (gyro + beacon + oredet + o2h2), 50 }, { cock, 150 }, { drill, 190 }, { ann, 100 } };
-                int pcu = 0;
-                for (int i = 0; i < PCU.GetLength(0); i++)
-                {
-                    pcu += PCU[i, 0] * PCU[i, 1];
-                }
+                tbxConstructionComponent.Text = construction.ToString();
+                tbxMetalGrid.Text = metalgrid.ToString();
+                tbxMotor.Text = motor.ToString();
+                tbxComputer.Text = computer.ToString();
+                tbxLargeSteelTube.Text = largesteeltube.ToString();
+                tbxDetectorComponent.Text = detector.ToString();
+                tbxRadioComponent.Text = radio.ToString();
+                tbxPowerCell.Text = powercell.ToString();
+                tbxDisplay.Text = display.ToString();            
+                tbxInteriorPlate.Text = interior.ToString();
+                tbxBulletproofGlass.Text = bulletproof.ToString();           
+                tbxSmallSteelTube.Text = smallsteeltube.ToString();                
+                tbxSuperConducter.Text = superconducter.ToString();
+                tbxReactorComponent.Text = reactor.ToString();
+                tbxThrusterComponent.Text = thruster.ToString(); 
                 tbxPCUCost.Text = pcu.ToString();
-
-
-                int[,] SteelPlates = new int[12, 2] { { (hab + lhthrust), 150 }, { (lab + shthrust), 25 }, { (battery + shtank + o2tank + beacon + ann), 80 }, { (lhtank + lhtank), 280 }, { (gyro), 600 }, { (largeatmot), 260 }, { (oredet), 50 }, { (spot), 8 }, { (airvent), 45 }, { (o2h2), 120 }, { (h2eng), 100 }, { (o2farm), 400 } };
-                int järnplattor = 0;
-                for (int i = 0; i < SteelPlates.GetLength(0); i++)
-                {
-                    järnplattor += SteelPlates[i, 0] * SteelPlates[i, 1];
-                }
-                tbxSteelPlate.Text = järnplattor.ToString();
-
-
-                int[,] componentconstruction = new int[9, 2] { { lcc, 80 }, { (scc + lhtank + shtank + gyro + ann + beacon + oredet + drill + o2tank), 40 }, { (airvent + cock), 20 }, { (battery), 30 }, { (atmot + h2eng), 70 }, { (lhthrust), 70 }, { (shthrust), 60 }, { (spot), 15 }, { (o2h2), 5 } };
-                int con = 0;
-                for (int i = 0; i < componentconstruction.GetLength(0); i++)
-                {
-                    con += componentconstruction[i, 0] * componentconstruction[i, 1];
-                }
-                tbxConstructionComponent.Text = con.ToString();
-
-
-                int[,] MetalGrid = new int[6, 2] { { lcc, 24}, { scc, 4}, {gyro, 50 }, { (largeatmot + shthrust), 40 }, {atmot, 10 }, { lhthrust, 250 } };
-                int men = 0;
-                for (int i = 0; i < MetalGrid.GetLength(0); i++)
-                {
-                    men += MetalGrid[i, 0] * MetalGrid[i, 1];
-                }
-                tbxMetalGrid.Text = men.ToString();
-
-
-                int[,] Motor = new int[9, 2] { { lcc, 20 }, { (scc + o2h2) , 4}, { cock, 1 }, { gyro, 4 }, {largeatmot, 1100 }, { atmot, 110 }, { (oredet + drill), 5 }, { h2eng, 12 }, { airvent, 10} };
-                int mon = 0;
-                for (int i = 0; i < Motor.GetLength(0); i++)
-                {
-                    mon += Motor[i, 0] * Motor[i, 1];
-                }
-                tbxMotor.Text = mon.ToString();
-
-
-                int[,] Computer = new int[7, 2] { { lcc, 8 }, { scc, 2}, { cock, 100 }, { (battery + oredet), 25 }, { (lhtank + shtank + ann + beacon + o2tank), 8 }, { (gyro + drill + airvent + o2h2), 5 }, { h2eng, 4} };
-                int com = 0;
-                for (int i = 0; i < Computer.GetLength(0); i++)
-                {
-                    com += Computer[i, 0] * Computer[i, 1];
-                }
-                tbxComputer.Text = com.ToString();
-
-
-                int[,] LargeSteelTubes = new int[8, 2] { { lhtank, 80}, { (shtank + ann + lhthrust + beacon + o2tank), 40 }, { gyro, 4 }, { largeatmot, 50 }, { (atmot + shthrust), 8 }, { (h2eng + drill), 12 }, { (o2h2 + spot), 2 }, { o2farm, 20 } };
-                int lst = 0;
-                for (int i = 0; i < LargeSteelTubes.GetLength(0); i++)
-                {
-                    lst += LargeSteelTubes[i, 0] * LargeSteelTubes[i, 1];
-                }
-                tbxLargeSteelTube.Text = lst.ToString();
-
-                tbxDetectorComponent.Text = ((oredet) * 25).ToString();
-                tbxRadioComponent.Text = ((ann + beacon) * 40).ToString();
-                tbxPowerCell.Text = ((battery * 80) + (h2eng * 1)).ToString();
-                tbxDisplay.Text = ((lcc+scc) + (cock * 8)).ToString();            
-                tbxInteriorPlate.Text = ((lcc * 360) + (scc * 40) + (cock * 30) + (spot * 20)).ToString();
-                tbxBulletproofGlass.Text = ((cock * 10) + (spot * 4) + (o2farm * 100)).ToString();           
-                tbxSmallSteelTube.Text = (((lcc+lhtank+shtank+ann+beacon+o2tank) * 60) + (scc*20) + (h2eng * 20) + (o2farm * 10)).ToString();                
-                tbxSuperConducter.Text = (lreactor * 100).ToString();
-                tbxReactorComponent.Text = ((lreactor * 2000) + (sractor * 100)).ToString();
-                tbxThrusterComponent.Text = ((largeiont * 960) + (iont * 80)).ToString();
-
-                double powerproduction = (lreactor * 300) + (sractor * 15) + (h2eng * 5);
-                double[,] powercom = new double[10, 2] { { (lhtank+spot+o2farm+o2tank), 0.001}, { gyro, 0.00003 }, { largeatmot, 16.36}, { atmot, 2.36}, { ann, 0.2 }, { beacon, 0.01 }, { drill, 0.002}, { o2h2, 0.33 }, { largeiont, 33.60 }, { iont, 3.36} };
-                double powerconsumtion = 0;
-                for (int i = 0; i < powercom.GetLength(0); i++)
-                {
-                    powerconsumtion += powercom[i, 0] * powercom[i, 1];
-                }
                 
                 tbxPowerProduction.Text = powerproduction.ToString() + " MW";
-                tbxPowerConsumption.Text = powerconsumtion.ToString() + " MW";
+                tbxPowerConsumption.Text = Math.Round(powerconsumption,2).ToString() + " MW";
                 
-                if (powerproduction < powerconsumtion)
+                if (powerproduction < powerconsumption)
                 {
-                    double power = powerconsumtion - powerproduction;
+                    double power = powerconsumption - powerproduction;
                     double batterylife = battery * 3;
                     double powerlife = batterylife / power;
                     tbxTotalPowerUsage.Text = Math.Round(powerlife, 2).ToString() + " h";
@@ -425,20 +445,19 @@ namespace SE_Calculator
                     tbxTotalPowerUsage.Text = " Infinity";
                 }
 
-                double totalhydrogen = (lhtank * 15000000) + (shtank * 1000000) + (h2eng * 100000);
-                double hydrogenconsumption = (lhthrust * 4821.29) + (shthrust * 803.55) + (h2eng * 500);
-                double hydrogentime = totalhydrogen/hydrogenconsumption;
+                
+                double hydrogentime = hydrogenproduction/hydrogenconsumption;
 
                 if (hydrogentime >= 300)
                 {
-                    tbxHydrogenTime.Text = Math.Round((hydrogentime/60), 2).ToString() + " m";
+                    tbxHydrogenTime.Text = Math.Round((hydrogentime/60), 2).ToString() + " minuts";
                 }
                 else
                 {
                     tbxHydrogenTime.Text = Math.Round(hydrogentime, 2).ToString() + " s";
                 }
 
-                tbxHydrogenCapacity.Text = totalhydrogen.ToString() + " L";
+                tbxHydrogenCapacity.Text = hydrogenproduction.ToString() + " L";
                 tbxHydrogenUse.Text = hydrogenconsumption.ToString() + " L/s";
                 
 
