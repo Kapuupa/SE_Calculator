@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tpeSpeed = new System.Windows.Forms.TabPage();
             this.tbxSträcka = new System.Windows.Forms.TextBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
             this.lblGridSize2 = new System.Windows.Forms.Label();
             this.btnSpeed = new System.Windows.Forms.Button();
             this.tbxTime = new System.Windows.Forms.TextBox();
@@ -305,6 +303,10 @@
             this.lblTotalMass = new System.Windows.Forms.Label();
             this.lblGDrive = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblDrills = new System.Windows.Forms.Label();
+            this.tbxDrills = new System.Windows.Forms.TextBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -318,9 +320,9 @@
             // 
             // tpeSpeed
             // 
+            this.tpeSpeed.Controls.Add(this.comboBox6);
+            this.tpeSpeed.Controls.Add(this.comboBox5);
             this.tpeSpeed.Controls.Add(this.tbxSträcka);
-            this.tpeSpeed.Controls.Add(this.listBox5);
-            this.tpeSpeed.Controls.Add(this.listBox4);
             this.tpeSpeed.Controls.Add(this.lblGridSize2);
             this.tpeSpeed.Controls.Add(this.btnSpeed);
             this.tpeSpeed.Controls.Add(this.tbxTime);
@@ -356,34 +358,6 @@
             this.tbxSträcka.ReadOnly = true;
             this.tbxSträcka.Size = new System.Drawing.Size(262, 20);
             this.tbxSträcka.TabIndex = 63;
-            // 
-            // listBox5
-            // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Items.AddRange(new object[] {
-            "Large Grid",
-            "Small Grid"});
-            this.listBox5.Location = new System.Drawing.Point(192, 231);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(58, 30);
-            this.listBox5.TabIndex = 62;
-            this.listBox5.Click += new System.EventHandler(this.listBox5_Click);
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Items.AddRange(new object[] {
-            "Earth",
-            "Moon",
-            "Mars",
-            "Europa",
-            "Titan",
-            "Alien"});
-            this.listBox4.Location = new System.Drawing.Point(58, 221);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(44, 82);
-            this.listBox4.TabIndex = 61;
-            this.listBox4.Click += new System.EventHandler(this.listBox4_Click);
             // 
             // lblGridSize2
             // 
@@ -445,6 +419,7 @@
             this.tbxSIT.Name = "tbxSIT";
             this.tbxSIT.Size = new System.Drawing.Size(100, 20);
             this.tbxSIT.TabIndex = 52;
+            this.tbxSIT.Text = "0";
             // 
             // tbxBIT
             // 
@@ -452,6 +427,7 @@
             this.tbxBIT.Name = "tbxBIT";
             this.tbxBIT.Size = new System.Drawing.Size(100, 20);
             this.tbxBIT.TabIndex = 51;
+            this.tbxBIT.Text = "0";
             // 
             // tbxSAT
             // 
@@ -459,6 +435,7 @@
             this.tbxSAT.Name = "tbxSAT";
             this.tbxSAT.Size = new System.Drawing.Size(100, 20);
             this.tbxSAT.TabIndex = 50;
+            this.tbxSAT.Text = "0";
             // 
             // tbxBAT
             // 
@@ -466,6 +443,7 @@
             this.tbxBAT.Name = "tbxBAT";
             this.tbxBAT.Size = new System.Drawing.Size(100, 20);
             this.tbxBAT.TabIndex = 49;
+            this.tbxBAT.Text = "0";
             // 
             // tbxSHT
             // 
@@ -473,6 +451,7 @@
             this.tbxSHT.Name = "tbxSHT";
             this.tbxSHT.Size = new System.Drawing.Size(100, 20);
             this.tbxSHT.TabIndex = 48;
+            this.tbxSHT.Text = "0";
             // 
             // tbxBHT
             // 
@@ -480,6 +459,7 @@
             this.tbxBHT.Name = "tbxBHT";
             this.tbxBHT.Size = new System.Drawing.Size(100, 20);
             this.tbxBHT.TabIndex = 47;
+            this.tbxBHT.Text = "0";
             // 
             // lblSIT
             // 
@@ -541,6 +521,7 @@
             this.tbxShipWeight3.Name = "tbxShipWeight3";
             this.tbxShipWeight3.Size = new System.Drawing.Size(100, 20);
             this.tbxShipWeight3.TabIndex = 4;
+            this.tbxShipWeight3.Text = "0";
             // 
             // lblShipWeight3
             // 
@@ -650,6 +631,7 @@
             this.tbxIonThrusterSmall.Name = "tbxIonThrusterSmall";
             this.tbxIonThrusterSmall.Size = new System.Drawing.Size(100, 20);
             this.tbxIonThrusterSmall.TabIndex = 29;
+            this.tbxIonThrusterSmall.Text = "0";
             // 
             // tbxIonThrusterBig
             // 
@@ -657,6 +639,7 @@
             this.tbxIonThrusterBig.Name = "tbxIonThrusterBig";
             this.tbxIonThrusterBig.Size = new System.Drawing.Size(100, 20);
             this.tbxIonThrusterBig.TabIndex = 28;
+            this.tbxIonThrusterBig.Text = "0";
             // 
             // tbxAtmosphericThrusterSmall
             // 
@@ -664,6 +647,7 @@
             this.tbxAtmosphericThrusterSmall.Name = "tbxAtmosphericThrusterSmall";
             this.tbxAtmosphericThrusterSmall.Size = new System.Drawing.Size(100, 20);
             this.tbxAtmosphericThrusterSmall.TabIndex = 27;
+            this.tbxAtmosphericThrusterSmall.Text = "0";
             // 
             // tbxAtmosphericThrusterBig
             // 
@@ -671,6 +655,7 @@
             this.tbxAtmosphericThrusterBig.Name = "tbxAtmosphericThrusterBig";
             this.tbxAtmosphericThrusterBig.Size = new System.Drawing.Size(100, 20);
             this.tbxAtmosphericThrusterBig.TabIndex = 26;
+            this.tbxAtmosphericThrusterBig.Text = "0";
             // 
             // tbxHydrogenThrusterSmall
             // 
@@ -678,6 +663,7 @@
             this.tbxHydrogenThrusterSmall.Name = "tbxHydrogenThrusterSmall";
             this.tbxHydrogenThrusterSmall.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenThrusterSmall.TabIndex = 25;
+            this.tbxHydrogenThrusterSmall.Text = "0";
             // 
             // tbxHydrogenThrusterBig
             // 
@@ -685,6 +671,7 @@
             this.tbxHydrogenThrusterBig.Name = "tbxHydrogenThrusterBig";
             this.tbxHydrogenThrusterBig.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenThrusterBig.TabIndex = 24;
+            this.tbxHydrogenThrusterBig.Text = "0";
             // 
             // lblIonThrusterBig
             // 
@@ -813,6 +800,7 @@
             this.tbxShipWeight.Name = "tbxShipWeight";
             this.tbxShipWeight.Size = new System.Drawing.Size(100, 20);
             this.tbxShipWeight.TabIndex = 2;
+            this.tbxShipWeight.Text = "0";
             // 
             // tbxSmallC
             // 
@@ -820,6 +808,7 @@
             this.tbxSmallC.Name = "tbxSmallC";
             this.tbxSmallC.Size = new System.Drawing.Size(100, 20);
             this.tbxSmallC.TabIndex = 1;
+            this.tbxSmallC.Text = "0";
             // 
             // tbxLargeContainer
             // 
@@ -827,6 +816,7 @@
             this.tbxLargeContainer.Name = "tbxLargeContainer";
             this.tbxLargeContainer.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeContainer.TabIndex = 0;
+            this.tbxLargeContainer.Text = "0";
             // 
             // tclEarth
             // 
@@ -835,7 +825,7 @@
             this.tclEarth.Controls.Add(this.tpeSpeed);
             this.tclEarth.Controls.Add(this.tpeResource);
             this.tclEarth.Controls.Add(this.tpeCapas);
-            this.tclEarth.Location = new System.Drawing.Point(12, 12);
+            this.tclEarth.Location = new System.Drawing.Point(13, 12);
             this.tclEarth.Name = "tclEarth";
             this.tclEarth.SelectedIndex = 0;
             this.tclEarth.Size = new System.Drawing.Size(664, 567);
@@ -843,6 +833,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tbxDrills);
+            this.tabPage2.Controls.Add(this.lblDrills);
             this.tabPage2.Controls.Add(this.comboBox4);
             this.tabPage2.Controls.Add(this.comboBox3);
             this.tabPage2.Controls.Add(this.comboBox2);
@@ -1012,6 +1004,7 @@
             this.tbxShipWeight2.Name = "tbxShipWeight2";
             this.tbxShipWeight2.Size = new System.Drawing.Size(100, 20);
             this.tbxShipWeight2.TabIndex = 12;
+            this.tbxShipWeight2.Text = "0";
             // 
             // tbxSmallContainer2
             // 
@@ -1019,6 +1012,7 @@
             this.tbxSmallContainer2.Name = "tbxSmallContainer2";
             this.tbxSmallContainer2.Size = new System.Drawing.Size(100, 20);
             this.tbxSmallContainer2.TabIndex = 11;
+            this.tbxSmallContainer2.Text = "0";
             // 
             // tbxLargeContainer2
             // 
@@ -1026,6 +1020,7 @@
             this.tbxLargeContainer2.Name = "tbxLargeContainer2";
             this.tbxLargeContainer2.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeContainer2.TabIndex = 10;
+            this.tbxLargeContainer2.Text = "0";
             // 
             // tpeResource
             // 
@@ -1897,6 +1892,7 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 62;
+            this.textBox6.Text = "0";
             // 
             // tbxHydrogenTime
             // 
@@ -1905,6 +1901,7 @@
             this.tbxHydrogenTime.ReadOnly = true;
             this.tbxHydrogenTime.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenTime.TabIndex = 61;
+            this.tbxHydrogenTime.Text = "0";
             // 
             // tbxHydrogenUse
             // 
@@ -1913,6 +1910,7 @@
             this.tbxHydrogenUse.ReadOnly = true;
             this.tbxHydrogenUse.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenUse.TabIndex = 60;
+            this.tbxHydrogenUse.Text = "0";
             // 
             // label8
             // 
@@ -1957,6 +1955,7 @@
             this.tbxPowerProduction.ReadOnly = true;
             this.tbxPowerProduction.Size = new System.Drawing.Size(100, 20);
             this.tbxPowerProduction.TabIndex = 55;
+            this.tbxPowerProduction.Text = "0";
             // 
             // tbxPowerConsumption
             // 
@@ -1965,6 +1964,7 @@
             this.tbxPowerConsumption.ReadOnly = true;
             this.tbxPowerConsumption.Size = new System.Drawing.Size(100, 20);
             this.tbxPowerConsumption.TabIndex = 54;
+            this.tbxPowerConsumption.Text = "0";
             // 
             // tbxTotalPowerUsage
             // 
@@ -1973,6 +1973,7 @@
             this.tbxTotalPowerUsage.ReadOnly = true;
             this.tbxTotalPowerUsage.Size = new System.Drawing.Size(100, 20);
             this.tbxTotalPowerUsage.TabIndex = 53;
+            this.tbxTotalPowerUsage.Text = "0";
             // 
             // textBox3
             // 
@@ -1981,6 +1982,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 52;
+            this.textBox3.Text = "0";
             // 
             // tbxHydrogenCapacity
             // 
@@ -1989,6 +1991,7 @@
             this.tbxHydrogenCapacity.ReadOnly = true;
             this.tbxHydrogenCapacity.Size = new System.Drawing.Size(100, 20);
             this.tbxHydrogenCapacity.TabIndex = 51;
+            this.tbxHydrogenCapacity.Text = "0";
             // 
             // textBox1
             // 
@@ -1997,6 +2000,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 50;
+            this.textBox1.Text = "0";
             // 
             // lblThrusterComponent
             // 
@@ -2014,6 +2018,7 @@
             this.tbxThrusterComponent.ReadOnly = true;
             this.tbxThrusterComponent.Size = new System.Drawing.Size(100, 20);
             this.tbxThrusterComponent.TabIndex = 48;
+            this.tbxThrusterComponent.Text = "0";
             // 
             // lblTotalPlatinaCost
             // 
@@ -2031,6 +2036,7 @@
             this.tbxTotalPlatinaCost.ReadOnly = true;
             this.tbxTotalPlatinaCost.Size = new System.Drawing.Size(100, 20);
             this.tbxTotalPlatinaCost.TabIndex = 46;
+            this.tbxTotalPlatinaCost.Text = "0";
             // 
             // tbxTotalSilverCost
             // 
@@ -2039,6 +2045,7 @@
             this.tbxTotalSilverCost.ReadOnly = true;
             this.tbxTotalSilverCost.Size = new System.Drawing.Size(100, 20);
             this.tbxTotalSilverCost.TabIndex = 45;
+            this.tbxTotalSilverCost.Text = "0";
             // 
             // tbxTotalGravelCost
             // 
@@ -2047,6 +2054,7 @@
             this.tbxTotalGravelCost.ReadOnly = true;
             this.tbxTotalGravelCost.Size = new System.Drawing.Size(100, 20);
             this.tbxTotalGravelCost.TabIndex = 44;
+            this.tbxTotalGravelCost.Text = "0";
             // 
             // tbxTotalGoldCost
             // 
@@ -2055,6 +2063,7 @@
             this.tbxTotalGoldCost.ReadOnly = true;
             this.tbxTotalGoldCost.Size = new System.Drawing.Size(100, 20);
             this.tbxTotalGoldCost.TabIndex = 43;
+            this.tbxTotalGoldCost.Text = "0";
             // 
             // tbxReactorComponent
             // 
@@ -2063,6 +2072,7 @@
             this.tbxReactorComponent.ReadOnly = true;
             this.tbxReactorComponent.Size = new System.Drawing.Size(100, 20);
             this.tbxReactorComponent.TabIndex = 42;
+            this.tbxReactorComponent.Text = "0";
             // 
             // tbxSuperConducter
             // 
@@ -2071,6 +2081,7 @@
             this.tbxSuperConducter.ReadOnly = true;
             this.tbxSuperConducter.Size = new System.Drawing.Size(100, 20);
             this.tbxSuperConducter.TabIndex = 41;
+            this.tbxSuperConducter.Text = "0";
             // 
             // lblTotalGoldCost
             // 
@@ -2124,6 +2135,7 @@
             this.tbxDetectorComponent.ReadOnly = true;
             this.tbxDetectorComponent.Size = new System.Drawing.Size(100, 20);
             this.tbxDetectorComponent.TabIndex = 35;
+            this.tbxDetectorComponent.Text = "0";
             // 
             // tbxRadioComponent
             // 
@@ -2132,6 +2144,7 @@
             this.tbxRadioComponent.ReadOnly = true;
             this.tbxRadioComponent.Size = new System.Drawing.Size(100, 20);
             this.tbxRadioComponent.TabIndex = 34;
+            this.tbxRadioComponent.Text = "0";
             // 
             // tbxPowerCell
             // 
@@ -2140,6 +2153,7 @@
             this.tbxPowerCell.ReadOnly = true;
             this.tbxPowerCell.Size = new System.Drawing.Size(100, 20);
             this.tbxPowerCell.TabIndex = 33;
+            this.tbxPowerCell.Text = "0";
             // 
             // tbxDisplay
             // 
@@ -2148,6 +2162,7 @@
             this.tbxDisplay.ReadOnly = true;
             this.tbxDisplay.Size = new System.Drawing.Size(100, 20);
             this.tbxDisplay.TabIndex = 32;
+            this.tbxDisplay.Text = "0";
             // 
             // tbxMetalGrid
             // 
@@ -2156,6 +2171,7 @@
             this.tbxMetalGrid.ReadOnly = true;
             this.tbxMetalGrid.Size = new System.Drawing.Size(100, 20);
             this.tbxMetalGrid.TabIndex = 31;
+            this.tbxMetalGrid.Text = "0";
             // 
             // tbxMotor
             // 
@@ -2164,6 +2180,7 @@
             this.tbxMotor.ReadOnly = true;
             this.tbxMotor.Size = new System.Drawing.Size(100, 20);
             this.tbxMotor.TabIndex = 30;
+            this.tbxMotor.Text = "0";
             // 
             // tbxInteriorPlate
             // 
@@ -2172,6 +2189,7 @@
             this.tbxInteriorPlate.ReadOnly = true;
             this.tbxInteriorPlate.Size = new System.Drawing.Size(100, 20);
             this.tbxInteriorPlate.TabIndex = 29;
+            this.tbxInteriorPlate.Text = "0";
             // 
             // tbxBulletproofGlass
             // 
@@ -2180,6 +2198,7 @@
             this.tbxBulletproofGlass.ReadOnly = true;
             this.tbxBulletproofGlass.Size = new System.Drawing.Size(100, 20);
             this.tbxBulletproofGlass.TabIndex = 28;
+            this.tbxBulletproofGlass.Text = "0";
             // 
             // tbxComputer
             // 
@@ -2188,6 +2207,7 @@
             this.tbxComputer.ReadOnly = true;
             this.tbxComputer.Size = new System.Drawing.Size(100, 20);
             this.tbxComputer.TabIndex = 27;
+            this.tbxComputer.Text = "0";
             // 
             // tbxConstructionComponent
             // 
@@ -2196,6 +2216,7 @@
             this.tbxConstructionComponent.ReadOnly = true;
             this.tbxConstructionComponent.Size = new System.Drawing.Size(100, 20);
             this.tbxConstructionComponent.TabIndex = 26;
+            this.tbxConstructionComponent.Text = "0";
             // 
             // tbxSmallSteelTube
             // 
@@ -2204,6 +2225,7 @@
             this.tbxSmallSteelTube.ReadOnly = true;
             this.tbxSmallSteelTube.Size = new System.Drawing.Size(100, 20);
             this.tbxSmallSteelTube.TabIndex = 25;
+            this.tbxSmallSteelTube.Text = "0";
             // 
             // tbxLargeSteelTube
             // 
@@ -2212,6 +2234,7 @@
             this.tbxLargeSteelTube.ReadOnly = true;
             this.tbxLargeSteelTube.Size = new System.Drawing.Size(100, 20);
             this.tbxLargeSteelTube.TabIndex = 24;
+            this.tbxLargeSteelTube.Text = "0";
             // 
             // tbxSteelPlate
             // 
@@ -2220,6 +2243,7 @@
             this.tbxSteelPlate.ReadOnly = true;
             this.tbxSteelPlate.Size = new System.Drawing.Size(100, 20);
             this.tbxSteelPlate.TabIndex = 23;
+            this.tbxSteelPlate.Text = "0";
             // 
             // lblDetectorComponent
             // 
@@ -2345,6 +2369,7 @@
             this.tbxPCUCost.ReadOnly = true;
             this.tbxPCUCost.Size = new System.Drawing.Size(100, 20);
             this.tbxPCUCost.TabIndex = 9;
+            this.tbxPCUCost.Text = "0";
             // 
             // lblPCUCost
             // 
@@ -2362,6 +2387,7 @@
             this.tbxNickelTot.ReadOnly = true;
             this.tbxNickelTot.Size = new System.Drawing.Size(100, 20);
             this.tbxNickelTot.TabIndex = 7;
+            this.tbxNickelTot.Text = "0";
             // 
             // tbxCobaltTot
             // 
@@ -2370,6 +2396,7 @@
             this.tbxCobaltTot.ReadOnly = true;
             this.tbxCobaltTot.Size = new System.Drawing.Size(100, 20);
             this.tbxCobaltTot.TabIndex = 6;
+            this.tbxCobaltTot.Text = "0";
             // 
             // tbxSiliconTot
             // 
@@ -2378,6 +2405,7 @@
             this.tbxSiliconTot.ReadOnly = true;
             this.tbxSiliconTot.Size = new System.Drawing.Size(100, 20);
             this.tbxSiliconTot.TabIndex = 5;
+            this.tbxSiliconTot.Text = "0";
             // 
             // tbxIronTot
             // 
@@ -2386,6 +2414,7 @@
             this.tbxIronTot.ReadOnly = true;
             this.tbxIronTot.Size = new System.Drawing.Size(100, 20);
             this.tbxIronTot.TabIndex = 4;
+            this.tbxIronTot.Text = "0";
             // 
             // lblSiliconTot
             // 
@@ -2967,6 +2996,50 @@
             this.lblGDrive.TabIndex = 0;
             this.lblGDrive.Text = "G-Drive";
             // 
+            // lblDrills
+            // 
+            this.lblDrills.AutoSize = true;
+            this.lblDrills.Location = new System.Drawing.Point(311, 84);
+            this.lblDrills.Name = "lblDrills";
+            this.lblDrills.Size = new System.Drawing.Size(29, 13);
+            this.lblDrills.TabIndex = 47;
+            this.lblDrills.Text = "Drills";
+            // 
+            // tbxDrills
+            // 
+            this.tbxDrills.Location = new System.Drawing.Point(346, 82);
+            this.tbxDrills.Name = "tbxDrills";
+            this.tbxDrills.Size = new System.Drawing.Size(100, 20);
+            this.tbxDrills.TabIndex = 48;
+            this.tbxDrills.Text = "0";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Large Grid",
+            "Small Grid"});
+            this.comboBox5.Location = new System.Drawing.Point(192, 231);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(78, 21);
+            this.comboBox5.TabIndex = 64;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Earth",
+            "Moon Mars",
+            "Europa",
+            "Titan",
+            "Alien"});
+            this.comboBox6.Location = new System.Drawing.Point(49, 231);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(76, 21);
+            this.comboBox6.TabIndex = 65;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3063,8 +3136,6 @@
         private System.Windows.Forms.TextBox tbxShipWeight2;
         private System.Windows.Forms.TextBox tbxSmallContainer2;
         private System.Windows.Forms.TextBox tbxLargeContainer2;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.TextBox tbxSträcka;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -3274,6 +3345,10 @@
         private System.Windows.Forms.Label lblHydrogenTime;
         private System.Windows.Forms.Label lblTotalHydrogenUse;
         private System.Windows.Forms.Label lblHydrogenCapacity;
+        private System.Windows.Forms.TextBox tbxDrills;
+        private System.Windows.Forms.Label lblDrills;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }
 

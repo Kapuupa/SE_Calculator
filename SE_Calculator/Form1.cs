@@ -85,7 +85,7 @@ namespace SE_Calculator
 
         private void btnRäkna_Click(object sender, EventArgs e)
         {
-            
+
             double lc2 = double.Parse(tbxLargeContainer2.Text);
             int sc2 = int.Parse(tbxSmallContainer2.Text);
             int sw2 = int.Parse(tbxShipWeight2.Text);
@@ -95,11 +95,12 @@ namespace SE_Calculator
             int sat2 = int.Parse(tbxAtmosphericThrusterSmall.Text);
             int bit2 = int.Parse(tbxIonThrusterBig.Text);
             int sit2 = int.Parse(tbxIonThrusterSmall.Text);
+            int Drills = int.Parse(tbxDrills.Text);
 
 
             if (gs2 == 1)
             {
-                int totsw = (int)((lc2 * 421000 / ContainerItem) + (sc2 * (15625) / ContainerItem) + sw2);
+                int totsw = (int)((lc2 * 421000 / ContainerItem) + (sc2 * (15625) / ContainerItem) + sw2 + (Drills * 46875/0.37));
                 tbxSvar.Text = totsw.ToString() + " kg";
 
                 //+ (bht2 * 6940) + (sht2 * 1420) + (bat2 * 32970) + (sat2 * 4000) + (bit2 * 43200) + (sit2 * 4380));
@@ -118,7 +119,7 @@ namespace SE_Calculator
             }
             else if (gs2 == 2)
             {
-                int totsw2 = (int)((lc2 * 15625 / ContainerItem) + (sc2 * (125) / ContainerItem) + sw2);
+                int totsw2 = (int)((lc2 * 15625 / ContainerItem) + (sc2 * (125) / ContainerItem) + sw2 + (Drills*6750/0.37));
                 tbxSvar.Text = totsw2.ToString() + " kg";
 
                 //+ (bht2 * 6940) + (sht2 * 1420) + (bat2 * 32970) + (sat2 * 4000) + (bit2 * 43200) + (sit2 * 4380));
@@ -195,14 +196,12 @@ namespace SE_Calculator
 
         private void listBox5_Click(object sender, EventArgs e)
         {
-            GridSize3 = listBox5.SelectedIndex + 1;
+            
         }
 
         private void listBox4_Click(object sender, EventArgs e)
         {
-            double[] planeterGravitation = new double[]
-            {1,0.25,0.9,0.25,0.25,1.1 };
-            gravv2 = planeterGravitation[listBox4.SelectedIndex];
+            
         }
 
         private void listBox6_Click(object sender, EventArgs e)
@@ -601,6 +600,18 @@ namespace SE_Calculator
 
 
 
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridSize3 = comboBox5.SelectedIndex + 1;
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double[] planeterGravitation = new double[]
+           {1,0.25,0.9,0.25,0.25,1.1 };
+            gravv2 = planeterGravitation[comboBox5.SelectedIndex];
         }
     }
 }
