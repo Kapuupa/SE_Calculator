@@ -27,12 +27,6 @@ namespace SE_Calculator
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
 
         private void btnRäknaUt_Click(object sender, EventArgs e)
         {
@@ -77,11 +71,6 @@ namespace SE_Calculator
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-
-        }
 
         private void btnRäkna_Click(object sender, EventArgs e)
         {
@@ -144,15 +133,6 @@ namespace SE_Calculator
             }
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void btnSpeed_Click(object sender, EventArgs e)
         {
@@ -189,30 +169,8 @@ namespace SE_Calculator
 
         }
 
-        private void lblGridSize2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void listBox4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void listBox6_Click(object sender, EventArgs e)
-        {
-           
-           
 
 
-
-
-        }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -244,30 +202,6 @@ namespace SE_Calculator
             
         }
 
-        private void listBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox40_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblOxygenTank_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnResource_Click(object sender, EventArgs e)
         {
@@ -613,5 +547,7 @@ namespace SE_Calculator
            {1,0.25,0.9,0.25,0.25,1.1 };
             gravv2 = planeterGravitation[comboBox5.SelectedIndex];
         }
+
+       
     }
 }

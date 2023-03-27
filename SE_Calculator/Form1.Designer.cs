@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tpeSpeed = new System.Windows.Forms.TabPage();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.tbxSträcka = new System.Windows.Forms.TextBox();
             this.lblGridSize2 = new System.Windows.Forms.Label();
             this.btnSpeed = new System.Windows.Forms.Button();
@@ -86,6 +88,8 @@
             this.tbxLargeContainer = new System.Windows.Forms.TextBox();
             this.tclEarth = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbxDrills = new System.Windows.Forms.TextBox();
+            this.lblDrills = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -303,10 +307,6 @@
             this.lblTotalMass = new System.Windows.Forms.Label();
             this.lblGDrive = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblDrills = new System.Windows.Forms.Label();
-            this.tbxDrills = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.tpeSpeed.SuspendLayout();
             this.tpeEarth.SuspendLayout();
             this.tclEarth.SuspendLayout();
@@ -351,6 +351,33 @@
             this.tpeSpeed.Text = "Speed";
             this.tpeSpeed.UseVisualStyleBackColor = true;
             // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Earth",
+            "Moon Mars",
+            "Europa",
+            "Titan",
+            "Alien"});
+            this.comboBox6.Location = new System.Drawing.Point(49, 231);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(76, 21);
+            this.comboBox6.TabIndex = 65;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Large Grid",
+            "Small Grid"});
+            this.comboBox5.Location = new System.Drawing.Point(192, 231);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(78, 21);
+            this.comboBox5.TabIndex = 64;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
             // tbxSträcka
             // 
             this.tbxSträcka.Location = new System.Drawing.Point(5, 357);
@@ -367,7 +394,6 @@
             this.lblGridSize2.Size = new System.Drawing.Size(49, 13);
             this.lblGridSize2.TabIndex = 60;
             this.lblGridSize2.Text = "Grid Size";
-            this.lblGridSize2.Click += new System.EventHandler(this.lblGridSize2_Click);
             // 
             // btnSpeed
             // 
@@ -731,6 +757,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 15;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // btnRäknaUt
@@ -874,6 +901,23 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Weight Calculator";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tbxDrills
+            // 
+            this.tbxDrills.Location = new System.Drawing.Point(346, 82);
+            this.tbxDrills.Name = "tbxDrills";
+            this.tbxDrills.Size = new System.Drawing.Size(100, 20);
+            this.tbxDrills.TabIndex = 48;
+            this.tbxDrills.Text = "0";
+            // 
+            // lblDrills
+            // 
+            this.lblDrills.AutoSize = true;
+            this.lblDrills.Location = new System.Drawing.Point(311, 84);
+            this.lblDrills.Name = "lblDrills";
+            this.lblDrills.Size = new System.Drawing.Size(29, 13);
+            this.lblDrills.TabIndex = 47;
+            this.lblDrills.Text = "Drills";
             // 
             // comboBox4
             // 
@@ -1127,7 +1171,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Info";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnResource
             // 
@@ -1321,7 +1364,6 @@
             this.lblOxygenTank.Size = new System.Drawing.Size(71, 13);
             this.lblOxygenTank.TabIndex = 58;
             this.lblOxygenTank.Text = "Oxygen Tank";
-            this.lblOxygenTank.Click += new System.EventHandler(this.lblOxygenTank_Click);
             // 
             // lblOxygenFarm
             // 
@@ -1421,7 +1463,6 @@
             this.lblLargeHydroTank.Size = new System.Drawing.Size(112, 13);
             this.lblLargeHydroTank.TabIndex = 47;
             this.lblLargeHydroTank.Text = "Large Hudrogen Tank";
-            this.lblLargeHydroTank.Click += new System.EventHandler(this.label12_Click);
             // 
             // lblBattery
             // 
@@ -2996,50 +3037,6 @@
             this.lblGDrive.TabIndex = 0;
             this.lblGDrive.Text = "G-Drive";
             // 
-            // lblDrills
-            // 
-            this.lblDrills.AutoSize = true;
-            this.lblDrills.Location = new System.Drawing.Point(311, 84);
-            this.lblDrills.Name = "lblDrills";
-            this.lblDrills.Size = new System.Drawing.Size(29, 13);
-            this.lblDrills.TabIndex = 47;
-            this.lblDrills.Text = "Drills";
-            // 
-            // tbxDrills
-            // 
-            this.tbxDrills.Location = new System.Drawing.Point(346, 82);
-            this.tbxDrills.Name = "tbxDrills";
-            this.tbxDrills.Size = new System.Drawing.Size(100, 20);
-            this.tbxDrills.TabIndex = 48;
-            this.tbxDrills.Text = "0";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Large Grid",
-            "Small Grid"});
-            this.comboBox5.Location = new System.Drawing.Point(192, 231);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(78, 21);
-            this.comboBox5.TabIndex = 64;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Earth",
-            "Moon Mars",
-            "Europa",
-            "Titan",
-            "Alien"});
-            this.comboBox6.Location = new System.Drawing.Point(49, 231);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(76, 21);
-            this.comboBox6.TabIndex = 65;
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3050,7 +3047,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SE Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tpeSpeed.ResumeLayout(false);
             this.tpeSpeed.PerformLayout();
             this.tpeEarth.ResumeLayout(false);
