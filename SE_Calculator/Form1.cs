@@ -102,42 +102,56 @@ namespace SE_Calculator
             int sit2 = int.Parse(tbxIonThrusterSmall.Text);
             int Drills = int.Parse(tbxDrills.Text);
 
+            double totsw = 0;
+            double totst = 0;
+            double maxlift = 0;
+
+
 
             if (gs2 == 1)
             {
-                int totsw = (int)((lc2 * 421000 / ContainerItem) + (sc2 * (15625) / ContainerItem) + sw2 + (Drills * 46875/0.37));
-                tbxSvar.Text = totsw.ToString() + " kg";
+                //den,sw,st,maxlift
+                double[,] WeightTab = new double[10, 4] {
+                {lc2,421000,0,0 },
+                {sc2,15625,0,0},
+                {sw2,1,0,0 },
+                {bht2,0,7200000,734694 },
+                {sht2,0,1080000,110204 },
+                {bat2,0,6480000,661224 },
+                {sat2,0,648000,66122 },
+                {bit2,0,4320000,88163 },
+                {sit2,0,345600,7053 },
+                {Drills,46875,0,0 } };               
 
-                //+ (bht2 * 6940) + (sht2 * 1420) + (bat2 * 32970) + (sat2 * 4000) + (bit2 * 43200) + (sit2 * 4380));
-
-                double totst = ((bht2 * 7200000) + (sht2 * 1080000) + (bat2 * 6480000) + (sat2 * 648000) + (bit2 * 4320000) + (sit2 * 345600)) / gravv;
-                double res = totsw / totst;
-                tbxSvar2.Text = res.ToString();
-
-                double maxlift = ((bht2 * 734694) + (sht2 * 110204) + (bat2 * 661224) + (sat2 * 66122) + (bit2 * 88163) + (sit2 * 7053)) / gravv;
-                tbxSvar3.Text = maxlift.ToString() + " kg";
-
-                double liftcompare = maxlift / totsw;
-                tbxSvar4.Text = liftcompare.ToString();
-
-
+                for (int i = 0; i < WeightTab.GetLength(0); i++)
+                {
+                    totsw = WeightTab[0, 0] * (WeightTab[0, 1] / ContainerItem) + WeightTab[1, 0] * (WeightTab[1, 1] / ContainerItem) + WeightTab[2, 0] + WeightTab[9, 0] * (WeightTab[9, 1] / ContainerItem);
+                    totst += (WeightTab[i, 0] * WeightTab[i, 2]) / gravv;
+                    maxlift += (WeightTab[i, 0] * WeightTab[i, 3]) / gravv;
+                }
+                
             }
             else if (gs2 == 2)
             {
-                int totsw2 = (int)((lc2 * 15625 / ContainerItem) + (sc2 * (125) / ContainerItem) + sw2 + (Drills*6750/0.37));
-                tbxSvar.Text = totsw2.ToString() + " kg";
+                //den,sw,st,maxlift
+                double[,] WeightTab2 = new double[10, 4] {
+                {lc2,15625,0,0 },
+                {sc2,125,0,0},
+                {sw2,1,0,0 },
+                {bht2,0,480000,48980 },
+                {sht2,0,98400,10041 },
+                {bat2,0,576000,58776 },
+                {sat2,0,96000,9796 },
+                {bit2,0,172800,3527 },
+                {sit2,0,14400,294 },
+                {Drills,6750,0,0 } };
 
-                //+ (bht2 * 6940) + (sht2 * 1420) + (bat2 * 32970) + (sat2 * 4000) + (bit2 * 43200) + (sit2 * 4380));
-
-                double totst2 = ((bht2 * 480000) + (sht2 * 98400) + (bat2 * 576000) + (sat2 * 96000) + (bit2 * 172800) + (sit2 * 14400)) / gravv;
-                double res2 = totsw2 / totst2;
-                tbxSvar2.Text = res2.ToString();
-
-                double maxlift2 = ((bht2 * 48980) + (sht2 * 10041) + (bat2 * 58776) + (sat2 * 9796) + (bit2 * 3527) + (sit2 * 294)) / gravv;
-                tbxSvar3.Text = maxlift2.ToString() + " kg";
-
-                double liftcompare2 = maxlift2 / totsw2;
-                tbxSvar4.Text = liftcompare2.ToString();
+                for (int i = 0; i < WeightTab2.GetLength(0); i++)
+                {
+                    totsw = WeightTab2[0, 0] * (WeightTab2[0, 1] / ContainerItem) + WeightTab2[1, 0] * (WeightTab2[1, 1] / ContainerItem) + WeightTab2[2,0] + WeightTab2[9, 0] * (WeightTab2[9, 1] / ContainerItem);
+                    totst += (WeightTab2[i, 0] * WeightTab2[i, 2]) / gravv;
+                    maxlift += (WeightTab2[i, 0] * WeightTab2[i, 3]) / gravv;
+                }              
 
             }
             else
@@ -147,6 +161,13 @@ namespace SE_Calculator
                 tbxSvar3.Text = " WTF did you do wrong?";
                 tbxSvar4.Text = " WTF did you do wrong?";
             }
+            tbxSvar.Text = Math.Round(totsw,2).ToString() + " kg";
+            double res = totsw / totst;
+            tbxSvar2.Text = Math.Round(res,2).ToString();
+            tbxSvar3.Text = Math.Round(maxlift, 2).ToString() + " kg";
+            double liftcompare = maxlift / totsw;
+            tbxSvar4.Text = Math.Round(liftcompare, 2).ToString();
+
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
