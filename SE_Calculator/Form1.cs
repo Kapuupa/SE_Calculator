@@ -367,12 +367,8 @@ namespace SE_Calculator
                     {sractor,25,80,8,0,40,25,0,0,6,4,0,0,0,0,0,100,0,4000.5,50,12,5,2000,500,0,0,15,0,0,0 }, 
                     {largeiont,15,150,100,0,100,0,0,0,0,0,0,0,0,0,0,0,960,25950,0,9600,0,0,0,960,384,0,33.6,0,0 }, 
                     {iont,15,25,8,0,60,0,0,0,0,0,0,0,0,0,0,0,80,3765,0,800,0,0,0,80,32,0,3.36,0,0 }, 
-                    {mcc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 } };
-
-               
-
-                double[] names = new double[29] { pcu, steelplates, largesteeltube, smallsteeltube, construction, computer, bulletproof, interior, motor, metalgrid, display, powercell, radio, detector,superconducter,reactor,thruster,irontot,nickeltot,cobalttot,silicontot,silvertot,graveltot,goldtot,platinatot,powerproduction,powerconsumption,hydrogenproduction,hydrogenconsumption, };
-               
+                    {mcc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 } };             
+                               
                 
                 for (int i = 0; i < CostList.GetLength(0); i++)
                 {                 
@@ -406,71 +402,8 @@ namespace SE_Calculator
                     hydrogenproduction += CostList[i, 0] * CostList[i, 28];
                     hydrogenconsumption += CostList[i, 0] * CostList[i, 29];
                     
-                }                
-
-                tbxSteelPlate.Text = steelplates.ToString();
-                tbxIronTot.Text = irontot.ToString();
-                tbxNickelTot.Text = nickeltot.ToString();
-                tbxCobaltTot.Text = cobalttot.ToString();
-                tbxSiliconTot.Text = silicontot.ToString();
-                tbxTotalSilverCost.Text = silvertot.ToString();
-                tbxTotalGravelCost.Text = graveltot.ToString();
-                tbxTotalGoldCost.Text = goldtot.ToString();
-                tbxTotalPlatinaCost.Text = platinatot.ToString();
-                tbxConstructionComponent.Text = construction.ToString();
-                tbxMetalGrid.Text = metalgrid.ToString();
-                tbxMotor.Text = motor.ToString();
-                tbxComputer.Text = computer.ToString();
-                tbxLargeSteelTube.Text = largesteeltube.ToString();
-                tbxDetectorComponent.Text = detector.ToString();
-                tbxRadioComponent.Text = radio.ToString();
-                tbxPowerCell.Text = powercell.ToString();
-                tbxDisplay.Text = display.ToString();            
-                tbxInteriorPlate.Text = interior.ToString();
-                tbxBulletproofGlass.Text = bulletproof.ToString();           
-                tbxSmallSteelTube.Text = smallsteeltube.ToString();                
-                tbxSuperConducter.Text = superconducter.ToString();
-                tbxReactorComponent.Text = reactor.ToString();
-                tbxThrusterComponent.Text = thruster.ToString(); 
-                tbxPCUCost.Text = pcu.ToString();
-                
-                tbxPowerProduction.Text = powerproduction.ToString() + " MW";
-                tbxPowerConsumption.Text = Math.Round(powerconsumption,2).ToString() + " MW";
-                
-                if (powerproduction < powerconsumption)
-                {
-                    double power = powerconsumption - powerproduction;
-                    double batterylife = battery * 3;
-                    double powerlife = batterylife / power;
-                    tbxTotalPowerUsage.Text = Math.Round(powerlife, 2).ToString() + " h";
-
-
-
-                }
-                else
-                {
-                    tbxTotalPowerUsage.Text = " Infinity";
-                }
-
-                
-                double hydrogentime = hydrogenproduction/hydrogenconsumption;
-
-                if (hydrogentime >= 300)
-                {
-                    tbxHydrogenTime.Text = Math.Round((hydrogentime/60), 2).ToString() + " minuts";
-                }
-                else
-                {
-                    tbxHydrogenTime.Text = Math.Round(hydrogentime, 2).ToString() + " s";
-                }
-
-                tbxHydrogenCapacity.Text = hydrogenproduction.ToString() + " L";
-                tbxHydrogenUse.Text = hydrogenconsumption.ToString() + " L/s";
-                
-
-
-
-
+                }             
+                                            
 
             }
             else if (GridSize4 == 2)
@@ -540,87 +473,6 @@ namespace SE_Calculator
 
                 }
 
-                tbxSteelPlate.Text = steelplates.ToString();
-                tbxIronTot.Text = irontot.ToString();
-                tbxNickelTot.Text = nickeltot.ToString();
-                tbxCobaltTot.Text = cobalttot.ToString();
-                tbxSiliconTot.Text = silicontot.ToString();
-                tbxTotalSilverCost.Text = silvertot.ToString();
-                tbxTotalGravelCost.Text = graveltot.ToString();
-                tbxTotalGoldCost.Text = goldtot.ToString();
-                tbxTotalPlatinaCost.Text = platinatot.ToString();
-                tbxConstructionComponent.Text = construction.ToString();
-                tbxMetalGrid.Text = metalgrid.ToString();
-                tbxMotor.Text = motor.ToString();
-                tbxComputer.Text = computer.ToString();
-                tbxLargeSteelTube.Text = largesteeltube.ToString();
-                tbxDetectorComponent.Text = detector.ToString();
-                tbxRadioComponent.Text = radio.ToString();
-                tbxPowerCell.Text = powercell.ToString();
-                tbxDisplay.Text = display.ToString();
-                tbxInteriorPlate.Text = interior.ToString();
-                tbxBulletproofGlass.Text = bulletproof.ToString();
-                tbxSmallSteelTube.Text = smallsteeltube.ToString();
-                tbxSuperConducter.Text = superconducter.ToString();
-                tbxReactorComponent.Text = reactor.ToString();
-                tbxThrusterComponent.Text = thruster.ToString();
-                tbxPCUCost.Text = pcu.ToString();
-
-                tbxPowerProduction.Text = powerproduction.ToString() + " MW";
-                tbxPowerConsumption.Text = Math.Round(powerconsumption, 2).ToString() + " MW";
-
-                if (powerproduction < powerconsumption)
-                {
-                    double power = powerconsumption - powerproduction;
-                    double batterylife = battery * 3;
-                    double powerlife = batterylife / power;
-                    tbxTotalPowerUsage.Text = Math.Round(powerlife, 2).ToString() + " h";
-
-
-
-                }
-                else
-                {
-                    tbxTotalPowerUsage.Text = " Infinity";
-                }
-
-
-                double hydrogentime = hydrogenproduction / hydrogenconsumption;
-
-                if (hydrogentime >= 300)
-                {
-                    tbxHydrogenTime.Text = Math.Round((hydrogentime / 60), 2).ToString() + " minuts";
-                }
-                else
-                {
-                    tbxHydrogenTime.Text = Math.Round(hydrogentime, 2).ToString() + " s";
-                }
-
-                tbxHydrogenCapacity.Text = hydrogenproduction.ToString() + " L";
-                tbxHydrogenUse.Text = hydrogenconsumption.ToString() + " L/s";
-
-
-
-
-
-
-
-
-
-
-
-                double irontot2 = (lcc * 676.5) + (mcc * 288) + (scc * 72) + (hab * 105) + (lab * 21) + (cock * 167.5) + (battery * 776) + (lhtank * 3584) + (shtank * 144) + (gyro * 646.5) + (largeatmot * 2736) + (atmot * 685) + (ann * 78.5) + (lhthrust * 1494) + (shthrust * 405) + (beacon * 57.5) + (oredet * 108.5) + (drill * 932.5) + (spot * 64.5) + (airvent * 315.5) + (o2h2 * 329.5) + (h2eng * 1010.5) + (o2tank * 730);
-                double nickeltot2 = (lcc * 40) + (mcc * 20) + (scc * 10) + (cock * 5) + (battery * 40) + (gyro * 10) + (largeatmot * 490) + (atmot * 95) + (lhthrust * 110) + (shthrust * 20) + (oredet * 20) + (drill * 5) + (airvent * 10) + (h2eng * 7);
-                double cobalttot2 = (largeatmot * 24) + (atmot * 3) + (lhthrust * 66) + (shthrust * 12);
-                double silicontot2 = (lcc * 6.2) + (mcc * 5.8) + (scc * 5.2) + (cock * 478) + (battery * 20.4) + (lhtank * 1.6) + (shtank * 0.4) + (gyro * 0.6) + (ann * 4.2) + (beacon * 0.2) + (oredet * 0.2) + (drill * 0.2) + (spot * 30) + (airvent * 3) + (o2h2 * 0.6) + (h2eng * 1.2) + (o2tank * 1.6);
-
-                tbxIronTot.Text = irontot2.ToString();
-                tbxNickelTot.Text = nickeltot2.ToString();
-                tbxCobaltTot.Text = cobalttot2.ToString();
-                tbxSiliconTot.Text = silicontot2.ToString();
-                
-
-
             }
 
             else
@@ -646,6 +498,65 @@ namespace SE_Calculator
 
 
             }
+
+            tbxSteelPlate.Text = steelplates.ToString();
+            tbxIronTot.Text = irontot.ToString();
+            tbxNickelTot.Text = nickeltot.ToString();
+            tbxCobaltTot.Text = cobalttot.ToString();
+            tbxSiliconTot.Text = silicontot.ToString();
+            tbxTotalSilverCost.Text = silvertot.ToString();
+            tbxTotalGravelCost.Text = graveltot.ToString();
+            tbxTotalGoldCost.Text = goldtot.ToString();
+            tbxTotalPlatinaCost.Text = platinatot.ToString();
+            tbxConstructionComponent.Text = construction.ToString();
+            tbxMetalGrid.Text = metalgrid.ToString();
+            tbxMotor.Text = motor.ToString();
+            tbxComputer.Text = computer.ToString();
+            tbxLargeSteelTube.Text = largesteeltube.ToString();
+            tbxDetectorComponent.Text = detector.ToString();
+            tbxRadioComponent.Text = radio.ToString();
+            tbxPowerCell.Text = powercell.ToString();
+            tbxDisplay.Text = display.ToString();
+            tbxInteriorPlate.Text = interior.ToString();
+            tbxBulletproofGlass.Text = bulletproof.ToString();
+            tbxSmallSteelTube.Text = smallsteeltube.ToString();
+            tbxSuperConducter.Text = superconducter.ToString();
+            tbxReactorComponent.Text = reactor.ToString();
+            tbxThrusterComponent.Text = thruster.ToString();
+            tbxPCUCost.Text = pcu.ToString();
+
+            tbxPowerProduction.Text = powerproduction.ToString() + " MW";
+            tbxPowerConsumption.Text = Math.Round(powerconsumption, 2).ToString() + " MW";
+
+            if (powerproduction < powerconsumption)
+            {
+                double power = powerconsumption - powerproduction;
+                double batterylife = battery * 3;
+                double powerlife = batterylife / power;
+                tbxTotalPowerUsage.Text = Math.Round(powerlife, 2).ToString() + " h";
+
+
+
+            }
+            else
+            {
+                tbxTotalPowerUsage.Text = " Infinity";
+            }
+
+
+            double hydrogentime = hydrogenproduction / hydrogenconsumption;
+
+            if (hydrogentime >= 300)
+            {
+                tbxHydrogenTime.Text = Math.Round((hydrogentime / 60), 2).ToString() + " minuts";
+            }
+            else
+            {
+                tbxHydrogenTime.Text = Math.Round(hydrogentime, 2).ToString() + " s";
+            }
+
+            tbxHydrogenCapacity.Text = hydrogenproduction.ToString() + " L";
+            tbxHydrogenUse.Text = hydrogenconsumption.ToString() + " L/s";
 
 
 
