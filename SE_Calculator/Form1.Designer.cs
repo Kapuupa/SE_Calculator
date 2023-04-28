@@ -367,7 +367,7 @@
             this.lblGridSize2.Size = new System.Drawing.Size(49, 13);
             this.lblGridSize2.TabIndex = 60;
             this.lblGridSize2.Text = "Grid Size";
-            this.lblGridSize2.Click += new System.EventHandler(this.lblGridSize2_Click);
+          
             // 
             // btnSpeed
             // 
@@ -921,7 +921,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 45;
-            this.comboBox3.Click += new System.EventHandler(this.comboBox3_Click);
+           
             // 
             // comboBox2
             // 
@@ -1127,7 +1127,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Info";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            
             // 
             // btnResource
             // 
@@ -1321,7 +1321,7 @@
             this.lblOxygenTank.Size = new System.Drawing.Size(71, 13);
             this.lblOxygenTank.TabIndex = 58;
             this.lblOxygenTank.Text = "Oxygen Tank";
-            this.lblOxygenTank.Click += new System.EventHandler(this.lblOxygenTank_Click);
+            
             // 
             // lblOxygenFarm
             // 
@@ -1421,7 +1421,7 @@
             this.lblLargeHydroTank.Size = new System.Drawing.Size(112, 13);
             this.lblLargeHydroTank.TabIndex = 47;
             this.lblLargeHydroTank.Text = "Large Hudrogen Tank";
-            this.lblLargeHydroTank.Click += new System.EventHandler(this.label12_Click);
+            
             // 
             // lblBattery
             // 
