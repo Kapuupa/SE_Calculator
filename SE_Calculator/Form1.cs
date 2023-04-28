@@ -19,12 +19,6 @@ namespace SE_Calculator
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
 
         private void btnRäknaUt_Click(object sender, EventArgs e)
         {
@@ -66,6 +60,12 @@ namespace SE_Calculator
 
 
 
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
 
         }
 
@@ -155,6 +155,15 @@ namespace SE_Calculator
 
         }
 
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
 
         private void btnSpeed_Click(object sender, EventArgs e)
         {
@@ -191,6 +200,30 @@ namespace SE_Calculator
 
         }
 
+        private void lblGridSize2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBox4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBox6_Click(object sender, EventArgs e)
+        {
+           
+           
+
+
+
+
+        }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -215,8 +248,63 @@ namespace SE_Calculator
             
         }
 
-        (double pcu, double steelplates, double largesteeltube, double smallsteeltube, double construction, double computer, double bulletproof, double interior, double motor, double metalgrid, double display, double powercell, double radio, double detector, double superconducter, double reactor, double thruster, double irontot, double nickeltot, double cobalttot, double silicontot, double silvertot, double graveltot, double goldtot, double platinatot, double powerproduction, double powerconsumption, double hydrogenproduction, double hydrogenconsumption) StorArray(double lcc, double mcc, double scc, double hab, double lab, double cock, double battery, double lhtank, double shtank, double gyro, double lhthrust, double shthrust, double ann, double beacon, double oredet, double drill, double spot, double airvent, double o2h2, double h2eng, double o2farm, double o2tank, double largeiont, double iont, double largeatmot, double atmot, double lreactor, double sractor)
+        private void listBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox40_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblOxygenTank_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnResource_Click(object sender, EventArgs e)
+        {
+            GridSize4 = (cbxGridSize.SelectedIndex) + 1;
+            int lcc = int.Parse(tbxLargeCargo.Text);
+            int mcc = int.Parse(tbxMediumCargo.Text);
+            int scc = int.Parse(tbxSmallCargo.Text);
+            int hab = int.Parse(tbxHeavyArmorBlock.Text);
+            int lab = int.Parse(tbxLightArmorBlock.Text);
+            int cock = int.Parse(tbxCockpit.Text);
+            int battery = int.Parse(tbxBattery.Text);
+            int lhtank = int.Parse(tbxLargeHydroTank.Text);
+            int shtank = int.Parse(tbxSmallHydroTank.Text);
+            int gyro = int.Parse(tbxGyroscope.Text);
+            int lhthrust = int.Parse(tbxLargeHydroThruster.Text);
+            int shthrust = int.Parse(tbxHydroThruster.Text);
+            int ann = int.Parse(tbxAntenna.Text);
+            int beacon = int.Parse(tbxBeacon.Text);
+            int oredet = int.Parse(tbxOreDetector.Text);
+            int drill = int.Parse(tbxDrill.Text);
+            int spot = int.Parse(tbxSpotlight.Text);
+            int airvent = int.Parse(tbxAirVent.Text);
+            int o2h2 = int.Parse(tbxO2H2gen.Text);
+            int h2eng = int.Parse(tbxHydroEngine.Text);
+            int o2farm = int.Parse(tbxOxygenFarm.Text);
+            int o2tank = int.Parse(tbxOxygenTank.Text);
+            int largeiont = int.Parse(tbxLargeIonThruster.Text);
+            int iont = int.Parse(tbxIonThruster.Text);
+            int largeatmot = int.Parse(tbxLargeAtmosphericThruster.Text);
+            int atmot = int.Parse(tbxAtmosphericThruster.Text);
+            int lreactor = int.Parse(tbxLReactor.Text);
+            int sractor = int.Parse(tbxSReactor.Text);
+
             double pcu = 0;
             double steelplates = 0;
             double largesteeltube = 0;
@@ -587,5 +675,7 @@ namespace SE_Calculator
            {1,0.25,0.9,0.25,0.25,1.1 };
             gravv2 = planeterGravitation[comboBox5.SelectedIndex];
         }
+
+       
     }
 }
